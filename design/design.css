@@ -1,0 +1,462 @@
+.design.wrapper {
+    min-height: 600px;
+}
+
+form {
+    height: 100%;
+}
+
+#designer {
+    position: relative;
+    background-color: #064c71;
+    height: 377px;
+}
+
+#zoneSelector {
+    position: absolute;
+    width: 100%;
+    background-color: #418cb5;
+}
+
+#zoneSelector div {
+    width: 20%;
+    max-width: 80px;
+    height: 75px;
+    float: left;
+    cursor: pointer;
+}
+
+#selectHeader {
+    background-image: url('/images/select-header.png');
+}
+
+#selectFooter {
+    background-image: url('/images/select-footer.png');
+}
+
+#selectBody {
+    background-image: url('/images/select-body.png');
+}
+
+#selectMenus {
+    background-image: url('/images/select-menus.png');
+}
+
+#selectHeader.inactive, #selectFooter.inactive, #selectBody.inactive, #selectMenus.inactive {
+    background-position: 0px -100%;
+}
+
+#exportBtn {
+    background: url('/images/export.png');
+}
+
+#help {
+    top: 100px;
+    position: absolute;
+    width: 40%;
+    padding-left: 20px;
+    color: white;
+    font-style: italic;
+}
+
+.accordion {
+    display: none;
+    position: absolute;
+    top: 75px;
+    width: 45%;
+    height: 298px;
+    color: white;
+    background-color: #0b4f74;
+    border: 2px solid #064c71;
+}
+
+.accordion.visible {
+    display: block;
+}
+
+.accordion .elementTitle {
+    height: 26px;
+    background-color: #0a4f73;
+    padding: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2em;
+    font-family: 'open_sanssemibold', sans-serif;
+}
+
+.accordion .elements {
+    margin: 0px;
+    padding: 0px;
+}
+
+.accordion .elements .element {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 1px solid #0a4f73;
+    border-bottom: 1px solid #0a4f73;
+    font-size: 0.8em;
+    position: relative;
+}
+
+.accordion .elements .element:hover {
+    cursor: pointer;
+}
+
+.accordion .elements .element:nth-child(4n+1) {
+    background-color: #2378a5;
+}
+
+.accordion .elements .element:nth-child(4n+3) {
+    background-color: #418cb5;
+}
+
+.accordion .elements .element .plusMinus {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    background-image: url('/images/plus-minus.png');
+}
+
+.accordion .elements .element .plusMinus.minus {
+    background-position: 0px -20px;
+}
+
+.accordion .elements .elementEdit {
+    display: block;
+    height: 64px;
+    background-color: white;
+    height: 0px;
+    transition: 0.3s height;
+    position: relative;
+    overflow: hidden;
+}
+
+.accordion .elements .elementEdit.visible {
+    height: 64px;
+}
+
+.colourBox {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #d3d3d3;
+    top: 9px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.colourPickerIcon {
+    width: 30px;
+    height: 30px;
+    background-image: url('/images/colour-picker-icon.png');
+    position: absolute;
+    left: 70px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.hexBox {
+    position: absolute;
+    top: 14px;
+    left: 120px;
+    width: 67px;
+    height: 30px;
+    font-size: 0.8em;
+    padding-left: 5px;
+}
+
+#colourPicker, #exportWindow {
+    display: none;
+    position: absolute;
+    top: 125px;
+    width: 44.5%;
+    height: 248px;
+    background-color: white;
+    border: 2px solid #064c71;
+    z-index: 0;
+    overflow-y: auto;
+}
+
+#colourPicker.visible, #exportWindow.visible {
+    display: block;
+}
+
+#colourPickerClose, #exportWindowClose, .accordionClose {
+    width: 27px;
+    height: 28px;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    background-image: url('/images/close.png');
+    cursor: pointer;
+}
+
+.accordionClose {
+    background-image: url('/images/close-white.png');
+}
+
+#colourPicker p, #exportWindow p {
+    margin: 10px;
+    color: #504e4e;
+}
+
+#colourPicker p.windowTitle, #exportWindow p.windowTitle {
+    font-weight: bold;
+}
+
+#colourPicker .colourBoxChoice {
+    width: 44px;
+    height: 44px;
+    float: left;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border: 1px solid #064c71;
+}
+
+#accordionMenus .elements em {
+    padding-left: 10px; /* For the coming soon text */
+}
+
+#colff0000 {
+    background-color: #ff0000;
+}
+
+#colff4000 {
+    background-color: #ff4000;
+}
+
+#colff8000 {
+    background-color: #ff8000;
+}
+
+#colffbf00 {
+    background-color: #ffbf00;
+}
+
+#colffff00 {
+    background-color: #ffff00;
+}
+
+#colbfff00 {
+    background-color: #bfff00;
+}
+
+#col80ff00 {
+    background-color: #80ff00;
+}
+
+#col40ff00 {
+    background-color: #40ff00;
+}
+
+#col00ff00 {
+    background-color: #00ff00;
+}
+
+#col00ff40 {
+    background-color: #00ff40;
+}
+
+#col00ff80 {
+    background-color: #00ff80;
+}
+
+#col00ffbf {
+    background-color: #00ffbf;
+}
+
+#col00ffff {
+    background-color: #00ffff;
+}
+
+#col00bfff {
+    background-color: #00bfff;
+}
+
+#col0080ff {
+    background-color: #0080ff;
+}
+
+#col0040ff {
+    background-color: #0040ff;
+}
+
+#col0000ff {
+    background-color: #0000ff;
+}
+
+#col4000ff {
+    background-color: #4000ff;
+}
+
+#col8000ff {
+    background-color: #8000ff;
+}
+
+#colbf00ff {
+    background-color: #bf00ff;
+}
+
+#colff00ff {
+    background-color: #ff00ff;
+}
+
+#colff00bf {
+    background-color: #ff00bf;
+}
+
+#colff0080 {
+    background-color: #ff0080;
+}
+
+#colff0040 {
+    background-color: #ff0040;
+}
+
+#colffffff {
+    background-color: #ffffff;
+}
+
+#col000000 {
+    background-color: #000000;
+}
+
+#preview {
+    position: absolute;
+    width: 55%;
+    height: 302px;
+    top: 75px;
+    right: 0px;
+}
+
+#x_mainHolder {
+    right: 0px;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    z-index: 0; /* Overwrites z-index of -3 in mainStyles.css */
+}
+
+#confirmBtn {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin: 0px;
+    border: 1px solid #064c71;
+}
+
+#exportWindow {
+    top: 75px;
+    height: 298px;
+}
+
+#confirmBtn {
+    width: 100px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #064c71;
+    border-radius: 8px;
+    position: relative;
+    right: 0px;
+    margin-left: -60px;
+    margin-top: 30px;
+    left: 50%;
+    cursor: pointer;
+}
+
+@media (max-width: 590px){
+    #intro h1 {
+        padding: 15px;
+        border-bottom: 0px;
+    }
+    #intro p {
+        display: none;
+    }
+    #designer {
+        height: 100%;
+    }
+    .design.wrapper {
+        padding: 0px;
+        height: 100%;
+    }
+    #zoneSelector {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        min-width: 307px;
+        z-index: 3;
+        border-top: 2px solid white;
+    }
+    #help {
+        display: none;
+    }
+    .accordion {
+        top: -62px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border: 0px;
+        border-top: 2px solid white;
+    }
+    #colourPicker, #exportWindow {
+        top: -58px;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border: 0px solid #064c71;
+        z-index: 2;
+    }
+    #preview {
+        right: auto;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 285px;
+    }
+    #x_mainHolder {
+        width: 100%;
+        height: 282px;
+    }
+    #exportBtn {
+        top: 310px;
+    }
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 590px) and (max-height: 620px) {
+    #intro {
+        display: none;
+    }
+    .accordion, #colourPicker, #exportWindow {
+        top: 0px;
+    }
+}
+
+@media (max-width: 410px) {
+    #zoneSelector div {
+        background-size: 100%;
+        height: 0px;
+        padding-bottom: 18.75%;
+    }
+}
+
+/* The following rules are designed to override the CSS brought in from the Xerte object */
+
+header img {
+    vertical-align: baseline;
+}
+
+#intro p {
+    padding: 0px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
