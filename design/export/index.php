@@ -47,7 +47,7 @@ echo '/* Xerte theme generated via Xhibit App (www.xhibitapp.com) */
 
 /* TOP BORDER OF FOOTER */
 
-#x_headerBlock { 
+#x_footerBlock { 
     border-top: 1px solid ' . $_POST["footerTopBorder"] . ';
 }
 
