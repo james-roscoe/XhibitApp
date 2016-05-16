@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About | Xhibit App</title>
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
 </head>
 <body>
     
@@ -24,7 +25,13 @@
             
             <p>We will be posting more comprehensive support information soon.</p>
             
+            <p>Until then, you can watch a recorded demonstration below (including how to generate and attach a stylesheet) from the Xhibit Launch Event at the 2016 Xerte Conference.</p>
+            
             <p>If you have any questions or comments please get in touch via the <a href="/contact/">contact page</a>.</p>
+
+            <div class='launchVideoContainer'>
+                <iframe src='https://www.youtube.com/embed/xlvxlXyUFx4' frameborder='0' allowfullscreen></iframe>
+			</div>
             
         </div>
         
