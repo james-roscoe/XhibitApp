@@ -223,108 +223,1364 @@ form {
     padding-left: 10px; /* For the coming soon text */
 }
 
-#colff0000 {
-    background-color: #ff0000;
-}
-
-#colff4000 {
-    background-color: #ff4000;
-}
-
-#colff8000 {
-    background-color: #ff8000;
-}
-
-#colffbf00 {
-    background-color: #ffbf00;
-}
-
-#colffff00 {
-    background-color: #ffff00;
-}
-
-#colbfff00 {
-    background-color: #bfff00;
-}
-
-#col80ff00 {
-    background-color: #80ff00;
-}
-
-#col40ff00 {
-    background-color: #40ff00;
-}
-
-#col00ff00 {
-    background-color: #00ff00;
-}
-
-#col00ff40 {
-    background-color: #00ff40;
-}
-
-#col00ff80 {
-    background-color: #00ff80;
-}
-
-#col00ffbf {
-    background-color: #00ffbf;
-}
-
-#col00ffff {
-    background-color: #00ffff;
-}
-
-#col00bfff {
-    background-color: #00bfff;
-}
-
-#col0080ff {
-    background-color: #0080ff;
-}
-
-#col0040ff {
-    background-color: #0040ff;
-}
-
-#col0000ff {
-    background-color: #0000ff;
-}
-
-#col4000ff {
-    background-color: #4000ff;
-}
-
-#col8000ff {
-    background-color: #8000ff;
-}
-
-#colbf00ff {
-    background-color: #bf00ff;
-}
-
-#colff00ff {
-    background-color: #ff00ff;
-}
-
-#colff00bf {
-    background-color: #ff00bf;
-}
-
-#colff0080 {
-    background-color: #ff0080;
-}
-
-#colff0040 {
-    background-color: #ff0040;
-}
-
-#colffffff {
-    background-color: #ffffff;
-}
-
 #col000000 {
-    background-color: #000000;
+	background-color: #000000;
+}
+
+#col0C090A {
+	background-color: #0C090A;
+}
+
+#col2C3539 {
+	background-color: #2C3539;
+}
+
+#col2B1B17 {
+	background-color: #2B1B17;
+}
+
+#col34282C {
+	background-color: #34282C;
+}
+
+#col25383C {
+	background-color: #25383C;
+}
+
+#col3B3131 {
+	background-color: #3B3131;
+}
+
+#col413839 {
+	background-color: #413839;
+}
+
+#col3D3C3A {
+	background-color: #3D3C3A;
+}
+
+#col463E3F {
+	background-color: #463E3F;
+}
+
+#col4C4646 {
+	background-color: #4C4646;
+}
+
+#col504A4B {
+	background-color: #504A4B;
+}
+
+#col565051 {
+	background-color: #565051;
+}
+
+#col5C5858 {
+	background-color: #5C5858;
+}
+
+#col625D5D {
+	background-color: #625D5D;
+}
+
+#col666362 {
+	background-color: #666362;
+}
+
+#col6D6968 {
+	background-color: #6D6968;
+}
+
+#col726E6D {
+	background-color: #726E6D;
+}
+
+#col736F6E {
+	background-color: #736F6E;
+}
+
+#col837E7C {
+	background-color: #837E7C;
+}
+
+#col848482 {
+	background-color: #848482;
+}
+
+#colB6B6B4 {
+	background-color: #B6B6B4;
+}
+
+#colD1D0CE {
+	background-color: #D1D0CE;
+}
+
+#colE5E4E2 {
+	background-color: #E5E4E2;
+}
+
+#colBCC6CC {
+	background-color: #BCC6CC;
+}
+
+#col98AFC7 {
+	background-color: #98AFC7;
+}
+
+#col6D7B8D {
+	background-color: #6D7B8D;
+}
+
+#col657383 {
+	background-color: #657383;
+}
+
+#col616D7E {
+	background-color: #616D7E;
+}
+
+#col646D7E {
+	background-color: #646D7E;
+}
+
+#col566D7E {
+	background-color: #566D7E;
+}
+
+#col737CA1 {
+	background-color: #737CA1;
+}
+
+#col4863A0 {
+	background-color: #4863A0;
+}
+
+#col2B547E {
+	background-color: #2B547E;
+}
+
+#col2B3856 {
+	background-color: #2B3856;
+}
+
+#col151B54 {
+	background-color: #151B54;
+}
+
+#col000080 {
+	background-color: #000080;
+}
+
+#col342D7E {
+	background-color: #342D7E;
+}
+
+#col15317E {
+	background-color: #15317E;
+}
+
+#col151B8D {
+	background-color: #151B8D;
+}
+
+#col0000A0 {
+	background-color: #0000A0;
+}
+
+#col0020C2 {
+	background-color: #0020C2;
+}
+
+#col0041C2 {
+	background-color: #0041C2;
+}
+
+#col2554C7 {
+	background-color: #2554C7;
+}
+
+#col1569C7 {
+	background-color: #1569C7;
+}
+
+#col2B60DE {
+	background-color: #2B60DE;
+}
+
+#col1F45FC {
+	background-color: #1F45FC;
+}
+
+#col6960EC {
+	background-color: #6960EC;
+}
+
+#col736AFF {
+	background-color: #736AFF;
+}
+
+#col357EC7 {
+	background-color: #357EC7;
+}
+
+#col368BC1 {
+	background-color: #368BC1;
+}
+
+#col488AC7 {
+	background-color: #488AC7;
+}
+
+#col3090C7 {
+	background-color: #3090C7;
+}
+
+#col659EC7 {
+	background-color: #659EC7;
+}
+
+#col87AFC7 {
+	background-color: #87AFC7;
+}
+
+#col95B9C7 {
+	background-color: #95B9C7;
+}
+
+#col728FCE {
+	background-color: #728FCE;
+}
+
+#col2B65EC {
+	background-color: #2B65EC;
+}
+
+#col306EFF {
+	background-color: #306EFF;
+}
+
+#col157DEC {
+	background-color: #157DEC;
+}
+
+#col1589FF {
+	background-color: #1589FF;
+}
+
+#col6495ED {
+	background-color: #6495ED;
+}
+
+#col6698FF {
+	background-color: #6698FF;
+}
+
+#col38ACEC {
+	background-color: #38ACEC;
+}
+
+#col56A5EC {
+	background-color: #56A5EC;
+}
+
+#col5CB3FF {
+	background-color: #5CB3FF;
+}
+
+#col3BB9FF {
+	background-color: #3BB9FF;
+}
+
+#col79BAEC {
+	background-color: #79BAEC;
+}
+
+#col82CAFA {
+	background-color: #82CAFA;
+}
+
+#col82CAFF {
+	background-color: #82CAFF;
+}
+
+#colA0CFEC {
+	background-color: #A0CFEC;
+}
+
+#colB7CEEC {
+	background-color: #B7CEEC;
+}
+
+#colB4CFEC {
+	background-color: #B4CFEC;
+}
+
+#colC2DFFF {
+	background-color: #C2DFFF;
+}
+
+#colC6DEFF {
+	background-color: #C6DEFF;
+}
+
+#colAFDCEC {
+	background-color: #AFDCEC;
+}
+
+#colADDFFF {
+	background-color: #ADDFFF;
+}
+
+#colBDEDFF {
+	background-color: #BDEDFF;
+}
+
+#colCFECEC {
+	background-color: #CFECEC;
+}
+
+#colE0FFFF {
+	background-color: #E0FFFF;
+}
+
+#colEBF4FA {
+	background-color: #EBF4FA;
+}
+
+#colF0F8FF {
+	background-color: #F0F8FF;
+}
+
+#colF0FFFF {
+	background-color: #F0FFFF;
+}
+
+#colCCFFFF {
+	background-color: #CCFFFF;
+}
+
+#col93FFE8 {
+	background-color: #93FFE8;
+}
+
+#col9AFEFF {
+	background-color: #9AFEFF;
+}
+
+#col7FFFD4 {
+	background-color: #7FFFD4;
+}
+
+#col00FFFF {
+	background-color: #00FFFF;
+}
+
+#col7DFDFE {
+	background-color: #7DFDFE;
+}
+
+#col57FEFF {
+	background-color: #57FEFF;
+}
+
+#col8EEBEC {
+	background-color: #8EEBEC;
+}
+
+#col50EBEC {
+	background-color: #50EBEC;
+}
+
+#col4EE2EC {
+	background-color: #4EE2EC;
+}
+
+#col81D8D0 {
+	background-color: #81D8D0;
+}
+
+#col92C7C7 {
+	background-color: #92C7C7;
+}
+
+#col77BFC7 {
+	background-color: #77BFC7;
+}
+
+#col78C7C7 {
+	background-color: #78C7C7;
+}
+
+#col48CCCD {
+	background-color: #48CCCD;
+}
+
+#col43C6DB {
+	background-color: #43C6DB;
+}
+
+#col46C7C7 {
+	background-color: #46C7C7;
+}
+
+#col43BFC7 {
+	background-color: #43BFC7;
+}
+
+#col3EA99F {
+	background-color: #3EA99F;
+}
+
+#col3B9C9C {
+	background-color: #3B9C9C;
+}
+
+#col438D80 {
+	background-color: #438D80;
+}
+
+#col348781 {
+	background-color: #348781;
+}
+
+#col307D7E {
+	background-color: #307D7E;
+}
+
+#col5E7D7E {
+	background-color: #5E7D7E;
+}
+
+#col4C787E {
+	background-color: #4C787E;
+}
+
+#col008080 {
+	background-color: #008080;
+}
+
+#col4E8975 {
+	background-color: #4E8975;
+}
+
+#col78866B {
+	background-color: #78866B;
+}
+
+#col848b79 {
+	background-color: #848b79;
+}
+
+#col617C58 {
+	background-color: #617C58;
+}
+
+#col728C00 {
+	background-color: #728C00;
+}
+
+#col667C26 {
+	background-color: #667C26;
+}
+
+#col254117 {
+	background-color: #254117;
+}
+
+#col306754 {
+	background-color: #306754;
+}
+
+#col347235 {
+	background-color: #347235;
+}
+
+#col437C17 {
+	background-color: #437C17;
+}
+
+#col387C44 {
+	background-color: #387C44;
+}
+
+#col347C2C {
+	background-color: #347C2C;
+}
+
+#col347C17 {
+	background-color: #347C17;
+}
+
+#col348017 {
+	background-color: #348017;
+}
+
+#col4E9258 {
+	background-color: #4E9258;
+}
+
+#col6AA121 {
+	background-color: #6AA121;
+}
+
+#col4AA02C {
+	background-color: #4AA02C;
+}
+
+#col41A317 {
+	background-color: #41A317;
+}
+
+#col3EA055 {
+	background-color: #3EA055;
+}
+
+#col6CBB3C {
+	background-color: #6CBB3C;
+}
+
+#col6CC417 {
+	background-color: #6CC417;
+}
+
+#col4CC417 {
+	background-color: #4CC417;
+}
+
+#col52D017 {
+	background-color: #52D017;
+}
+
+#col4CC552 {
+	background-color: #4CC552;
+}
+
+#col54C571 {
+	background-color: #54C571;
+}
+
+#col99C68E {
+	background-color: #99C68E;
+}
+
+#col89C35C {
+	background-color: #89C35C;
+}
+
+#col85BB65 {
+	background-color: #85BB65;
+}
+
+#col8BB381 {
+	background-color: #8BB381;
+}
+
+#col9CB071 {
+	background-color: #9CB071;
+}
+
+#colB2C248 {
+	background-color: #B2C248;
+}
+
+#col9DC209 {
+	background-color: #9DC209;
+}
+
+#colA1C935 {
+	background-color: #A1C935;
+}
+
+#col7FE817 {
+	background-color: #7FE817;
+}
+
+#col59E817 {
+	background-color: #59E817;
+}
+
+#col57E964 {
+	background-color: #57E964;
+}
+
+#col64E986 {
+	background-color: #64E986;
+}
+
+#col5EFB6E {
+	background-color: #5EFB6E;
+}
+
+#col00FF00 {
+	background-color: #00FF00;
+}
+
+#col5FFB17 {
+	background-color: #5FFB17;
+}
+
+#col87F717 {
+	background-color: #87F717;
+}
+
+#col8AFB17 {
+	background-color: #8AFB17;
+}
+
+#col6AFB92 {
+	background-color: #6AFB92;
+}
+
+#col98FF98 {
+	background-color: #98FF98;
+}
+
+#colB5EAAA {
+	background-color: #B5EAAA;
+}
+
+#colC3FDB8 {
+	background-color: #C3FDB8;
+}
+
+#colCCFB5D {
+	background-color: #CCFB5D;
+}
+
+#colB1FB17 {
+	background-color: #B1FB17;
+}
+
+#colBCE954 {
+	background-color: #BCE954;
+}
+
+#colEDDA74 {
+	background-color: #EDDA74;
+}
+
+#colEDE275 {
+	background-color: #EDE275;
+}
+
+#colFFE87C {
+	background-color: #FFE87C;
+}
+
+#colFFFF00 {
+	background-color: #FFFF00;
+}
+
+#colFFF380 {
+	background-color: #FFF380;
+}
+
+#colFFFFC2 {
+	background-color: #FFFFC2;
+}
+
+#colFFFFCC {
+	background-color: #FFFFCC;
+}
+
+#colFFF8C6 {
+	background-color: #FFF8C6;
+}
+
+#colFFF8DC {
+	background-color: #FFF8DC;
+}
+
+#colF5F5DC {
+	background-color: #F5F5DC;
+}
+
+#colFBF6D9 {
+	background-color: #FBF6D9;
+}
+
+#colFAEBD7 {
+	background-color: #FAEBD7;
+}
+
+#colF7E7CE {
+	background-color: #F7E7CE;
+}
+
+#colFFEBCD {
+	background-color: #FFEBCD;
+}
+
+#colF3E5AB {
+	background-color: #F3E5AB;
+}
+
+#colECE5B6 {
+	background-color: #ECE5B6;
+}
+
+#colFFE5B4 {
+	background-color: #FFE5B4;
+}
+
+#colFFDB58 {
+	background-color: #FFDB58;
+}
+
+#colFFD801 {
+	background-color: #FFD801;
+}
+
+#colFDD017 {
+	background-color: #FDD017;
+}
+
+#colEAC117 {
+	background-color: #EAC117;
+}
+
+#colF2BB66 {
+	background-color: #F2BB66;
+}
+
+#colFBB917 {
+	background-color: #FBB917;
+}
+
+#colFBB117 {
+	background-color: #FBB117;
+}
+
+#colFFA62F {
+	background-color: #FFA62F;
+}
+
+#colE9AB17 {
+	background-color: #E9AB17;
+}
+
+#colE2A76F {
+	background-color: #E2A76F;
+}
+
+#colDEB887 {
+	background-color: #DEB887;
+}
+
+#colFFCBA4 {
+	background-color: #FFCBA4;
+}
+
+#colC9BE62 {
+	background-color: #C9BE62;
+}
+
+#colE8A317 {
+	background-color: #E8A317;
+}
+
+#colEE9A4D {
+	background-color: #EE9A4D;
+}
+
+#colC8B560 {
+	background-color: #C8B560;
+}
+
+#colD4A017 {
+	background-color: #D4A017;
+}
+
+#colC2B280 {
+	background-color: #C2B280;
+}
+
+#colC7A317 {
+	background-color: #C7A317;
+}
+
+#colC68E17 {
+	background-color: #C68E17;
+}
+
+#colB5A642 {
+	background-color: #B5A642;
+}
+
+#colADA96E {
+	background-color: #ADA96E;
+}
+
+#colC19A6B {
+	background-color: #C19A6B;
+}
+
+#colCD7F32 {
+	background-color: #CD7F32;
+}
+
+#colC88141 {
+	background-color: #C88141;
+}
+
+#colC58917 {
+	background-color: #C58917;
+}
+
+#colAF9B60 {
+	background-color: #AF9B60;
+}
+
+#colAF7817 {
+	background-color: #AF7817;
+}
+
+#colB87333 {
+	background-color: #B87333;
+}
+
+#col966F33 {
+	background-color: #966F33;
+}
+
+#col806517 {
+	background-color: #806517;
+}
+
+#col827839 {
+	background-color: #827839;
+}
+
+#col827B60 {
+	background-color: #827B60;
+}
+
+#col786D5F {
+	background-color: #786D5F;
+}
+
+#col493D26 {
+	background-color: #493D26;
+}
+
+#col483C32 {
+	background-color: #483C32;
+}
+
+#col6F4E37 {
+	background-color: #6F4E37;
+}
+
+#col835C3B {
+	background-color: #835C3B;
+}
+
+#col7F5217 {
+	background-color: #7F5217;
+}
+
+#col7F462C {
+	background-color: #7F462C;
+}
+
+#colC47451 {
+	background-color: #C47451;
+}
+
+#colC36241 {
+	background-color: #C36241;
+}
+
+#colC35817 {
+	background-color: #C35817;
+}
+
+#colC85A17 {
+	background-color: #C85A17;
+}
+
+#colCC6600 {
+	background-color: #CC6600;
+}
+
+#colE56717 {
+	background-color: #E56717;
+}
+
+#colE66C2C {
+	background-color: #E66C2C;
+}
+
+#colF87217 {
+	background-color: #F87217;
+}
+
+#colF87431 {
+	background-color: #F87431;
+}
+
+#colE67451 {
+	background-color: #E67451;
+}
+
+#colFF8040 {
+	background-color: #FF8040;
+}
+
+#colF88017 {
+	background-color: #F88017;
+}
+
+#colFF7F50 {
+	background-color: #FF7F50;
+}
+
+#colF88158 {
+	background-color: #F88158;
+}
+
+#colF9966B {
+	background-color: #F9966B;
+}
+
+#colE78A61 {
+	background-color: #E78A61;
+}
+
+#colE18B6B {
+	background-color: #E18B6B;
+}
+
+#colE77471 {
+	background-color: #E77471;
+}
+
+#colF75D59 {
+	background-color: #F75D59;
+}
+
+#colE55451 {
+	background-color: #E55451;
+}
+
+#colE55B3C {
+	background-color: #E55B3C;
+}
+
+#colFF0000 {
+	background-color: #FF0000;
+}
+
+#colFF2400 {
+	background-color: #FF2400;
+}
+
+#colF62217 {
+	background-color: #F62217;
+}
+
+#colF70D1A {
+	background-color: #F70D1A;
+}
+
+#colF62817 {
+	background-color: #F62817;
+}
+
+#colE42217 {
+	background-color: #E42217;
+}
+
+#colE41B17 {
+	background-color: #E41B17;
+}
+
+#colDC381F {
+	background-color: #DC381F;
+}
+
+#colC34A2C {
+	background-color: #C34A2C;
+}
+
+#colC24641 {
+	background-color: #C24641;
+}
+
+#colC04000 {
+	background-color: #C04000;
+}
+
+#colC11B17 {
+	background-color: #C11B17;
+}
+
+#col9F000F {
+	background-color: #9F000F;
+}
+
+#col990012 {
+	background-color: #990012;
+}
+
+#col8C001A {
+	background-color: #8C001A;
+}
+
+#col954535 {
+	background-color: #954535;
+}
+
+#col7E3517 {
+	background-color: #7E3517;
+}
+
+#col8A4117 {
+	background-color: #8A4117;
+}
+
+#col7E3817 {
+	background-color: #7E3817;
+}
+
+#col800517 {
+	background-color: #800517;
+}
+
+#col810541 {
+	background-color: #810541;
+}
+
+#col7D0541 {
+	background-color: #7D0541;
+}
+
+#col7E354D {
+	background-color: #7E354D;
+}
+
+#col7D0552 {
+	background-color: #7D0552;
+}
+
+#col7F4E52 {
+	background-color: #7F4E52;
+}
+
+#col7F5A58 {
+	background-color: #7F5A58;
+}
+
+#col7F525D {
+	background-color: #7F525D;
+}
+
+#colB38481 {
+	background-color: #B38481;
+}
+
+#colC5908E {
+	background-color: #C5908E;
+}
+
+#colC48189 {
+	background-color: #C48189;
+}
+
+#colC48793 {
+	background-color: #C48793;
+}
+
+#colE8ADAA {
+	background-color: #E8ADAA;
+}
+
+#colEDC9AF {
+	background-color: #EDC9AF;
+}
+
+#colFDD7E4 {
+	background-color: #FDD7E4;
+}
+
+#colFCDFFF {
+	background-color: #FCDFFF;
+}
+
+#colFFDFDD {
+	background-color: #FFDFDD;
+}
+
+#colFBBBB9 {
+	background-color: #FBBBB9;
+}
+
+#colFAAFBE {
+	background-color: #FAAFBE;
+}
+
+#colFAAFBA {
+	background-color: #FAAFBA;
+}
+
+#colF9A7B0 {
+	background-color: #F9A7B0;
+}
+
+#colE7A1B0 {
+	background-color: #E7A1B0;
+}
+
+#colE799A3 {
+	background-color: #E799A3;
+}
+
+#colE38AAE {
+	background-color: #E38AAE;
+}
+
+#colF778A1 {
+	background-color: #F778A1;
+}
+
+#colE56E94 {
+	background-color: #E56E94;
+}
+
+#colF660AB {
+	background-color: #F660AB;
+}
+
+#colFC6C85 {
+	background-color: #FC6C85;
+}
+
+#colF6358A {
+	background-color: #F6358A;
+}
+
+#colF52887 {
+	background-color: #F52887;
+}
+
+#colE45E9D {
+	background-color: #E45E9D;
+}
+
+#colE4287C {
+	background-color: #E4287C;
+}
+
+#colF535AA {
+	background-color: #F535AA;
+}
+
+#colFF00FF {
+	background-color: #FF00FF;
+}
+
+#colE3319D {
+	background-color: #E3319D;
+}
+
+#colF433FF {
+	background-color: #F433FF;
+}
+
+#colD16587 {
+	background-color: #D16587;
+}
+
+#colC25A7C {
+	background-color: #C25A7C;
+}
+
+#colCA226B {
+	background-color: #CA226B;
+}
+
+#colC12869 {
+	background-color: #C12869;
+}
+
+#colC12267 {
+	background-color: #C12267;
+}
+
+#colC25283 {
+	background-color: #C25283;
+}
+
+#colC12283 {
+	background-color: #C12283;
+}
+
+#colB93B8F {
+	background-color: #B93B8F;
+}
+
+#col7E587E {
+	background-color: #7E587E;
+}
+
+#col571B7E {
+	background-color: #571B7E;
+}
+
+#col583759 {
+	background-color: #583759;
+}
+
+#col4B0082 {
+	background-color: #4B0082;
+}
+
+#col461B7E {
+	background-color: #461B7E;
+}
+
+#col4E387E {
+	background-color: #4E387E;
+}
+
+#col614051 {
+	background-color: #614051;
+}
+
+#col5E5A80 {
+	background-color: #5E5A80;
+}
+
+#col6A287E {
+	background-color: #6A287E;
+}
+
+#col7D1B7E {
+	background-color: #7D1B7E;
+}
+
+#colA74AC7 {
+	background-color: #A74AC7;
+}
+
+#colB048B5 {
+	background-color: #B048B5;
+}
+
+#col6C2DC7 {
+	background-color: #6C2DC7;
+}
+
+#col842DCE {
+	background-color: #842DCE;
+}
+
+#col8D38C9 {
+	background-color: #8D38C9;
+}
+
+#col7A5DC7 {
+	background-color: #7A5DC7;
+}
+
+#col7F38EC {
+	background-color: #7F38EC;
+}
+
+#col8E35EF {
+	background-color: #8E35EF;
+}
+
+#col893BFF {
+	background-color: #893BFF;
+}
+
+#col8467D7 {
+	background-color: #8467D7;
+}
+
+#colA23BEC {
+	background-color: #A23BEC;
+}
+
+#colB041FF {
+	background-color: #B041FF;
+}
+
+#colC45AEC {
+	background-color: #C45AEC;
+}
+
+#col9172EC {
+	background-color: #9172EC;
+}
+
+#col9E7BFF {
+	background-color: #9E7BFF;
+}
+
+#colD462FF {
+	background-color: #D462FF;
+}
+
+#colE238EC {
+	background-color: #E238EC;
+}
+
+#colC38EC7 {
+	background-color: #C38EC7;
+}
+
+#colC8A2C8 {
+	background-color: #C8A2C8;
+}
+
+#colE6A9EC {
+	background-color: #E6A9EC;
+}
+
+#colE0B0FF {
+	background-color: #E0B0FF;
+}
+
+#colC6AEC7 {
+	background-color: #C6AEC7;
+}
+
+#colF9B7FF {
+	background-color: #F9B7FF;
+}
+
+#colD2B9D3 {
+	background-color: #D2B9D3;
+}
+
+#colE9CFEC {
+	background-color: #E9CFEC;
+}
+
+#colEBDDE2 {
+	background-color: #EBDDE2;
+}
+
+#colE3E4FA {
+	background-color: #E3E4FA;
+}
+
+#colFDEEF4 {
+	background-color: #FDEEF4;
+}
+
+#colFFF5EE {
+	background-color: #FFF5EE;
+}
+
+#colFEFCFF {
+	background-color: #FEFCFF;
+}
+
+#colFFFFFF {
+	background-color: #FFFFFF;
 }
 
 #preview {

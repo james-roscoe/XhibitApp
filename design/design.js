@@ -175,6 +175,7 @@ for (i = 0; i < accordionClose.length; i++){
             selectFooter.className = '';
             selectBody.className = '';
             selectMenus.className = '';
+            colourPicker.className = '';
         });
     }(i));
 }
