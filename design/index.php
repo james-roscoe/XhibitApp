@@ -133,6 +133,18 @@
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox"  type="text" name="footerTopBorder"/>
                         </div>
+                        <div id="footerDotsTexture" class="element">
+                            Dots Texture
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="footerDotsTextureEdit" class="elementEdit">
+                            <label id="footerDotsTextureOn" class="radio">
+                                <input type="radio" name="footerDotsTexture" value="on" checked/> On
+                            </label>
+                            <label id="footerDotsTextureOff" class="radio">
+                                <input type="radio" name="footerDotsTexture" value="off"/> Off
+                            </label>
+                        </div>
                     </div>
                 </div>
 

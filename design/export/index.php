@@ -49,7 +49,19 @@ echo '/* Xerte theme generated via Xhibit App (www.xhibitapp.com) */
 
 #x_footerBlock { 
     border-top: 1px solid ' . $_POST["footerTopBorder"] . ';
+}';
+
+if ($_POST["footerDotsTexture"] == "off"){
+echo '
+
+/* DOTS TEXTURE OFF */
+
+#x_footerBg {
+    background-image: none;
+}';
 }
+
+echo '
 
 /* BODY BACKGROUND */
 

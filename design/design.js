@@ -29,13 +29,16 @@ var selectHeader = document.getElementById('selectHeader'),
         colour: '#ffffff', /*This probably isn't set initially in Xerte?*/
     },
     footerGradient1 = {
-        colour: '#010101', 
+        colour: '#434343', 
     }
     footerGradient2 = {
-        colour: '#434343', 
+        colour: '#010101', 
     }
     footerTopBorder = {
         colour: '#ffffff', /*This probably isn't set initially in Xerte?*/
+    }
+    footerDotsTexture = {
+        status: 'on',
     }
     bodyBackgroundColour = {
         colour: '#ffffff', 
@@ -62,6 +65,10 @@ var colourPickerIcon = document.getElementsByClassName('colourPickerIcon');
 var hexBox = document.getElementsByClassName('hexBox');
 var plusMinus = document.getElementsByClassName('plusMinus');
 var accordionClose = document.getElementsByClassName('accordionClose');
+
+var radios = document.getElementsByClassName('radio');
+var footerDotsTextureOn = document.getElementById('footerDotsTextureOn');
+var footerDotsTextureOff = document.getElementById('footerDotsTextureOff');
 
 var xerteButtons = document.getElementById('x_mainHolder').getElementsByTagName('button');
 for (i=0; i < xerteButtons.length; i++){
@@ -219,6 +226,16 @@ colourPickerClose.addEventListener('click', function(){
     colourPicker.className = '';
 });
 
+footerDotsTextureOn.addEventListener('click', function(){
+    footerDotsTexture.status = 'on';
+    updatePreview()
+});
+
+footerDotsTextureOff.addEventListener('click', function(){
+    footerDotsTexture.status = 'off';
+    updatePreview()
+});
+
 exportBtn.addEventListener('click', function(){
     exportWindow.className = 'visible';
 });
@@ -242,6 +259,7 @@ function updatePreview() {
     x_footerBlock.style.background = '-moz-linear-gradient(top,  '+footerGradient1.colour+',  '+footerGradient2.colour+')';
     x_footerBlock.style.backgroundImage = '-o-linear-gradient('+footerGradient1.colour+', '+footerGradient2.colour+')';
     x_footerBlock.style.borderTop = '1px solid ' + footerTopBorder.colour;
+    x_footerBg.style.backgroundImage = (footerDotsTexture.status == 'on') ? "url('../includes/xerte/modules/xerte/parent_templates/Nottingham/common_html5/dots.png')" : "none";
     
     x_mainHolder.style.background = bodyBackgroundColour.colour;
     x_mainHolder.getElementsByTagName('p')[0].style.color = bodyParagraphColour.colour;
