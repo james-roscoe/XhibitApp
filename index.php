@@ -31,7 +31,7 @@
             
             <p>The web app is accessible on desktop, tablet and smartphones.</p>
             
-            <p>Please note that Xhibit is still a work-in-progress. We will be launching a preview at the Xerte Conference on 14th April 2016 at Nottingham, UK.</p>
+            <p>Please note that XhibitApp is still a work-in-progress. A preview version was launched at the Xerte Conference on 14th April 2016 in Nottingham, UK, and we continue to make adjustments and improvements.</p>
             
         </div>
         
