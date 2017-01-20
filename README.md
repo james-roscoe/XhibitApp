@@ -4,7 +4,7 @@ Visit the live site at http://www.xhibitapp.com/
 
 ## What is XhibitApp?
 
-XhibitApp is a supporting project for [Xerte](www.xerte.org.uk), the free, open source e-learning content creation tool.
+XhibitApp is a supporting project for [Xerte](http://www.xerte.org.uk), the free, open source e-learning content creation tool.
 
 This web app offers Xerte users the opportunity to produce a theme without having to learn HTML and CSS. The user's edits appear in real-time via a Xerte project preview window.
 
