@@ -1638,7 +1638,7 @@ label.radio input {
     cursor: pointer;
 }
 
-@media (max-width: 590px){
+@media (max-width: 620px){
     #intro h1 {
         padding: 15px;
         border-bottom: 0px;

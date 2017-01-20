@@ -77,10 +77,6 @@ echo '
 
 /* LINK COLOUR */
 
-#x_mainHolder a {
-    color: ' . $_POST["bodyLinkColour"] . ';
-}
-
-';
+' . $_POST["cssOutput"];
 
 ?>

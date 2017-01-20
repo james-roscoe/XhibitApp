@@ -149,7 +149,7 @@ header a:hover, footer a:hover {
     }
 }
 
-@media (max-width:590px){
+@media (max-width:620px){
     .index #intro h1 {
         font-size: 2.5em;
     }

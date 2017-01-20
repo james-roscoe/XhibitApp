@@ -1,4 +1,5 @@
-var selectHeader = document.getElementById('selectHeader'),
+var liveStyles = document.getElementById('liveStyles');
+    selectHeader = document.getElementById('selectHeader'),
     selectFooter = document.getElementById('selectFooter'),
     selectBody = document.getElementById('selectBody'),
     selectMenus = document.getElementById('selectMenus'),
@@ -244,6 +245,15 @@ exportWindowClose.addEventListener('click', function(){
     exportWindow.className = '';
 });
 
+// Update link colour and link hover colour via style tag in head.
+function updateCSS(){
+    var css = '#x_mainHolder a { color: ' + bodyLinkColour.colour + '; }\n';
+    css += '#x_mainHolder a:hover { color: ' + bodyLinkHoverColour.colour + '; }';
+    liveStyles.innerText=css;
+    document.getElementById('cssOutput').value=css;
+};
+updateCSS();
+
 function updatePreview() {
     
     x_headerBlock.style.background = '-ms-linear-gradient(top, '+headerGradient1.colour+', '+headerGradient2.colour+')';
@@ -264,5 +274,6 @@ function updatePreview() {
     x_mainHolder.style.background = bodyBackgroundColour.colour;
     x_mainHolder.getElementsByTagName('p')[0].style.color = bodyParagraphColour.colour;
     x_mainHolder.style.border = '1px solid ' + bodyBorder.colour;
-    x_mainHolder.getElementsByTagName('a')[0].style.color = bodyLinkColour.colour;
+    
+    updateCSS(); //updateCSS function currently used for just link colour and link hover colour.
 }

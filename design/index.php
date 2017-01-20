@@ -9,6 +9,7 @@
     ?>
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="design.css">
+    <style id="liveStyles"></style>
 </head>
 <body>
     
@@ -194,7 +195,9 @@
                             <div class="plusMinus"></div>
                         </div>
                         <div id="bodyLinkHoverColourEdit" class="elementEdit">
-                            <p style="color: black; padding: 10px;">Coming soon.</p>.
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox"  type="text" name="bodyLinkHoverColour"/>
                         </div>
                     </div>
                 </div>
@@ -554,6 +557,8 @@
                     <div id="colFFFFFF" class="colourBoxChoice"></div>
 
                 </div>
+                
+                <input id="cssOutput" type="hidden" name="cssOutput" />
 
                 <div id="exportWindow">
                     <div id="exportWindowClose"></div>
