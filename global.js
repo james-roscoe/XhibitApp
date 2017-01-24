@@ -1,3 +1,5 @@
+/* jshint browser: true */    // Prevents JSHint errors when 'document' is used.
+
 (function () {
     'use strict';
 
