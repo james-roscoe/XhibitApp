@@ -69,7 +69,7 @@
                         <div id="headerGradient2Edit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="headerGradient2"/>
+                            <input class="hexBox" type="text" name="headerGradient2"/>
                         </div>
                         <div id="headerHeading1" class="element">
                             Heading 1
@@ -78,7 +78,7 @@
                         <div id="headerHeading1Edit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="headerHeading1"/>
+                            <input class="hexBox" type="text" name="headerHeading1"/>
                         </div>
                         <div id="headerHeading2" class="element">
                             Heading 2
@@ -87,7 +87,7 @@
                         <div id="headerHeading2Edit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="headerHeading2"/>
+                            <input class="hexBox" type="text" name="headerHeading2"/>
                         </div>
                         <div id="headerBottomBorder" class="element">
                             Bottom Border
@@ -96,7 +96,7 @@
                         <div id="headerBottomBorderEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="headerBottomBorder"/>
+                            <input class="hexBox" type="text" name="headerBottomBorder"/>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                         <div id="footerGradient1Edit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="footerGradient1"/>
+                            <input class="hexBox" type="text" name="footerGradient1"/>
                         </div>
                         <div id="footerGradient2" class="element">
                             Gradient 2
@@ -123,7 +123,7 @@
                         <div id="footerGradient2Edit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="footerGradient2"/>
+                            <input class="hexBox" type="text" name="footerGradient2"/>
                         </div>
                         <div id="footerTopBorder" class="element">
                             Top Border
@@ -132,7 +132,7 @@
                         <div id="footerTopBorderEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="footerTopBorder"/>
+                            <input class="hexBox" type="text" name="footerTopBorder"/>
                         </div>
                         <div id="footerDotsTexture" class="element">
                             Dots Texture
@@ -157,11 +157,12 @@
                     <div class="elements">
                         <div id="bodyBackgroundColour" class="element">
                             Background Colour
-                            <div class="plusMinus"></div></div>
+                            <div class="plusMinus"></div>
+                        </div>
                         <div id="bodyBackgroundColourEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="bodyBackgroundColour"/>
+                            <input class="hexBox" type="text" name="bodyBackgroundColour"/>
                         </div>
                         <div id="bodyParagraphColour" class="element">
                             Paragraph Colour
@@ -170,7 +171,7 @@
                         <div id="bodyParagraphColourEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="bodyParagraphColour"/>
+                            <input class="hexBox" type="text" name="bodyParagraphColour"/>
                         </div>
                         <div id="bodyBorder" class="element">
                             Border
@@ -179,7 +180,7 @@
                         <div id="bodyBorderEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="bodyBorder"/>
+                            <input class="hexBox" type="text" name="bodyBorder"/>
                         </div>
                         <div id="bodyLinkColour" class="element">
                             Link Colour
@@ -188,7 +189,7 @@
                         <div id="bodyLinkColourEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="bodyLinkColour"/>
+                            <input class="hexBox" type="text" name="bodyLinkColour"/>
                         </div>
                         <div id="bodyLinkHoverColour" class="element">
                             Link Hover Colour
@@ -197,7 +198,7 @@
                         <div id="bodyLinkHoverColourEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox"  type="text" name="bodyLinkHoverColour"/>
+                            <input class="hexBox" type="text" name="bodyLinkHoverColour"/>
                         </div>
                     </div>
                 </div>
@@ -208,7 +209,51 @@
                         <div class="accordionClose"></div>
                     </div>
                     <div class="elements">
-                        <div><em>Coming soon...</em></div>
+                        <div id="menuBackgroundColour" class="element">
+                            Background Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="menuBackgroundColourEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="bodyBackgroundColour"/>
+                        </div>
+                        <div id="menuHeaderBackground" class="element">
+                            Header Background Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="menuHeaderBackgroundEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="menuHeaderBackground"/>
+                        </div>
+                        <div id="menuHeaderText" class="element">
+                            Header Text Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="menuHeaderTextEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="menuHeaderText"/>
+                        </div>
+                        <div id="menuItemBackground" class="element">
+                            Item Background Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="menuItemBackgroundEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="menuItemBackground"/>
+                        </div>
+                        <div id="menuItemText" class="element">
+                            Item Text Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="menuItemTextEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="menuItemText"/>
+                        </div>
                     </div>
                 </div>
 

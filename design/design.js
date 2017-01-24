@@ -29,7 +29,8 @@
         radios = document.getElementsByClassName('radio'),
         footerDotsTextureOn = document.getElementById('footerDotsTextureOn'),
         footerDotsTextureOff = document.getElementById('footerDotsTextureOff'),
-        xerteButtons = document.getElementById('x_mainHolder').getElementsByTagName('button'),
+        xerteButtons = document.getElementById('preview').getElementsByTagName('button'),
+        xhibitXerteMenu = document.getElementById('xhibitXerteMenu'),
         hexValue,
         i,
         j,
@@ -76,6 +77,21 @@
             },
             bodyLinkHoverColour : {
                 colour: '#0000EE'
+            },
+            menuBackgroundColour : {
+                colour: '#ffffff'
+            },
+            menuHeaderBackground : {
+                colour: '#2d2a2a'
+            },
+            menuHeaderText : {
+                colour: '#ffffff'
+            },
+            menuItemBackground : {
+                colour: '#e6e6e6'
+            },
+            menuItemText : {
+                colour: '#555555'
             }
     };
     
@@ -154,13 +170,28 @@
 
         css += '/* LINK COLOUR */\n\n';
 
-
         css += '#x_mainHolder a {\n';
         css += '\t' + 'color: ' + styles.bodyLinkColour.colour + ';\n';
         css += '}\n';
         css += '#x_mainHolder a:hover {\n';
         css += '\t' + 'color: ' + styles.bodyLinkHoverColour.colour + ';\n';
-        css += '}\n';
+        css += '}\n\n';
+
+        css += '/* MENUS */\n\n';
+
+        css += '.ui-dialog {\n';
+        css += '\t' + 'background: ' + styles.menuBackgroundColour.colour + ';\n';
+        css += '}\n\n';
+
+        css += '.ui-dialog .ui-widget-header {\n';
+        css += '\t' + 'background: ' + styles.menuHeaderBackground.colour + ';\n';
+        css += '\t' + 'color: ' + styles.menuHeaderText.colour + ';\n';
+        css += '}\n\n';
+
+        css += '.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\n';
+        css += '\t' + 'background: ' + styles.menuItemBackground.colour + ';\n';
+        css += '\t' + 'color: ' + styles.menuItemText.colour + ';\n';
+        css += '}';
 
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
@@ -213,6 +244,7 @@
         selectHeader.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
+        xhibitXerteMenu.style.display = 'none';
     });
 
     selectFooter.addEventListener('click', function () {
@@ -233,6 +265,7 @@
         selectFooter.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
+        xhibitXerteMenu.style.display = 'none';
     });
 
     selectBody.addEventListener('click', function () {
@@ -253,6 +286,7 @@
         selectBody.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
+        xhibitXerteMenu.style.display = 'none';
     });
 
     selectMenus.addEventListener('click', function () {
@@ -261,6 +295,7 @@
             selectHeader.className = 'inactive';
             selectBody.className = 'inactive';
             selectFooter.className = 'inactive';
+            xhibitXerteMenu.style.display = 'block';
         } else {
             accordionMenus.className = 'accordion';
             selectHeader.className = '';
