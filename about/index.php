@@ -21,17 +21,38 @@
 
             <h1>About</h1>
             
+            <h2>How do I use Xhibit?</h2>
+            
             <p>The best way to get started is to try out Xhibit for yourself. Click on <a href="/design/">Start Your Design</a> to begin designing your theme.</p>
             
-            <p>We will be posting more comprehensive support information soon.</p>
-            
-            <p>Until then, you can watch a recorded demonstration below (including how to generate and attach a stylesheet) from the Xhibit Launch Event at the 2016 Xerte Conference.</p>
+            <p>We will be posting more comprehensive support information soon. Until then, you can watch a recorded demonstration below (including how to generate and attach a stylesheet) from the Xhibit Launch Event at the 2016 Xerte Conference.</p>
             
             <p>If you have any questions or comments please get in touch via the <a href="/contact/">contact page</a>.</p>
 
             <div class='launchVideoContainer'>
                 <iframe src='https://www.youtube.com/embed/xlvxlXyUFx4' frameborder='0' allowfullscreen></iframe>
 			</div>
+            
+            <hr/>
+            
+            <h2>What are people saying about Xhibit?</h2>
+            
+            <p>We've had a great response so far from the Xerte community. Take a look at just some of the comments from developers, learning technologists and educators who have seen what Xhibit can do: </p>
+            
+            <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">Well, <a href="https://twitter.com/XhibitApp">@XhibitApp</a> looks fabulous already - live preview is great! And more features to come <a href="https://t.co/SIvwg4q53m">https://t.co/SIvwg4q53m</a> <a href="https://twitter.com/hashtag/xerte16?src=hash">#xerte16</a> <a href="https://twitter.com/hashtag/XhibitApp?src=hash">#XhibitApp</a></p>&mdash; Simon Wood (@MrSimonWood) <a href="https://twitter.com/MrSimonWood/status/720543616754675713">14 April 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">Great!! A web app to create themes in Xerte. Very easy to use made by AgriFood ATP <a href="https://twitter.com/hashtag/xerte16?src=hash">#xerte16</a></p>&mdash; Inge Donkervoort (@12ChangeLearn) <a href="https://twitter.com/12ChangeLearn/status/720546563756539904">14 April 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">I love it when talented people create a solution to an issue that makes technology more usable for all. <a href="https://twitter.com/XhibitApp">@XhibitApp</a> <a href="https://twitter.com/hashtag/xhibitapp?src=hash">#xhibitapp</a> <a href="https://twitter.com/hashtag/xerte16?src=hash">#xerte16</a></p>&mdash; Kerry Pinny (@KerryPinny) <a href="https://twitter.com/KerryPinny/status/720548973090598912">14 April 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <blockquote class="twitter-tweet" data-conversation="none" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/_JamesRoscoe">@_JamesRoscoe</a> <a href="https://twitter.com/XhibitApp">@xhibitapp</a> It looks a really good tool, I’m looking forward to using it</p>&mdash; Helen Davies (@HelenMD) <a href="https://twitter.com/HelenMD/status/720936865851969536">15 April 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">Brilliant work guys, nice one! <a href="https://t.co/8xedwbatMj">https://t.co/8xedwbatMj</a></p>&mdash; Xerte Project (@xerte_project) <a href="https://twitter.com/xerte_project/status/824177245191340032">25 January 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             
         </div>
         
