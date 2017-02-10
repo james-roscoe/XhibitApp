@@ -15,7 +15,7 @@ form {
 #zoneSelector {
     position: absolute;
     width: 100%;
-    background-color: #418cb5;
+    background-color: #1C74A4;
 }
 
 #zoneSelector div {
@@ -25,21 +25,48 @@ form {
     float: left;
     cursor: pointer;
 }
+#x_pageHolder {
+	height:296px !important;
+}
 
 #selectHeader {
-    background-image: url('/images/select-header.png');
+    background-image: url('../images/select-header-new.png');
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
 }
 
 #selectFooter {
-    background-image: url('/images/select-footer.png');
+    background-image: url('../images/select-footer-new.png');
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
 }
 
 #selectBody {
-    background-image: url('/images/select-body.png');
+    background-image: url('../images/select-body-new.png');
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
 }
 
 #selectMenus {
-    background-image: url('/images/select-menus.png');
+    background-image: url('../images/select-menus-new.png');
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
 }
 
 #selectHeader.inactive, #selectFooter.inactive, #selectBody.inactive, #selectMenus.inactive {
@@ -47,7 +74,13 @@ form {
 }
 
 #exportBtn {
-    background: url('/images/export.png');
+    background: url('../images/export-new.png');
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
 }
 
 #help {
@@ -56,7 +89,7 @@ form {
     width: 40%;
     padding-left: 20px;
     color: white;
-    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .accordion {
@@ -81,7 +114,7 @@ form {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 1.2em;
-    font-family: 'open_sanssemibold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .accordion .elements {
@@ -99,6 +132,7 @@ form {
     border-bottom: 1px solid #0a4f73;
     font-size: 0.8em;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .accordion .elements .element:hover {
@@ -169,11 +203,13 @@ form {
     height: 30px;
     font-size: 0.8em;
     padding-left: 5px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 label.radio {
     margin-left: 24px;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
 }
 
 label.radio input {
@@ -214,10 +250,12 @@ label.radio input {
 #colourPicker p, #exportWindow p {
     margin: 10px;
     color: #504e4e;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #colourPicker p.windowTitle, #exportWindow p.windowTitle {
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #colourPicker .colourBoxChoice {
@@ -1612,10 +1650,15 @@ label.radio input {
 
 #confirmBtn {
     text-align: center;
-    font-weight: bold;
     color: white;
     margin: 0px;
     border: 1px solid #064c71;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition: background .5s ease;
+}
+#confirmBtn:hover {
+	background-color: #105F8A;
 }
 
 #exportWindow {
@@ -1626,8 +1669,6 @@ label.radio input {
 #confirmBtn {
     width: 100px;
     height: 45px;
-    padding: 10px;
-    font-size: 1.2em;
     background-color: #064c71;
     border-radius: 8px;
     position: relative;
@@ -1636,11 +1677,12 @@ label.radio input {
     margin-top: 30px;
     left: 50%;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media (max-width: 620px){
     #intro h1 {
-        padding: 15px;
+        padding: 5px;
         border-bottom: 0px;
     }
     #intro p {
