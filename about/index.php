@@ -6,10 +6,22 @@
     <title>About | Xhibit App</title>
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="about.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://www.xhibitapp.com/">
+    <meta name="twitter:title" content="Xhibit App">
+    <meta name="twitter:description" content="Xhibit offers non-coding Xerte users the opportunity to produce a theme without having to learn HTML and CSS. The user's edits appear in real-time via a Xerte project preview window.">
+    <meta name="twitter:image" content="http://www.xhibitapp.com/images/xhibit-social.jpg">
+    <!-- TWITTER -->
+
 </head>
 <body>
     
     <?php include_once("../includes/analyticstracking.php") ?>
+
+<div class="mainWrapper">
 
     <?php 
     include('../includes/header.html');
@@ -23,9 +35,13 @@
             
             <h2>How do I use Xhibit?</h2>
             
-            <p>The best way to get started is to try out Xhibit for yourself. Click on <a href="/design/">Start Your Design</a> to begin designing your theme.</p>
+            <p>The best way to get started is to try out Xhibit for yourself.</p>
+
+             <div class="btn-wrapper">
+                    <a href="/design/"><button type="button" class="button btn-blue">Start Your Design</button></a>
+            </div>
             
-            <p>We will be posting more comprehensive support information soon. Until then, you can watch a recorded demonstration below (including how to generate and attach a stylesheet) from the Xhibit Launch Event at the 2016 Xerte Conference.</p>
+            <p>We will be posting more comprehensive support information on how to use Xhibit soon. Until then, you can watch a recorded demonstration below (including how to generate and attach a stylesheet) from the Xhibit Launch Event at the 2016 Xerte Conference.</p>
             
             <p>If you have any questions or comments please get in touch via the <a href="/contact/">contact page</a>.</p>
 
@@ -53,10 +69,16 @@
             
             <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">Brilliant work guys, nice one! <a href="https://t.co/8xedwbatMj">https://t.co/8xedwbatMj</a></p>&mdash; Xerte Project (@xerte_project) <a href="https://twitter.com/xerte_project/status/824177245191340032">25 January 2017</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Very neat, very usable! <a href="https://t.co/1HWonSzMAt">https://t.co/1HWonSzMAt</a></p>&mdash; Simon Thompson (@bizzypeople) <a href="https://twitter.com/bizzypeople/status/824705444660776960">January 26, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             
         </div>
         
     </div>
+
+   <div class="push"></div>
+</div>
 
     <?php 
     include('../includes/footer.html');

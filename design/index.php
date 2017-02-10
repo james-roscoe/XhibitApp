@@ -8,12 +8,23 @@
     include('../includes/xerte/xerte-head.html');
     ?>
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="design.css">
     <style id="liveStyles"></style>
+
+     <!-- TWITTER -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://www.xhibitapp.com/">
+    <meta name="twitter:title" content="Xhibit App">
+    <meta name="twitter:description" content="Xhibit offers non-coding Xerte users the opportunity to produce a theme without having to learn HTML and CSS. The user's edits appear in real-time via a Xerte project preview window.">
+    <meta name="twitter:image" content="http://www.xhibitapp.com/images/xhibit-social.jpg">
+    <!-- TWITTER -->
 </head>
 <body>
     
     <?php include_once("../includes/analyticstracking.php") ?>
+
+ 
 
     <?php 
     include('../includes/header.html');
@@ -23,7 +34,9 @@
         
         <div id="intro">
 
-            <h1>Design Your Theme</h1>
+            <h1 class="designSpace">Design Your Theme</h1>
+
+            <h2 class="designH2">Customise your colours</h2>
 
             <p>Start designing your Xerte theme by using the Xhibit designer tools below. When you are ready click the export button.</p>
             
@@ -35,15 +48,15 @@
 
                 <div id="zoneSelector">
 
-                    <div id="selectHeader"></div>
-                    <div id="selectFooter"></div>
-                    <div id="selectBody"></div>
-                    <div id="selectMenus"></div>
-                    <div id="exportBtn"></div>
+                    <div id="selectHeader">Header</div>
+                    <div id="selectFooter">Footer</div>
+                    <div id="selectBody">Body</div>
+                    <div id="selectMenus">Menus</div>
+                    <div id="exportBtn">Export</div>
 
                 </div>
                 
-                <p id="help">Select a design area to focus on, using the tiled menu above.</p>
+                <p id="help">Select a design area to focus on, using the tiled menu items above.</p>
 
                 <div style="clear:both"></div>
 
@@ -626,6 +639,8 @@
         </form>
         
     </div>
+
+
 
     <?php 
     include('../includes/footer.html');
