@@ -15,6 +15,18 @@
     height: 100%; 
 }
 
+.tweets {
+    background-color: #075E8D;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .twitter-tweet {
-    margin: 20px auto 20px !important;
+    margin: 10px;
+    padding: 10px;
+    background-color: #1C74A4;
+    flex: 1;
+    border-radius: 10px;
 }
