@@ -20,14 +20,15 @@
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex;
+    display: flex !important;
     -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     background-color: #075E8D;
     border-radius: 10px;
     padding: 10px;
 }
 
+/* '!important' rules required as Safari produces inline styles for embedded Tweets */
 .twitter-tweet, .tweets iframe {
     -webkit-box-flex: 1 !important;
     -moz-box-flex: 1 !important;
@@ -37,6 +38,12 @@
     margin: 10px !important;
     padding: 10px !important;
     background-color: #1C74A4 !important;
-    flex: 1 !important;
+	flex: 1 1 273px !important;
     border-radius: 10px !important;
+    min-width: 0 !important;
+}
+
+/* Try to force embedded Tweets to fill full width by targetting Shadow DOM */
+.twitter-tweet::shadow .EmbeddedTweet {
+    max-width: none !important;
 }
