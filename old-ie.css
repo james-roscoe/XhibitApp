@@ -1,0 +1,52 @@
+﻿/* IE and Browser Upgrade Warning */
+
+.ie-only {
+  display:block;
+}
+
+#ie {
+  width:100%; 
+  height: 100%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow:hidden;
+  background-color: #fff;
+}
+#message {
+  width: 100%;
+  height:auto;
+  background-color: #075E8D;
+  position:relative;
+  line-height: 150%
+}
+#message img {
+  margin: 0 auto;
+  display:block;
+  padding-top:34px;
+}
+#alert {
+  text-align: center;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  max-width:960px;
+  margin: 0 auto;
+  padding:29px;
+}
+#alert a:link, #alert a:visited {
+  color: #c1e5f8;
+}
+#alert a:hover {
+  color: #93CCEA;
+}
+#warning-image {
+  text-align: center;
+  margin-top:30px;
+}
+#warning-image img {
+  max-width: 100%;
+  height: auto;
+}

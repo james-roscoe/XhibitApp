@@ -6,6 +6,16 @@
     <title>About | Xhibit App</title>
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="about.css">
+
+    <!--[if IE 9]>
+      <style>.tweets,.tweet-share {display: none;}</style>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" type="text/css" href="../old-ie.css">
+      <style>.mainWrapper,.sticky {display: none;}</style>
+    <![endif]-->
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 
     <!-- TWITTER -->
@@ -51,9 +61,9 @@
             
             <hr/>
             
-            <h2>What are people saying about Xhibit?</h2>
+            <h2 class="tweet-share">What are people saying about Xhibit?</h2>
             
-            <p>We've had a great response so far from the Xerte community. Take a look at just some of the comments from developers, learning technologists and educators who have seen what Xhibit can do: </p>
+            <p class="tweet-share">We've had a great response so far from the Xerte community. Take a look at just some of the comments from developers, learning technologists and educators who have seen what Xhibit can do: </p>
             
             <div class="tweets">
             
@@ -89,6 +99,18 @@
     <?php 
     include('../includes/footer.html');
     ?>
+
+   <!--[if lte IE 8]><div id="ie" class="ie-only">
+            <div id="message">
+                <img src="../images/xhibit-logo.png" width="190px">
+                <div id="alert">
+                    Your current browser is out-of-date. Please <a href="https://updatemybrowser.org/" target="_blank">upgrade it now</a> to enjoy the best possible experience on Xhibit App.
+                </div>
+            </div>
+            <div id="warning-image">
+                <img src="../images/sad-pc.png" width="446px" alt="Upgrade your browser now">
+            </div>
+   </div><![endif]-->
     
 </body>
     
