@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Xhibit App</title>
     <link rel="stylesheet" type="text/css" href="xhibit.css">
+
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" type="text/css" href="old-ie.css">
+      <style>.mainWrapper,.sticky {display: none;}</style>
+    <![endif]-->
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 
     <!-- TWITTER -->
@@ -81,6 +87,18 @@
     <?php 
     include('includes/footer.html');
     ?>
+
+   <!--[if lte IE 8]><div id="ie" class="ie-only">
+            <div id="message">
+                <img src="../images/xhibit-logo.png" width="190px">
+                <div id="alert">
+                    Your current browser is out-of-date. Please <a href="https://updatemybrowser.org/" target="_blank">upgrade it now</a> to enjoy the best possible experience on Xhibit App.
+                </div>
+            </div>
+            <div id="warning-image">
+                <img src="images/sad-pc.png" width="446px" alt="Upgrade your browser now">
+            </div>
+   </div><![endif]-->
     
 </body>
     

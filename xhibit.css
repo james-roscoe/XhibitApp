@@ -54,6 +54,9 @@ header {
     color: white;
     background-color: #075E8D;
 }
+header img {
+    border:none;
+}
 footer {
     color: white;
     background-color: #075E8D;
