@@ -6,7 +6,7 @@ form {
     height: 100%;
 }
 
-#designer {
+.mainWrapper #designer {
     position: relative;
     background-color: #064c71;
     height: 377px;
@@ -1684,6 +1684,7 @@ label.radio input {
     #intro h1 {
         padding: 5px;
         border-bottom: 0px;
+        background-color: #fff;
     }
     #intro p {
         display: none;
@@ -1694,6 +1695,7 @@ label.radio input {
     .design.wrapper {
         padding: 0px;
         height: 100%;
+        background-color: #064c71;
     }
     #zoneSelector {
         position: fixed;
@@ -1736,8 +1738,11 @@ label.radio input {
     #exportBtn {
         top: 310px;
     }
-    footer {
+    .sticky, .push, footer {
         display: none;
+    }
+    body {
+    	background-color: #064c71;
     }
 }
 
