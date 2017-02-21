@@ -7,8 +7,9 @@
     <?php 
     include('../includes/xerte/xerte-head.html');
     ?>
+
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="design.css">
     <style id="liveStyles"></style>
 
@@ -17,6 +18,12 @@
       <style>.mainWrapper,.sticky {display: none;}</style>
     <![endif]-->
 
+    <!-- CSS -->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <!-- Fonts -->
+
      <!-- TWITTER -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://www.xhibitapp.com/">
@@ -24,12 +31,29 @@
     <meta name="twitter:description" content="Xhibit offers non-coding Xerte users the opportunity to produce a theme without having to learn HTML and CSS. The user's edits appear in real-time via a Xerte project preview window.">
     <meta name="twitter:image" content="http://www.xhibitapp.com/images/xhibit-social.jpg">
     <!-- TWITTER -->
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../images/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="../images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <!-- Favicon -->
+
 </head>
 <body>
     
     <?php include_once("../includes/analyticstracking.php") ?>
 
- 
+ <div class="mainWrapper">
 
     <?php 
     include('../includes/header.html');
@@ -678,7 +702,8 @@
         
     </div>
 
-
+   <div class="push"></div>
+</div>
 
     <?php 
     include('../includes/footer.html');
