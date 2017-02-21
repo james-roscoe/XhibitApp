@@ -57,6 +57,7 @@
                     <div id="selectFooter">Footer</div>
                     <div id="selectBody">Body</div>
                     <div id="selectMenus">Menus</div>
+                    <div id="selectIcons">Icons</div>
                     <div id="exportBtn">Export</div>
 
                 </div>
@@ -64,6 +65,17 @@
                 <p id="help">Select a design area to focus on, using the tiled menu items above.</p>
 
                 <div style="clear:both"></div>
+                
+                <div id="accordionHelp" class="accordion visible">
+                    <div class="elementTitle">
+                        Start your Design - Help
+                        <div class="accordionClose"></div>
+                    </div>
+                    <div class="elements">
+                        <p>Scroll through the design area options (bottom) from left-to-right and select a feature to work on. You can export your theme using the orange button (far-right).</p>
+                        <p id="helpClose">Got it! Close Window</p>
+                    </div>
+                </div>
 
                 <div id="accordionHeader" class="accordion">
                     <div class="elementTitle">
@@ -272,6 +284,27 @@
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="menuItemText"/>
                         </div>
+                    </div>
+                </div>
+
+                <div id="accordionIcons" class="accordion">
+                    <div class="elementTitle">
+                        Icons
+                        <div class="accordionClose"></div>
+                    </div>
+                    <div class="elements">
+                        <p>Coming soon.</p>
+<!--
+                        <div id="nextIcon" class="element">
+                            Next Arrow
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="nextIconEdit" class="elementEdit">
+                            <div class="iconBox"></div>
+                            <div class="iconPickerIcon"></div>
+                            <input class="unicodeBox" type="text"/>
+                        </div>
+-->
                     </div>
                 </div>
 

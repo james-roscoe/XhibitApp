@@ -9,13 +9,19 @@
         selectFooter = document.getElementById('selectFooter'),
         selectBody = document.getElementById('selectBody'),
         selectMenus = document.getElementById('selectMenus'),
+        selectIcons = document.getElementById('selectIcons'),
+        accordionHelp = document.getElementById('accordionHelp'),
         accordionHeader = document.getElementById('accordionHeader'),
         accordionFooter = document.getElementById('accordionFooter'),
         accordionBody = document.getElementById('accordionBody'),
         accordionMenus = document.getElementById('accordionMenus'),
+        accordionIcons = document.getElementById('accordionIcons'),
         colourPicker = document.getElementById('colourPicker'),
         colourPickerClose = document.getElementById('colourPickerClose'),
         colourBoxChoice = document.getElementsByClassName('colourBoxChoice'),
+        iconPicker = document.getElementById('iconPicker'),
+        iconPickerClose = document.getElementById('iconPickerClose'),
+        iconBoxChoice = document.getElementsByClassName('iconBoxChoice'),
         exportBtn = document.getElementById('exportBtn'),
         exportWindow = document.getElementById('exportWindow'),
         exportWindowClose = document.getElementById('exportWindowClose'),
@@ -23,8 +29,12 @@
         elementEdit = document.getElementsByClassName('elementEdit'),
         colourBox = document.getElementsByClassName('colourBox'),
         colourPickerIcon = document.getElementsByClassName('colourPickerIcon'),
+        iconBox = document.getElementsByClassName('iconBox'),
+        iconPickerIcon = document.getElementsByClassName('iconPickerIcon'),
         hexBox = document.getElementsByClassName('hexBox'),
+        unicodeBox = document.getElementsByClassName('unicodeBox'),
         plusMinus = document.getElementsByClassName('plusMinus'),
+        helpClose = document.getElementById('helpClose'),
         accordionClose = document.getElementsByClassName('accordionClose'),
         radios = document.getElementsByClassName('radio'),
         footerDotsTextureOn = document.getElementById('footerDotsTextureOn'),
@@ -92,8 +102,13 @@
             },
             menuItemText : {
                 colour: '#555555'
+            },
+            nextIcon : {
+                content: '',
+                colour: '',
+                background: ''
             }
-    };
+        }
     
     // Generate the CSS and place in the document head to enable live preview.
 
@@ -232,15 +247,19 @@
             selectFooter.className = 'inactive';
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
+            selectIcons.className = 'inactive';
         } else {
             accordionHeader.className = 'accordion';
             selectFooter.className = '';
             selectBody.className = '';
             selectMenus.className = '';
+            selectIcons.className = '';
         }
+        accordionHelp.className = 'accordion';
         accordionFooter.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
+        accordionIcons.className = 'accordion';
         selectHeader.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -253,15 +272,19 @@
             selectHeader.className = 'inactive';
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
+            selectIcons.className = 'inactive';
         } else {
             accordionFooter.className = 'accordion';
             selectHeader.className = '';
             selectBody.className = '';
             selectMenus.className = '';
+            selectIcons.className = '';
         }
+        accordionHelp.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
+        accordionIcons.className = 'accordion';
         selectFooter.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -274,15 +297,19 @@
             selectHeader.className = 'inactive';
             selectFooter.className = 'inactive';
             selectMenus.className = 'inactive';
+            selectIcons.className = 'inactive';
         } else {
+            accordionHelp.className = 'accordion';
             accordionBody.className = 'accordion';
             selectHeader.className = '';
             selectFooter.className = '';
             selectMenus.className = '';
+            selectIcons.className = '';
         }
         accordionFooter.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionMenus.className = 'accordion';
+        accordionIcons.className = 'accordion';
         selectBody.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -295,19 +322,48 @@
             selectHeader.className = 'inactive';
             selectBody.className = 'inactive';
             selectFooter.className = 'inactive';
+            selectIcons.className = 'inactive';
             xhibitXerteMenu.style.display = 'block';
         } else {
             accordionMenus.className = 'accordion';
             selectHeader.className = '';
             selectBody.className = '';
             selectFooter.className = '';
+            selectIcons.className = '';
         }
+        accordionHelp.className = 'accordion';
         accordionFooter.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionBody.className = 'accordion';
+        accordionIcons.className = 'accordion';
         selectMenus.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
+    });
+
+    selectIcons.addEventListener('click', function () {
+        if (accordionIcons.className.indexOf('visible') === -1) {
+            accordionIcons.className += ' visible';
+            selectHeader.className = 'inactive';
+            selectFooter.className = 'inactive';
+            selectBody.className = 'inactive';
+            selectMenus.className = 'inactive';
+        } else {
+            accordionIcons.className = 'accordion';
+            selectHeader.className = '';
+            selectFooter.className = '';
+            selectBody.className = '';
+            selectMenus.className = '';
+        }
+        accordionHelp.className = 'accordion';
+        accordionFooter.className = 'accordion';
+        accordionHeader.className = 'accordion';
+        accordionBody.className = 'accordion';
+        accordionMenus.className = 'accordion';
+        selectIcons.className = '';
+        colourPicker.className = '';
+        exportWindow.className = '';
+        xhibitXerteMenu.style.display = 'none';
     });
     
     // Functionality for closing the zones.
@@ -319,6 +375,7 @@
             selectFooter.className = '';
             selectBody.className = '';
             selectMenus.className = '';
+            selectIcons.className = '';
             colourPicker.className = '';
         });
     }
@@ -326,6 +383,10 @@
     for (i = 0; i < accordionClose.length; i++) {
         closeAccordions(i);
     }
+    
+    helpClose.addEventListener('click', function () {
+        accordionHelp.className = 'accordion';
+    });
     
     // Set default ColourBoxes and HexBoxes based on styles object, and add their event listeners.
     
@@ -355,6 +416,35 @@
     
     for (i = 0; i < colourBox.length; i++) {
         editElement(i);
+    }
+
+    // Set default icons based on styles object, and add their event listeners.
+    
+    function editIcon(_i) {
+        
+        // Set defaults
+        var unicodeValue = styles[iconBox[_i].parentElement.id.slice(0, -4)].colour;
+        unicodeBox[_i].value = unicodeValue;
+        
+        // Event listeners
+        unicodeBox[_i].addEventListener('keyup', function () {
+            iconBox[_i].style.backgroundColor = unicodeBox[_i].value;
+            var targetElement = iconBox[_i].parentElement.id.slice(0, -4),
+                newValue = unicodeBox[_i].value;
+            styles[targetElement].unicode = newValue;
+            updateCSS();
+        });
+        iconBox[_i].addEventListener('click', function () {
+            iconPicker.className = 'visible ' + iconBox[_i].parentElement.id.slice(0, -4);
+        });
+        iconPickerIcon[_i].addEventListener('click', function () {
+            iconPicker.className = 'visible ' + iconBox[_i].parentElement.id.slice(0, -4);
+        });
+        
+    }
+    
+    for (i = 0; i < iconBox.length; i++) {
+        editIcon(i);
     }
     
     //Functionality for selecting from colour palette
