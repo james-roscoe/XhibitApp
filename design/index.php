@@ -97,6 +97,9 @@
                     </div>
                     <div class="elements">
                         <p>Scroll through the design area options (bottom) from left-to-right and select a feature to work on. You can export your theme using the orange button (far-right).</p>
+                        <div class="dragAnimation">
+                            <div class="drag"></div>
+                        </div>
                         <p id="helpClose">Got it! Close Window</p>
                     </div>
                 </div>
