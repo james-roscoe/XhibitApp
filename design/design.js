@@ -10,12 +10,14 @@
         selectBody = document.getElementById('selectBody'),
         selectMenus = document.getElementById('selectMenus'),
         selectIcons = document.getElementById('selectIcons'),
+        selectFont = document.getElementById('selectFont'),
         accordionHelp = document.getElementById('accordionHelp'),
         accordionHeader = document.getElementById('accordionHeader'),
         accordionFooter = document.getElementById('accordionFooter'),
         accordionBody = document.getElementById('accordionBody'),
         accordionMenus = document.getElementById('accordionMenus'),
         accordionIcons = document.getElementById('accordionIcons'),
+        accordionFont = document.getElementById('accordionFont'),
         colourPicker = document.getElementById('colourPicker'),
         colourPickerClose = document.getElementById('colourPickerClose'),
         colourBoxChoice = document.getElementsByClassName('colourBoxChoice'),
@@ -75,6 +77,9 @@
             },
             bodyBackgroundColour : {
                 colour: '#ffffff'
+            },
+            bodyTextSizeDrop : {
+                fontSize: '12pt'
             },
             bodyParagraphColour : {
                 colour: '#000000'
@@ -177,10 +182,11 @@
         css += '\t' + 'border: 1px solid ' + styles.bodyBorder.colour + ';\n';
         css += '}\n\n';
 
-        css += '/* PARAGRAPH COLOUR */\n\n';
+        css += '/* PARAGRAPH COLOUR & FONT SIZE */\n\n';
 
         css += '#x_mainHolder p {\n';
         css += '\t' + 'color: ' + styles.bodyParagraphColour.colour + ';\n';
+        css += '\t' + 'font-size: ' + styles.bodyTextSizeDrop.fontSize + ';\n';
         css += '}\n\n';
 
         css += '/* LINK COLOUR */\n\n';
@@ -248,18 +254,21 @@
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
             selectIcons.className = 'inactive';
+            selectFont.className = 'inactive';
         } else {
             accordionHeader.className = 'accordion';
             selectFooter.className = '';
             selectBody.className = '';
             selectMenus.className = '';
             selectIcons.className = '';
+            selectFont.className = '';
         }
         accordionHelp.className = 'accordion';
         accordionFooter.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
         accordionIcons.className = 'accordion';
+        accordionFont.className = 'accordion';
         selectHeader.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -273,18 +282,21 @@
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
             selectIcons.className = 'inactive';
+            selectFont.className = 'inactive';
         } else {
             accordionFooter.className = 'accordion';
             selectHeader.className = '';
             selectBody.className = '';
             selectMenus.className = '';
             selectIcons.className = '';
+            selectFont.className = '';
         }
         accordionHelp.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
         accordionIcons.className = 'accordion';
+        accordionFont.className = 'accordion';
         selectFooter.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -298,6 +310,7 @@
             selectFooter.className = 'inactive';
             selectMenus.className = 'inactive';
             selectIcons.className = 'inactive';
+            selectFont.className = 'inactive';
         } else {
             accordionHelp.className = 'accordion';
             accordionBody.className = 'accordion';
@@ -305,11 +318,13 @@
             selectFooter.className = '';
             selectMenus.className = '';
             selectIcons.className = '';
+            selectFont.className = '';
         }
         accordionFooter.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionMenus.className = 'accordion';
         accordionIcons.className = 'accordion';
+        accordionFont.className = 'accordion';
         selectBody.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -323,6 +338,7 @@
             selectBody.className = 'inactive';
             selectFooter.className = 'inactive';
             selectIcons.className = 'inactive';
+            selectFont.className = 'inactive';
             xhibitXerteMenu.style.display = 'block';
         } else {
             accordionMenus.className = 'accordion';
@@ -330,12 +346,14 @@
             selectBody.className = '';
             selectFooter.className = '';
             selectIcons.className = '';
+            selectFont.className = '';
         }
         accordionHelp.className = 'accordion';
         accordionFooter.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionIcons.className = 'accordion';
+        accordionFont.className = 'accordion';
         selectMenus.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -348,23 +366,55 @@
             selectFooter.className = 'inactive';
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
+            selectFont.className = 'inactive';
         } else {
             accordionIcons.className = 'accordion';
             selectHeader.className = '';
             selectFooter.className = '';
             selectBody.className = '';
             selectMenus.className = '';
+            selectFont.className = '';
         }
         accordionHelp.className = 'accordion';
         accordionFooter.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
+        accordionFont.className = 'accordion';
         selectIcons.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
         xhibitXerteMenu.style.display = 'none';
     });
+
+    selectFont.addEventListener('click', function () {
+        if (accordionFont.className.indexOf('visible') === -1) {
+            accordionFont.className += ' visible';
+            selectHeader.className = 'inactive';
+            selectFooter.className = 'inactive';
+            selectBody.className = 'inactive';
+            selectMenus.className = 'inactive';
+            selectIcons.className = 'inactive';
+        } else {
+            accordionFont.className = 'accordion';
+            selectHeader.className = '';
+            selectFooter.className = '';
+            selectBody.className = '';
+            selectMenus.className = '';
+            selectIcons.className = '';
+        }
+        accordionHelp.className = 'accordion';
+        accordionFooter.className = 'accordion';
+        accordionHeader.className = 'accordion';
+        accordionBody.className = 'accordion';
+        accordionMenus.className = 'accordion';
+        accordionIcons.className = 'accordion';
+        selectFont.className = '';
+        colourPicker.className = '';
+        exportWindow.className = '';
+        xhibitXerteMenu.style.display = 'none';
+    });
+    
     
     // Functionality for closing the zones.
     
@@ -376,6 +426,7 @@
             selectBody.className = '';
             selectMenus.className = '';
             selectIcons.className = '';
+            selectFont.className = '';
             colourPicker.className = '';
         });
     }
@@ -487,6 +538,16 @@
 
     exportWindowClose.addEventListener('click', function () {
         exportWindow.className = '';
+    });
+
+    //Update Body > Paragraph Text Size through Select (Options) Drop-Down Menu
+    //Please Note: You need to specify the 'document.getElementByID("")'' approach when attaching the change AddEventListener or the event won't work in IE
+
+    document.getElementById("bodyTextSizeDrop").addEventListener('change', function () {
+        var dropDown = document.getElementById("bodyTextSizeDrop");
+        var selectedBodyParagraphFontSize = dropDown.options[dropDown.selectedIndex].value;
+        styles.bodyTextSizeDrop.fontSize = selectedBodyParagraphFontSize;
+        updateCSS();
     });
     
     // Add content to liveStyles on page load
