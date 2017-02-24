@@ -204,6 +204,15 @@
                                 <input type="radio" name="footerDotsTexture" value="off"/> Off
                             </label>
                         </div>
+                        <div id="pageNumBackground" class="element">
+                            Page Number Background Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="pageNumBackgroundEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="pageNumBackground"/>
+                        </div>
                     </div>
                 </div>
 

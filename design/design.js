@@ -75,6 +75,9 @@
             footerDotsTexture : {
                 status: 'on'
             },
+            pageNumBackground : {
+                colour: '#000000'
+            },
             bodyBackgroundColour : {
                 colour: '#ffffff'
             },
@@ -165,6 +168,12 @@
         css += '#x_footerBg {\n';
         css += '\t' + 'background-image: ';
         css += (styles.footerDotsTexture.status === 'on') ? 'url("../includes/xerte/modules/xerte/parent_templates/Nottingham/common_html5/dots.png");\n' : 'none;\n';
+        css += '}\n\n';
+
+        css += '/* FOOTER PAGE NUMBERING BOX */\n\n';
+
+        css += '#x_pageNo {\n';
+        css += '\t' + 'background-color: ' + styles.pageNumBackground.colour + ';\n';
         css += '}\n\n';
 
         css += '/* BODY BACKGROUND */\n\n';
