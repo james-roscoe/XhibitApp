@@ -57,7 +57,7 @@ form {
 #selectIcons {
     background-image: url('../images/select-icons-new.png');
 }
-#selectFont {
+#selectFonts {
     background-image: url('../images/select-font-new.png');
 }
 
@@ -88,7 +88,7 @@ form {
     display: none;
     position: absolute;
     top: 75px;
-    width: 45%;
+    width: 44.5%;
     height: 298px;
     color: white;
     background-color: #0b4f74;
@@ -173,7 +173,7 @@ form {
     height: 64px;
 }
 
-#accordionBody {
+#accordionHeader, #accordionFooter, #accordionBody, #accordionMenus, #accordionIcons, #accordionFonts {
 	overflow-y: auto;
 }
 .colourBox {
