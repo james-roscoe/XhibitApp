@@ -222,19 +222,6 @@
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="bodyBackgroundColour"/>
                         </div>
-                        <div id="bodyTextSize" class="element">
-                            Paragraph Text Size
-                            <div class="plusMinus"></div>
-                        </div>
-                        <div id="bodyTextSizeEdit" class="elementEdit">
-                            <select id="bodyTextSizeDrop">
-                                <option value="12pt" selected>12pt</option>
-                                <option value="14pt">14pt</option>
-                                <option value="16pt">16pt</option>
-                                <option value="18pt">18pt</option>
-                                <option value="20pt">20pt</option>
-                            </select>
-                        </div>
                         <div id="bodyParagraphColour" class="element">
                             Paragraph Colour
                             <div class="plusMinus"></div>

@@ -78,9 +78,6 @@
             bodyBackgroundColour : {
                 colour: '#ffffff'
             },
-            bodyTextSizeDrop : {
-                fontSize: '12pt'
-            },
             bodyParagraphColour : {
                 colour: '#000000'
             },
@@ -182,11 +179,10 @@
         css += '\t' + 'border: 1px solid ' + styles.bodyBorder.colour + ';\n';
         css += '}\n\n';
 
-        css += '/* PARAGRAPH COLOUR & FONT SIZE */\n\n';
+        css += '/* PARAGRAPH COLOUR */\n\n';
 
         css += '#x_mainHolder p {\n';
         css += '\t' + 'color: ' + styles.bodyParagraphColour.colour + ';\n';
-        css += '\t' + 'font-size: ' + styles.bodyTextSizeDrop.fontSize + ';\n';
         css += '}\n\n';
 
         css += '/* LINK COLOUR */\n\n';
@@ -538,16 +534,6 @@
 
     exportWindowClose.addEventListener('click', function () {
         exportWindow.className = '';
-    });
-
-    //Update Body > Paragraph Text Size through Select (Options) Drop-Down Menu
-    //Please Note: You need to specify the 'document.getElementByID("")'' approach when attaching the change AddEventListener or the event won't work in IE
-
-    document.getElementById("bodyTextSizeDrop").addEventListener('change', function () {
-        var dropDown = document.getElementById("bodyTextSizeDrop");
-        var selectedBodyParagraphFontSize = dropDown.options[dropDown.selectedIndex].value;
-        styles.bodyTextSizeDrop.fontSize = selectedBodyParagraphFontSize;
-        updateCSS();
     });
     
     // Add content to liveStyles on page load
