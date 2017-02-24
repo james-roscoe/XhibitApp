@@ -82,6 +82,7 @@
                     <div id="selectBody">Body</div>
                     <div id="selectMenus">Menus</div>
                     <div id="selectIcons">Icons</div>
+                    <div id="selectFont">Fonts</div>
                     <div id="exportBtn">Export</div>
 
                 </div>
@@ -320,7 +321,7 @@
                         <div class="accordionClose"></div>
                     </div>
                     <div class="elements">
-                        <p>Coming soon.</p>
+                        <p>Coming soon. You will be able to change the default UI and navigation icons in the Xerte Footer to new icon sets.</p>
 <!--
                         <div id="nextIcon" class="element">
                             Next Arrow
@@ -332,6 +333,18 @@
                             <input class="unicodeBox" type="text"/>
                         </div>
 -->
+                    </div>
+                </div>
+
+               <div id="accordionFont" class="accordion">
+                    <div class="elementTitle">
+                        Fonts
+                        <div class="accordionClose"></div>
+                    </div>
+                    <div class="elements">
+                        <p>Coming soon. You will be able to change your Font Type to help improve your Xerte project's accessibility even further.</p>
+                        <p>As well as traditional web fonts, there will also be selected sans-serif web hosted options available from:</p>
+                        <img src="../images/google-fonts.png" class="google-font" alt="Google Fonts">
                     </div>
                 </div>
 

@@ -14,7 +14,7 @@ form {
 
 #zoneSelector {
     position: absolute;
-    width: 480px;
+    width: 560px;
     overflow-x: auto;
     white-space: nowrap;
     background-color: #1C74A4;
@@ -56,6 +56,9 @@ form {
 
 #selectIcons {
     background-image: url('../images/select-icons-new.png');
+}
+#selectFont {
+    background-image: url('../images/select-font-new.png');
 }
 
 #zoneSelector div.inactive {
@@ -170,6 +173,9 @@ form {
     height: 64px;
 }
 
+#accordionBody {
+	overflow-y: auto;
+}
 .colourBox {
     position: absolute;
     width: 44px;
@@ -1729,6 +1735,32 @@ label.radio input {
     left: 50%;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
+}
+.google-font {
+	margin-left: 11px;
+}
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(../images/select-arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   font-family: 'Open Sans', sans-serif;
+   color: #4d4d4d;
+   font-size: 0.9em;
+   margin: 19px 0px 0px 10px;
+   overflow: hidden;
+   padding: 2px 5px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 150px;
 }
 
 @media (max-width: 620px){
