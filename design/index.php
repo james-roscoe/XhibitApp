@@ -8,6 +8,8 @@
     include('../includes/xerte/xerte-head.html');
     ?>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="design.css">
@@ -213,7 +215,7 @@
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="pageNumBackground"/>
                         </div>
-                        <div id="pageNumBorder" class="element">
+                        <div id="pageNumBorder" onclick="scrollBottom(this);" class="element">
                             Page Number Border
                             <div class="plusMinus"></div>
                         </div>
@@ -221,6 +223,15 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="pageNumBorder"/>
+                        </div>
+                        <div id="pageNumTextColour" onclick="scrollBottom(this);" class="element">
+                            Page Number Text Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="pageNumTextColourEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="pageNumTextColour"/>
                         </div>
                     </div>
                 </div>

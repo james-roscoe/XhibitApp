@@ -81,6 +81,9 @@
             pageNumBorder : {
                 colour: '#000000'
             },
+            pageNumTextColour : {
+                colour: '#ffffff'
+            },
             bodyBackgroundColour : {
                 colour: '#ffffff'
             },
@@ -178,6 +181,7 @@
         css += '#x_pageNo {\n';
         css += '\t' + 'background-color: ' + styles.pageNumBackground.colour + ';\n';
         css += '\t' + 'border: 1px solid ' + styles.pageNumBorder.colour + ';\n';
+        css += '\t' + 'color: ' + styles.pageNumTextColour.colour + ';\n';
         css += '}\n\n';
 
         css += '/* BODY BACKGROUND */\n\n';
@@ -554,3 +558,13 @@
     updateCSS();
     
 }());
+
+//Scroll to the very bottom of the overlapped Design Accordions
+function scrollBottom(clicked_id) {
+
+    //Find the parent div we are in, e.g. accordionFooter and add a # symbol to the front of it
+    var selectedAccordion = "#" + clicked_id.parentNode.parentNode.id;
+    console.log("selectedAccordion");
+    //Scroll to the bottom the accordion stack
+    $(selectedAccordion).animate({scrollTop: $(selectedAccordion)[0].scrollHeight}, 2000);
+}
