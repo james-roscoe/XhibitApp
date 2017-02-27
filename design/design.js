@@ -10,14 +10,14 @@
         selectBody = document.getElementById('selectBody'),
         selectMenus = document.getElementById('selectMenus'),
         selectIcons = document.getElementById('selectIcons'),
-        selectFont = document.getElementById('selectFont'),
+        selectFonts = document.getElementById('selectFonts'),
         accordionHelp = document.getElementById('accordionHelp'),
         accordionHeader = document.getElementById('accordionHeader'),
         accordionFooter = document.getElementById('accordionFooter'),
         accordionBody = document.getElementById('accordionBody'),
         accordionMenus = document.getElementById('accordionMenus'),
         accordionIcons = document.getElementById('accordionIcons'),
-        accordionFont = document.getElementById('accordionFont'),
+        accordionFonts = document.getElementById('accordionFonts'),
         colourPicker = document.getElementById('colourPicker'),
         colourPickerClose = document.getElementById('colourPickerClose'),
         colourBoxChoice = document.getElementsByClassName('colourBoxChoice'),
@@ -74,6 +74,15 @@
             },
             footerDotsTexture : {
                 status: 'on'
+            },
+            pageNumBackground : {
+                colour: '#000000'
+            },
+            pageNumBorder : {
+                colour: '#000000'
+            },
+            pageNumTextColour : {
+                colour: '#ffffff'
             },
             bodyBackgroundColour : {
                 colour: '#ffffff'
@@ -167,6 +176,14 @@
         css += (styles.footerDotsTexture.status === 'on') ? 'url("../includes/xerte/modules/xerte/parent_templates/Nottingham/common_html5/dots.png");\n' : 'none;\n';
         css += '}\n\n';
 
+        css += '/* FOOTER PAGE NUMBERING BOX */\n\n';
+
+        css += '#x_pageNo {\n';
+        css += '\t' + 'background-color: ' + styles.pageNumBackground.colour + ';\n';
+        css += '\t' + 'border: 1px solid ' + styles.pageNumBorder.colour + ';\n';
+        css += '\t' + 'color: ' + styles.pageNumTextColour.colour + ';\n';
+        css += '}\n\n';
+
         css += '/* BODY BACKGROUND */\n\n';
 
         css += '#x_mainHolder {\n';
@@ -250,21 +267,21 @@
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
             selectIcons.className = 'inactive';
-            selectFont.className = 'inactive';
+            selectFonts.className = 'inactive';
         } else {
             accordionHeader.className = 'accordion';
             selectFooter.className = '';
             selectBody.className = '';
             selectMenus.className = '';
             selectIcons.className = '';
-            selectFont.className = '';
+            selectFonts.className = '';
         }
         accordionHelp.className = 'accordion';
         accordionFooter.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
         accordionIcons.className = 'accordion';
-        accordionFont.className = 'accordion';
+        accordionFonts.className = 'accordion';
         selectHeader.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -278,21 +295,21 @@
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
             selectIcons.className = 'inactive';
-            selectFont.className = 'inactive';
+            selectFonts.className = 'inactive';
         } else {
             accordionFooter.className = 'accordion';
             selectHeader.className = '';
             selectBody.className = '';
             selectMenus.className = '';
             selectIcons.className = '';
-            selectFont.className = '';
+            selectFonts.className = '';
         }
         accordionHelp.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
         accordionIcons.className = 'accordion';
-        accordionFont.className = 'accordion';
+        accordionFonts.className = 'accordion';
         selectFooter.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -306,7 +323,7 @@
             selectFooter.className = 'inactive';
             selectMenus.className = 'inactive';
             selectIcons.className = 'inactive';
-            selectFont.className = 'inactive';
+            selectFonts.className = 'inactive';
         } else {
             accordionHelp.className = 'accordion';
             accordionBody.className = 'accordion';
@@ -314,13 +331,13 @@
             selectFooter.className = '';
             selectMenus.className = '';
             selectIcons.className = '';
-            selectFont.className = '';
+            selectFonts.className = '';
         }
         accordionFooter.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionMenus.className = 'accordion';
         accordionIcons.className = 'accordion';
-        accordionFont.className = 'accordion';
+        accordionFonts.className = 'accordion';
         selectBody.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -334,7 +351,7 @@
             selectBody.className = 'inactive';
             selectFooter.className = 'inactive';
             selectIcons.className = 'inactive';
-            selectFont.className = 'inactive';
+            selectFonts.className = 'inactive';
             xhibitXerteMenu.style.display = 'block';
         } else {
             accordionMenus.className = 'accordion';
@@ -342,14 +359,14 @@
             selectBody.className = '';
             selectFooter.className = '';
             selectIcons.className = '';
-            selectFont.className = '';
+            selectFonts.className = '';
         }
         accordionHelp.className = 'accordion';
         accordionFooter.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionIcons.className = 'accordion';
-        accordionFont.className = 'accordion';
+        accordionFonts.className = 'accordion';
         selectMenus.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
@@ -362,37 +379,37 @@
             selectFooter.className = 'inactive';
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
-            selectFont.className = 'inactive';
+            selectFonts.className = 'inactive';
         } else {
             accordionIcons.className = 'accordion';
             selectHeader.className = '';
             selectFooter.className = '';
             selectBody.className = '';
             selectMenus.className = '';
-            selectFont.className = '';
+            selectFonts.className = '';
         }
         accordionHelp.className = 'accordion';
         accordionFooter.className = 'accordion';
         accordionHeader.className = 'accordion';
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
-        accordionFont.className = 'accordion';
+        accordionFonts.className = 'accordion';
         selectIcons.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
         xhibitXerteMenu.style.display = 'none';
     });
 
-    selectFont.addEventListener('click', function () {
-        if (accordionFont.className.indexOf('visible') === -1) {
-            accordionFont.className += ' visible';
+    selectFonts.addEventListener('click', function () {
+        if (accordionFonts.className.indexOf('visible') === -1) {
+            accordionFonts.className += ' visible';
             selectHeader.className = 'inactive';
             selectFooter.className = 'inactive';
             selectBody.className = 'inactive';
             selectMenus.className = 'inactive';
             selectIcons.className = 'inactive';
         } else {
-            accordionFont.className = 'accordion';
+            accordionFonts.className = 'accordion';
             selectHeader.className = '';
             selectFooter.className = '';
             selectBody.className = '';
@@ -405,7 +422,7 @@
         accordionBody.className = 'accordion';
         accordionMenus.className = 'accordion';
         accordionIcons.className = 'accordion';
-        selectFont.className = '';
+        selectFonts.className = '';
         colourPicker.className = '';
         exportWindow.className = '';
         xhibitXerteMenu.style.display = 'none';
@@ -422,7 +439,7 @@
             selectBody.className = '';
             selectMenus.className = '';
             selectIcons.className = '';
-            selectFont.className = '';
+            selectFonts.className = '';
             colourPicker.className = '';
         });
     }
@@ -541,3 +558,13 @@
     updateCSS();
     
 }());
+
+//Scroll to the very bottom of the overlapped Design Accordions
+function scrollBottom(clicked_id) {
+
+    //Find the parent div we are in, e.g. accordionFooter and add a # symbol to the front of it
+    var selectedAccordion = "#" + clicked_id.parentNode.parentNode.id;
+    console.log("selectedAccordion");
+    //Scroll to the bottom the accordion stack
+    $(selectedAccordion).animate({scrollTop: $(selectedAccordion)[0].scrollHeight}, 2000);
+}

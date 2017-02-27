@@ -8,6 +8,8 @@
     include('../includes/xerte/xerte-head.html');
     ?>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="design.css">
@@ -82,7 +84,7 @@
                     <div id="selectBody">Body</div>
                     <div id="selectMenus">Menus</div>
                     <div id="selectIcons">Icons</div>
-                    <div id="selectFont">Fonts</div>
+                    <div id="selectFonts">Fonts</div>
                     <div id="exportBtn">Export</div>
 
                 </div>
@@ -203,6 +205,33 @@
                             <label id="footerDotsTextureOff" class="radio">
                                 <input type="radio" name="footerDotsTexture" value="off"/> Off
                             </label>
+                        </div>
+                        <div id="pageNumBackground" class="element">
+                            Page Number Background Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="pageNumBackgroundEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="pageNumBackground"/>
+                        </div>
+                        <div id="pageNumBorder" onclick="scrollBottom(this);" class="element">
+                            Page Number Border
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="pageNumBorderEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="pageNumBorder"/>
+                        </div>
+                        <div id="pageNumTextColour" onclick="scrollBottom(this);" class="element">
+                            Page Number Text Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="pageNumTextColourEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="pageNumTextColour"/>
                         </div>
                     </div>
                 </div>
@@ -336,7 +365,7 @@
                     </div>
                 </div>
 
-               <div id="accordionFont" class="accordion">
+               <div id="accordionFonts" class="accordion">
                     <div class="elementTitle">
                         Fonts
                         <div class="accordionClose"></div>
