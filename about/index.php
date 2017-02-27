@@ -21,7 +21,7 @@
     <!-- CSS -->
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
     <!-- Fonts -->
 
     <!-- TWITTER -->
