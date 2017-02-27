@@ -20,6 +20,4 @@ Feel free to browse or contribute to the source code on GitHub.
 
 ## Contributors
 
-Code development by James Roscoe, University of Nottingham.
-
-Initial concept, wireframes and mockups by Joel Reed and James Roscoe, University of Nottingham.
+Concept, design and development by James Roscoe and Joel Reed, University of Nottingham.

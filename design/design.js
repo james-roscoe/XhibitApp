@@ -5,19 +5,20 @@
     // Set up variables.
 
     var liveStyles = document.getElementById('liveStyles'),
-        selectHeader = document.getElementById('selectHeader'),
-        selectFooter = document.getElementById('selectFooter'),
-        selectBody = document.getElementById('selectBody'),
-        selectMenus = document.getElementById('selectMenus'),
-        selectIcons = document.getElementById('selectIcons'),
-        selectFonts = document.getElementById('selectFonts'),
-        accordionHelp = document.getElementById('accordionHelp'),
-        accordionHeader = document.getElementById('accordionHeader'),
-        accordionFooter = document.getElementById('accordionFooter'),
-        accordionBody = document.getElementById('accordionBody'),
-        accordionMenus = document.getElementById('accordionMenus'),
-        accordionIcons = document.getElementById('accordionIcons'),
-        accordionFonts = document.getElementById('accordionFonts'),
+        zoneButtons = [null, // Placeholder for possible future help icon
+                      document.getElementById('selectHeader'),
+                      document.getElementById('selectFooter'),
+                      document.getElementById('selectBody'),
+                      document.getElementById('selectMenus'),
+                      document.getElementById('selectIcons'),
+                      document.getElementById('selectFonts')],
+        accordions = [document.getElementById('accordionHelp'),
+                     document.getElementById('accordionHeader'),
+                     document.getElementById('accordionFooter'),
+                     document.getElementById('accordionBody'),
+                     document.getElementById('accordionMenus'),
+                     document.getElementById('accordionIcons'),
+                     document.getElementById('accordionFonts')],
         colourPicker = document.getElementById('colourPicker'),
         colourPickerClose = document.getElementById('colourPickerClose'),
         colourBoxChoice = document.getElementsByClassName('colourBoxChoice'),
@@ -119,7 +120,7 @@
                 colour: '',
                 background: ''
             }
-        }
+        };
     
     // Generate the CSS and place in the document head to enable live preview.
 
@@ -259,198 +260,66 @@
     }
     
     // Functionality for opening the zones.
-
-    selectHeader.addEventListener('click', function () {
-        if (accordionHeader.className.indexOf('visible') === -1) {
-            accordionHeader.className += ' visible';
-            selectFooter.className = 'inactive';
-            selectBody.className = 'inactive';
-            selectMenus.className = 'inactive';
-            selectIcons.className = 'inactive';
-            selectFonts.className = 'inactive';
-        } else {
-            accordionHeader.className = 'accordion';
-            selectFooter.className = '';
-            selectBody.className = '';
-            selectMenus.className = '';
-            selectIcons.className = '';
-            selectFonts.className = '';
-        }
-        accordionHelp.className = 'accordion';
-        accordionFooter.className = 'accordion';
-        accordionBody.className = 'accordion';
-        accordionMenus.className = 'accordion';
-        accordionIcons.className = 'accordion';
-        accordionFonts.className = 'accordion';
-        selectHeader.className = '';
-        colourPicker.className = '';
-        exportWindow.className = '';
-        xhibitXerteMenu.style.display = 'none';
-    });
-
-    selectFooter.addEventListener('click', function () {
-        if (accordionFooter.className.indexOf('visible') === -1) {
-            accordionFooter.className += ' visible';
-            selectHeader.className = 'inactive';
-            selectBody.className = 'inactive';
-            selectMenus.className = 'inactive';
-            selectIcons.className = 'inactive';
-            selectFonts.className = 'inactive';
-        } else {
-            accordionFooter.className = 'accordion';
-            selectHeader.className = '';
-            selectBody.className = '';
-            selectMenus.className = '';
-            selectIcons.className = '';
-            selectFonts.className = '';
-        }
-        accordionHelp.className = 'accordion';
-        accordionHeader.className = 'accordion';
-        accordionBody.className = 'accordion';
-        accordionMenus.className = 'accordion';
-        accordionIcons.className = 'accordion';
-        accordionFonts.className = 'accordion';
-        selectFooter.className = '';
-        colourPicker.className = '';
-        exportWindow.className = '';
-        xhibitXerteMenu.style.display = 'none';
-    });
-
-    selectBody.addEventListener('click', function () {
-        if (accordionBody.className.indexOf('visible') === -1) {
-            accordionBody.className += ' visible';
-            selectHeader.className = 'inactive';
-            selectFooter.className = 'inactive';
-            selectMenus.className = 'inactive';
-            selectIcons.className = 'inactive';
-            selectFonts.className = 'inactive';
-        } else {
-            accordionHelp.className = 'accordion';
-            accordionBody.className = 'accordion';
-            selectHeader.className = '';
-            selectFooter.className = '';
-            selectMenus.className = '';
-            selectIcons.className = '';
-            selectFonts.className = '';
-        }
-        accordionFooter.className = 'accordion';
-        accordionHeader.className = 'accordion';
-        accordionMenus.className = 'accordion';
-        accordionIcons.className = 'accordion';
-        accordionFonts.className = 'accordion';
-        selectBody.className = '';
-        colourPicker.className = '';
-        exportWindow.className = '';
-        xhibitXerteMenu.style.display = 'none';
-    });
-
-    selectMenus.addEventListener('click', function () {
-        if (accordionMenus.className.indexOf('visible') === -1) {
-            accordionMenus.className += ' visible';
-            selectHeader.className = 'inactive';
-            selectBody.className = 'inactive';
-            selectFooter.className = 'inactive';
-            selectIcons.className = 'inactive';
-            selectFonts.className = 'inactive';
-            xhibitXerteMenu.style.display = 'block';
-        } else {
-            accordionMenus.className = 'accordion';
-            selectHeader.className = '';
-            selectBody.className = '';
-            selectFooter.className = '';
-            selectIcons.className = '';
-            selectFonts.className = '';
-        }
-        accordionHelp.className = 'accordion';
-        accordionFooter.className = 'accordion';
-        accordionHeader.className = 'accordion';
-        accordionBody.className = 'accordion';
-        accordionIcons.className = 'accordion';
-        accordionFonts.className = 'accordion';
-        selectMenus.className = '';
-        colourPicker.className = '';
-        exportWindow.className = '';
-    });
-
-    selectIcons.addEventListener('click', function () {
-        if (accordionIcons.className.indexOf('visible') === -1) {
-            accordionIcons.className += ' visible';
-            selectHeader.className = 'inactive';
-            selectFooter.className = 'inactive';
-            selectBody.className = 'inactive';
-            selectMenus.className = 'inactive';
-            selectFonts.className = 'inactive';
-        } else {
-            accordionIcons.className = 'accordion';
-            selectHeader.className = '';
-            selectFooter.className = '';
-            selectBody.className = '';
-            selectMenus.className = '';
-            selectFonts.className = '';
-        }
-        accordionHelp.className = 'accordion';
-        accordionFooter.className = 'accordion';
-        accordionHeader.className = 'accordion';
-        accordionBody.className = 'accordion';
-        accordionMenus.className = 'accordion';
-        accordionFonts.className = 'accordion';
-        selectIcons.className = '';
-        colourPicker.className = '';
-        exportWindow.className = '';
-        xhibitXerteMenu.style.display = 'none';
-    });
-
-    selectFonts.addEventListener('click', function () {
-        if (accordionFonts.className.indexOf('visible') === -1) {
-            accordionFonts.className += ' visible';
-            selectHeader.className = 'inactive';
-            selectFooter.className = 'inactive';
-            selectBody.className = 'inactive';
-            selectMenus.className = 'inactive';
-            selectIcons.className = 'inactive';
-        } else {
-            accordionFonts.className = 'accordion';
-            selectHeader.className = '';
-            selectFooter.className = '';
-            selectBody.className = '';
-            selectMenus.className = '';
-            selectIcons.className = '';
-        }
-        accordionHelp.className = 'accordion';
-        accordionFooter.className = 'accordion';
-        accordionHeader.className = 'accordion';
-        accordionBody.className = 'accordion';
-        accordionMenus.className = 'accordion';
-        accordionIcons.className = 'accordion';
-        selectFonts.className = '';
-        colourPicker.className = '';
-        exportWindow.className = '';
-        xhibitXerteMenu.style.display = 'none';
-    });
     
+    function zoneButtonsActive(active) {
+        for (z = 1; z < zoneButtons.length; z++){
+            zoneButtons[z].className = active==='true' ? '' : 'inactive';
+        }
+    }
+
+    function closeAccordions() {
+        for (i = 0; i < accordions.length; i++){
+            accordions[i].className = 'accordion';
+        }
+    }
     
-    // Functionality for closing the zones.
+    function zoneButtonSelected(zone) {
+        if (accordions[zone].className.indexOf('visible') === -1) {
+            // This accordion not currently visible.
+            closeAccordions(); // close all accordions first.
+            accordions[zone].className += ' visible'; // open this accordion.
+            zoneButtonsActive('false'); // inactivate all buttons.
+            zoneButtons[zone].className = 'active'; // activate this button.
+            if (zone===4) { // show or hide XOT menu
+                xhibitXerteMenu.style.display = 'block';
+            } else {
+                xhibitXerteMenu.style.display = 'none';
+            }
+        } else {
+            // Accordion already visible - Close it and re-activate all buttons.
+            zoneButtonsActive('true');
+            accordions[zone].className = 'accordion';
+            xhibitXerteMenu.style.display = 'none'; //hide XOT menu.
+        }
+        colourPicker.className = '';
+        exportWindow.className = '';
+    }
+
+    function zoneButtonClicked(_i) {
+        zoneButtons[_i].addEventListener('click', function () {
+            zoneButtonSelected(_i);
+        });
+    }
+
+    for (i = 1; i < zoneButtons.length; i++) {
+        zoneButtonClicked(i);
+    }
     
-    function closeAccordions(_i) {
+    // Functionality for clicking the close icons.
+    
+    function closeAccordionClicked(_i) {
         accordionClose[_i].addEventListener('click', function () {
-            accordionClose[_i].parentElement.parentElement.className = 'accordion';
-            selectHeader.className = '';
-            selectFooter.className = '';
-            selectBody.className = '';
-            selectMenus.className = '';
-            selectIcons.className = '';
-            selectFonts.className = '';
+            closeAccordions();
+            zoneButtonsActive('true');
+            xhibitXerteMenu.style.display = 'none';
             colourPicker.className = '';
+            exportWindow.className = '';
         });
     }
 
     for (i = 0; i < accordionClose.length; i++) {
-        closeAccordions(i);
+        closeAccordionClicked(i);
     }
-    
-    helpClose.addEventListener('click', function () {
-        accordionHelp.className = 'accordion';
-    });
     
     // Set default ColourBoxes and HexBoxes based on styles object, and add their event listeners.
     
@@ -558,13 +427,12 @@
     updateCSS();
     
 }());
-
+    
 //Scroll to the very bottom of the overlapped Design Accordions
-function scrollBottom(clicked_id) {
 
+function scrollBottom(clicked_id) {
     //Find the parent div we are in, e.g. accordionFooter and add a # symbol to the front of it
     var selectedAccordion = "#" + clicked_id.parentNode.parentNode.id;
-    console.log("selectedAccordion");
     //Scroll to the bottom the accordion stack
     $(selectedAccordion).animate({scrollTop: $(selectedAccordion)[0].scrollHeight}, 2000);
 }
