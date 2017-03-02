@@ -8,8 +8,6 @@
     include('../includes/xerte/xerte-head.html');
     ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="design.css">
@@ -21,6 +19,10 @@
     <![endif]-->
 
     <!-- CSS -->
+
+    <!-- JS/JQ -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!-- JS/JQ -->
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
@@ -365,15 +367,20 @@
                     </div>
                 </div>
 
-               <div id="accordionFonts" class="accordion">
+                <div id="accordionFonts" class="accordion">
                     <div class="elementTitle">
                         Fonts
                         <div class="accordionClose"></div>
                     </div>
                     <div class="elements">
-                        <p>Coming soon. You will be able to change your Font Type to help improve your Xerte project's accessibility even further.</p>
-                        <p>As well as traditional web fonts, there will also be selected sans-serif web hosted options available from:</p>
-                        <img src="../images/google-fonts.png" class="google-font" alt="Google Fonts">
+                    <div id="traditionalFonts" class="element">
+                            Traditional Web Fonts
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="traditionalFontsEdit" class="elementEdit">
+                            <select id="traditionalFontDrop">
+                            </select>
+                        </div>
                     </div>
                 </div>
 

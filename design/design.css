@@ -124,7 +124,7 @@ form {
     display: block;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-left: 10px;
+    padding-left: 11px;
     padding-right: 10px;
     border-top: 1px solid #0a4f73;
     border-bottom: 1px solid #0a4f73;
@@ -1737,8 +1737,11 @@ label.radio input {
     font-family: 'Open Sans', sans-serif;
 }
 .google-font {
-	margin-left: 11px;
+	float:right;
+	margin-top:20px;
+	margin-right:14px;
 }
+
 /* -------------------- Select Box Styles: stackoverflow.com Method */
 /* -------------------- Source: http://stackoverflow.com/a/5809186 */
 select {
@@ -1760,7 +1763,7 @@ select {
    padding: 2px 5px;
    text-overflow: ellipsis;
    white-space: nowrap;
-   width: 150px;
+   width: 225px;
 }
 
 @media (max-width: 620px){

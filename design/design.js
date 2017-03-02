@@ -30,6 +30,7 @@
         exportWindowClose = document.getElementById('exportWindowClose'),
         element = document.getElementsByClassName('element'),
         elementEdit = document.getElementsByClassName('elementEdit'),
+        fontTraditionalSelect = document.getElementById('traditionalFontDrop'),
         colourBox = document.getElementsByClassName('colourBox'),
         colourPickerIcon = document.getElementsByClassName('colourPickerIcon'),
         iconBox = document.getElementsByClassName('iconBox'),
@@ -49,6 +50,9 @@
         j,
         k,
         styles = {
+            bodyFont : {
+                fontFamily: 'Arial, Arial, Helvetica, sans-serif'
+            },
             headerGradient1 : {
                 colour: '#010101'
             },
@@ -127,6 +131,12 @@
     function updateCSS() {
 
         var css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
+
+        css += '/* FONT */\n\n';
+
+        css += 'body {\n';
+        css += '\t' + 'font-family: ' + styles.bodyFont.fontFamily + ';\n';
+        css += '}\n\n';
 
         css += '/* HEADER GRADIENT */\n\n';
 
@@ -216,6 +226,7 @@
 
         css += '.ui-dialog {\n';
         css += '\t' + 'background: ' + styles.menuBackgroundColour.colour + ';\n';
+        css += '\t' + 'font-family: ' + styles.bodyFont.fontFamily + ';\n';
         css += '}\n\n';
 
         css += '.ui-dialog .ui-widget-header {\n';
@@ -226,6 +237,7 @@
         css += '.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\n';
         css += '\t' + 'background: ' + styles.menuItemBackground.colour + ';\n';
         css += '\t' + 'color: ' + styles.menuItemText.colour + ';\n';
+        css += '\t' + 'font-family: ' + styles.bodyFont.fontFamily + ';\n';
         css += '}';
 
         liveStyles.textContent = css;
@@ -422,9 +434,38 @@
         exportWindow.className = '';
     });
 
-    helpClose.addEventListener('click', function () {
-        accordions[0].className = '';
+    //-----------------------------------------------------------------------------------------------------------
+
+    //Populate the Traditional Font select menus
+    var selectTraditional = document.getElementById("traditionalFontDrop");
+
+    var options = ["Arial", "Courier New", "Georgia", "Tahoma", "Times New Roman", "Verdana"];
+    var values = ["Arial, Helvetica, sans-serif", 
+                    "Courier New, Courier New, Courier, monospace", 
+                    "Georgia, Georgia, serif", 
+                    "Tahoma, Geneva, sans-serif", 
+                    "Times New Roman, Times, serif", 
+                    "Verdana, Geneva, sans-serif"
+                    ];
+
+    for ( var i = 0; i < options.length; i++) {
+        var opt = options[i];
+        var val = values[i];
+        var tfo = document.createElement("option");
+        tfo.textContent = opt;
+        tfo.value = val;
+        selectTraditional.appendChild(tfo);
+}
+
+    //Update Traditional Font through Select (Options) Drop-Down Menu
+
+    fontTraditionalSelect.addEventListener('change', function () {
+        var selectedTraditionalFont = fontTraditionalSelect.options[fontTraditionalSelect.selectedIndex].value;
+        styles.bodyFont.fontFamily = selectedTraditionalFont;
+        updateCSS();
     });
+
+    //-----------------------------------------------------------------------------------------------------------
     
     // Add content to liveStyles on page load
 
@@ -433,7 +474,6 @@
 }());
     
 //Scroll to the very bottom of the overlapped Design Accordions
-
 function scrollBottom(clicked_id) {
     //Find the parent div we are in, e.g. accordionFooter and add a # symbol to the front of it
     var selectedAccordion = "#" + clicked_id.parentNode.parentNode.id;
