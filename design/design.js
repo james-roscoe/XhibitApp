@@ -421,6 +421,10 @@
     exportWindowClose.addEventListener('click', function () {
         exportWindow.className = '';
     });
+
+    helpClose.addEventListener('click', function () {
+        accordions[0].className = '';
+    });
     
     // Add content to liveStyles on page load
 
