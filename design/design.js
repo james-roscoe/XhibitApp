@@ -31,6 +31,8 @@
         element = document.getElementsByClassName('element'),
         elementEdit = document.getElementsByClassName('elementEdit'),
         fontTraditionalSelect = document.getElementById('traditionalFontDrop'),
+        fontGoogleSelect = document.getElementById('googleFontDrop'),
+        googleAPI = "Lato:400,400i,700,700i",
         colourBox = document.getElementsByClassName('colourBox'),
         colourPickerIcon = document.getElementsByClassName('colourPickerIcon'),
         iconBox = document.getElementsByClassName('iconBox'),
@@ -50,8 +52,11 @@
         j,
         k,
         styles = {
-            bodyFont : {
-                fontFamily: 'Arial, Arial, Helvetica, sans-serif'
+            traditionalFont : {
+                fontFamily: '"Arial", Helvetica, sans-serif'
+            },
+            googleFont : {
+                fontFamily: '"Lato", sans-serif'
             },
             headerGradient1 : {
                 colour: '#010101'
@@ -132,10 +137,21 @@
 
         var css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
 
-        css += '/* FONT */\n\n';
+        // If a 'Google' font is selected, as opposed to 'traditional' add the Include declaration for the Google API
+        if (traditionalSelected == false && googleSelected == true) {
+            css += '/* GOOGLE FONT IMPORT DECLARATION */\n';
+            css += "@import url('https://fonts.googleapis.com/css?family=" + googleAPI + "');\n\n";
+        }
 
+        css += '/* FONT */\n\n';
+        // Specify the Font Family across the Xerte project - traditional or Google Font
         css += 'body {\n';
-        css += '\t' + 'font-family: ' + styles.bodyFont.fontFamily + ';\n';
+        if (traditionalSelected == true && googleSelected == false) {
+            css += '\t' + 'font-family: ' + styles.traditionalFont.fontFamily + ';\n';
+        }
+        if (traditionalSelected == false && googleSelected == true) {
+            css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
+        }
         css += '}\n\n';
 
         css += '/* HEADER GRADIENT */\n\n';
@@ -226,7 +242,13 @@
 
         css += '.ui-dialog {\n';
         css += '\t' + 'background: ' + styles.menuBackgroundColour.colour + ';\n';
-        css += '\t' + 'font-family: ' + styles.bodyFont.fontFamily + ';\n';
+        // Specify the Font Family across the Xerte project - traditional or Google Font
+        if (traditionalSelected == true && googleSelected == false) {
+            css += '\t' + 'font-family: ' + styles.traditionalFont.fontFamily + ';\n';
+        }
+        if (traditionalSelected == false && googleSelected == true) {
+            css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
+        }
         css += '}\n\n';
 
         css += '.ui-dialog .ui-widget-header {\n';
@@ -237,7 +259,13 @@
         css += '.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\n';
         css += '\t' + 'background: ' + styles.menuItemBackground.colour + ';\n';
         css += '\t' + 'color: ' + styles.menuItemText.colour + ';\n';
-        css += '\t' + 'font-family: ' + styles.bodyFont.fontFamily + ';\n';
+        // Specify the Font Family across the Xerte project - traditional or Google Font
+        if (traditionalSelected == true && googleSelected == false) {
+            css += '\t' + 'font-family: ' + styles.traditionalFont.fontFamily + ';\n';
+        }
+        if (traditionalSelected == false && googleSelected == true) {
+            css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
+        }
         css += '}';
 
         liveStyles.textContent = css;
@@ -435,34 +463,125 @@
     });
 
     //-----------------------------------------------------------------------------------------------------------
+    //Opening boolean variables declared. We want the traditional Arial font (Xerte default) to be the default to begin with (not Google Fonts).
+    var traditionalSelected = true;
+    var googleSelected = false;
 
-    //Populate the Traditional Font select menus
+    //Populate the Traditional Font select menu
     var selectTraditional = document.getElementById("traditionalFontDrop");
 
-    var options = ["Arial", "Courier New", "Georgia", "Tahoma", "Times New Roman", "Verdana"];
-    var values = ["Arial, Helvetica, sans-serif", 
-                    "Courier New, Courier New, Courier, monospace", 
-                    "Georgia, Georgia, serif", 
-                    "Tahoma, Geneva, sans-serif", 
-                    "Times New Roman, Times, serif", 
-                    "Verdana, Geneva, sans-serif"
-                    ];
+    //Load the traditional web fonts into two managable arrays
+    var tOptions = [
+                    "Arial (Xerte Default)", 
+                    "Courier New", 
+                    "Georgia",
+                    "Tahoma", 
+                    "Times New Roman",
+                    "Trebuchet MS",  
+                    "Verdana"
+                   ];
 
-    for ( var i = 0; i < options.length; i++) {
-        var opt = options[i];
-        var val = values[i];
+    var tValues = [
+                    "Arial, Helvetica, sans-serif", 
+                    "'Courier New', Courier, monospace", 
+                    "'Georgia', serif",
+                    "Tahoma, Geneva, sans-serif", 
+                    "'Times New Roman', Times, serif",
+                    "'Trebuchet MS', Helvetica, sans-serif", 
+                    "Verdana, Geneva, sans-serif"
+                  ];
+
+    //Populate the select menu using our arrays
+    for (var i = 0; i < tOptions.length; i++) {
+        var optionT = tOptions[i];
+        var valueT = tValues[i];
         var tfo = document.createElement("option");
-        tfo.textContent = opt;
-        tfo.value = val;
+        tfo.textContent = optionT;
+        tfo.value = valueT;
         selectTraditional.appendChild(tfo);
-}
+    }
+
+    //Set default selected item
+    document.getElementById('traditionalFontDrop').selectedIndex = 0;
 
     //Update Traditional Font through Select (Options) Drop-Down Menu
 
     fontTraditionalSelect.addEventListener('change', function () {
+        //Get selected value
         var selectedTraditionalFont = fontTraditionalSelect.options[fontTraditionalSelect.selectedIndex].value;
-        styles.bodyFont.fontFamily = selectedTraditionalFont;
+        //Update our CSS style variable with the selected value (above)
+        styles.traditionalFont.fontFamily = selectedTraditionalFont;
+        //Update boolean properties to Traditional
+        traditionalSelected = true;
+        googleSelected = false;
+        //Update CSS
         updateCSS();
+    });
+
+    //-----------------------------------------------------------------------------------------------------------
+
+    //Populate the Google Fonts select menu
+    var selectGoogle = document.getElementById("googleFontDrop");
+
+    //Load the Google web fonts into two managable arrays
+    var gOptions = [
+                    "Select a Google Font...",
+                    "Cabin",
+                    "Lato",
+                    "Montserrat",
+                    "Muli",
+                    "Noto Sans",
+                    "Open Sans",
+                    "PT Sans",
+                    "Raleway",
+                    "Roboto",
+                    "Rubik"
+                  ];
+
+    var gValues = [
+                  "Select a Google Font...",
+                  "Cabin:400,400i,700,700i",
+                  "Lato:400,400i,700,700i",
+                  "Montserrat:400,400i,700,700i",
+                  "Muli:400,400i,700,700i",
+                  "Noto+Sans:400,400i,700,700i",
+                  "Open+Sans:400,400i,700,700i",
+                  "PT+Sans:400,400i,700,700i",
+                  "Raleway:400,400i,700,700i",
+                  "Roboto:400,400i,700,700i",
+                  "Rubik:400,400i,700,700i"
+                  ];
+
+    //Populate the select menu using our arrays
+    for ( var j = 0; j < gOptions.length; j++) {
+        var optionG = gOptions[j];
+        var valueG = gValues[j];
+        var gfo = document.createElement("option");
+        gfo.textContent = optionG;
+        gfo.value = valueG;
+        selectGoogle.appendChild(gfo);
+    }
+
+    //Set default selected item
+    document.getElementById('googleFontDrop').selectedIndex = 0;
+
+    //Update Google Font through Select (Options) Drop-Down Menu
+
+    fontGoogleSelect.addEventListener('change', function () {
+        //Update Google API (import URL value in CSS)
+        googleAPI = fontGoogleSelect.options[fontGoogleSelect.selectedIndex].value;
+        //If we have actually selected a font then let's execute the update, otherwise if 'Select a Google Font...' is selected - ignore
+        if (googleAPI != "Select a Google Font...") {
+            //Update the Google Font selected
+            var selectedGoogleFont = fontGoogleSelect.options[fontGoogleSelect.selectedIndex].text;
+            //Update our CSS style variable with the selected value (above)
+            styles.googleFont.fontFamily = selectedGoogleFont;
+            //Update boolean properties to Google Fonts
+            traditionalSelected = false;
+            googleSelected = true;
+            //Update CSS
+            updateCSS();
+        }
     });
 
     //-----------------------------------------------------------------------------------------------------------

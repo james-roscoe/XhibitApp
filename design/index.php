@@ -381,6 +381,15 @@
                             <select id="traditionalFontDrop">
                             </select>
                         </div>
+                        <div id="googleFonts" class="element">
+                            Google Fonts
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="googleFontsEdit" class="elementEdit">
+                            <img src="../images/google-fonts-logo.png" class="google-font" alt="Google Fonts">
+                            <select id="googleFontDrop">
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -735,8 +744,8 @@
                 <div id="exportWindow">
                     <div id="exportWindowClose"></div>
                     <p class="windowTitle">Confirm Export</p>
-                    <p>Thanks for using <em>Xhibit</em> to develop your Xerte theme. To confirm your export, click on the <strong>Confirmation</strong> button.</p>
-                    <p>You can then attach your CSS file to your Xerte project.</p>
+                    <p>Thanks for using <strong>Xhibit</strong> to develop your Xerte theme. To confirm your export, click on the <strong>Confirmation</strong> button.</p>
+                    <p>You can then attach your CSS file to your Xerte project. Watch the video in the <a href="/about/" target="blank_">About section</a> to find out how!</p>
                     <input type="submit" id="confirmBtn" value="Confirm"/>
                 </div>
 
