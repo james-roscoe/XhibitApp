@@ -490,6 +490,10 @@
         exportWindow.className = '';
     });
 
+	helpClose.addEventListener('click', function () {
+		accordions[0].className = '';
+	});
+
     //-----------------------------------------------------------------------------------------------------------
     //Opening boolean variables declared. We want the traditional Arial font (Xerte default) to be the default to begin with (not Google Fonts).
     var traditionalSelected = true;
