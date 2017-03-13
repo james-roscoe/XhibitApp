@@ -124,7 +124,7 @@ form {
     display: block;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-left: 10px;
+    padding-left: 11px;
     padding-right: 10px;
     border-top: 1px solid #0a4f73;
     border-bottom: 1px solid #0a4f73;
@@ -205,6 +205,8 @@ form {
     font-size: 0.8em;
     padding-left: 5px;
     font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.4px;
+	text-transform: uppercase;
 }
 
 label.radio {
@@ -312,6 +314,7 @@ label.radio input {
 #colourPicker p.windowTitle, #exportWindow p.windowTitle {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
 }
 
 #colourPicker .colourBoxChoice {
@@ -1722,6 +1725,14 @@ label.radio input {
     top: 75px;
     height: 298px;
 }
+#exportWindow a, #exportWindow a:active, #exportWindow a:visited {
+    color: #ff511f;
+    transition: all 0.5s ease;
+}
+
+#exportWindow a:hover {
+    color: #D73101;
+}
 
 #confirmBtn {
     width: 100px;
@@ -1731,14 +1742,18 @@ label.radio input {
     position: relative;
     right: 0px;
     margin-left: -60px;
-    margin-top: 30px;
+    margin-top: 10px;
     left: 50%;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
 }
 .google-font {
-	margin-left: 11px;
+	float:right;
+	margin-top:20px;
+	margin-right:14px;
+	display: block;
 }
+
 /* -------------------- Select Box Styles: stackoverflow.com Method */
 /* -------------------- Source: http://stackoverflow.com/a/5809186 */
 select {
@@ -1760,7 +1775,14 @@ select {
    padding: 2px 5px;
    text-overflow: ellipsis;
    white-space: nowrap;
-   width: 150px;
+   width: 225px;
+}
+
+@media (max-width: 940px){
+
+	 .google-font {
+    	display:none;
+    }
 }
 
 @media (max-width: 620px){
@@ -1829,6 +1851,9 @@ select {
     body {
     	background-color: #064c71;
     }
+    .google-font {
+    	display:block;
+    }
 }
 
 @media (max-width: 590px) and (max-height: 620px) {
@@ -1847,6 +1872,9 @@ select {
         height: 0px;
         padding-bottom: 18.75%;
 */
+    }
+    .google-font {
+    	display:none;
     }
 }
 
@@ -1868,4 +1896,7 @@ header img {
     padding: 0px;
     margin-top: 16px;
     margin-bottom: 16px;
+}
+#pageContents p:first-child {
+    margin-top: 7px !important;
 }

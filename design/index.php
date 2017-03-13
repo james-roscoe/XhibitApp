@@ -8,8 +8,6 @@
     include('../includes/xerte/xerte-head.html');
     ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="design.css">
@@ -21,6 +19,10 @@
     <![endif]-->
 
     <!-- CSS -->
+
+    <!-- JS/JQ -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!-- JS/JQ -->
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
@@ -365,15 +367,29 @@
                     </div>
                 </div>
 
-               <div id="accordionFonts" class="accordion">
+                <div id="accordionFonts" class="accordion">
                     <div class="elementTitle">
                         Fonts
                         <div class="accordionClose"></div>
                     </div>
                     <div class="elements">
-                        <p>Coming soon. You will be able to change your Font Type to help improve your Xerte project's accessibility even further.</p>
-                        <p>As well as traditional web fonts, there will also be selected sans-serif web hosted options available from:</p>
-                        <img src="../images/google-fonts.png" class="google-font" alt="Google Fonts">
+                    <div id="traditionalFonts" class="element">
+                            Traditional Web Fonts
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="traditionalFontsEdit" class="elementEdit">
+                            <select id="traditionalFontDrop">
+                            </select>
+                        </div>
+                        <div id="googleFonts" class="element">
+                            Google Fonts
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="googleFontsEdit" class="elementEdit">
+                            <img src="../images/google-fonts-logo.png" class="google-font" alt="Google Fonts">
+                            <select id="googleFontDrop">
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -728,8 +744,8 @@
                 <div id="exportWindow">
                     <div id="exportWindowClose"></div>
                     <p class="windowTitle">Confirm Export</p>
-                    <p>Thanks for using <em>Xhibit</em> to develop your Xerte theme. To confirm your export, click on the <strong>Confirmation</strong> button.</p>
-                    <p>You can then attach your CSS file to your Xerte project.</p>
+                    <p>Thanks for using <strong>Xhibit</strong> to develop your Xerte theme. To confirm your export, click on the <strong>Confirmation</strong> button.</p>
+                    <p>You can then attach your CSS file to your Xerte project. Watch the video in the <a href="/about/" target="blank_">About section</a> to find out how!</p>
                     <input type="submit" id="confirmBtn" value="Confirm"/>
                 </div>
 
