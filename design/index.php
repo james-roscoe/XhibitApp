@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="design.css">
+    <link rel="stylesheet" type="text/css" href="contrast-ratio.css">
     <style id="liveStyles"></style>
 
     <!--[if lt IE 9]>
@@ -251,7 +252,7 @@
                         <div id="bodyBackgroundColourEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox" type="text" name="bodyBackgroundColour"/>
+                            <input class="hexBox" type="text" name="bodyBackgroundColour" id="bodyBackgroundHex"/>
                         </div>
                         <div id="bodyParagraphColour" class="element">
                             Paragraph Colour
@@ -260,7 +261,33 @@
                         <div id="bodyParagraphColourEdit" class="elementEdit">
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
-                            <input class="hexBox" type="text" name="bodyParagraphColour"/>
+                            <input class="hexBox" type="text" name="bodyParagraphColour" id="bodyParagraphHex"/>
+                        </div>
+                       <div id="bodyContrast" class="element">
+                            Background Contrast Ratio
+                                     <output id="circleBodyNotification">
+                                        <strong>1</strong>
+                                    </output>
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="bodyContrastEdit" class="accessibility elementEdit">
+
+                        <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+
+                                    <output id="circleBodyResult">
+                                        <strong>?</strong>
+                                    </output>
+
+                            </div>
+
+                            <div class="ratioRight" id="resultBody">
+                                
+                            </div>
+
+                        </div>
+
                         </div>
                         <div id="bodyBorder" class="element">
                             Border
@@ -280,7 +307,7 @@
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="bodyLinkColour"/>
                         </div>
-                        <div id="bodyLinkHoverColour" class="element">
+                        <div id="bodyLinkHoverColour" onclick="scrollBottom(this);" class="element">
                             Link Hover Colour
                             <div class="plusMinus"></div>
                         </div>

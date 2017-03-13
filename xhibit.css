@@ -145,6 +145,7 @@ header a:hover, footer a:hover {
 
 #intro a:hover {
     color: #D73101;
+    text-decoration: none;
 }
 .itemContainer {
     max-width:800px;
