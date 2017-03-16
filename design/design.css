@@ -157,42 +157,24 @@ form {
 .accordion .elements .element .plusMinus.minus {
     background-position: 0px -20px;
 }
-/* Applying the transition to the 'Max-Height' property isn't working for these Hex Code accordions. Not sure why? So temporarily, for now, I have included the transition animation on the padding-bottom style ('all')  */
+
 .accordion .elements .elementEdit {
     display: block;
     color: #504e4e;
     background-color: white;
     max-height: 0px;
     /* Set our transitions up. */
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 0px;
-}
-/* Applying the transition to the 'Max-Height' property IS working for my colour contrast accordion. Once we get this Max-Height transition working for both types of accordion we can lose the .accessibility class completely (and the associated code in design.js)  */
-.accordion .elements .accessibility .elementEdit {
-    display: block;
-    color: #504e4e;
-    background-color: white;
-    max-height: 0px;
-    /* Set our transitions up. */
-	-webkit-transition: max-height 0.8s;
-	-moz-transition: max-height 0.8s;
-	transition: max-height 0.8s;
+	-webkit-transition: max-height 0.3s ease;
+	-moz-transition: max-height 0.3s ease;
+	transition: max-height 0.3s ease;
     position: relative;
     overflow: hidden;
 }
+
 .accordion .elements .elementEdit.visible {
-	/*max-height:220px;*/
-	/* Note: For now, transition applies to the padding, which is set to the height (64px) we need */
-	padding-bottom: 64px;
+	max-height:220px;
 }
-.accordion .elements .accessibility.elementEdit.visible {
-	max-height: 220px;
-	padding-bottom: 0px;
-}
+
 .accordion .elements .accessibility.elementEdit.visible a, .accordion .elements .accessibility.elementEdit.visible a:active, .accordion .elements .accessibility.elementEdit.visible a:visited {
     color: #ff511f;
     transition: all 0.5s ease;
@@ -207,29 +189,34 @@ form {
 	overflow-y: auto;
 }
 .colourBox {
-    position: absolute;
+    position: relative;
+    float:left;
     width: 44px;
     height: 44px;
     border: 1px solid #d3d3d3;
-    top: 9px;
-    left: 10px;
+    margin-left: 10px;
     cursor: pointer;
+    margin-bottom: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .colourPickerIcon {
     width: 30px;
     height: 30px;
     background-image: url('/images/colour-picker-icon.png');
-    position: absolute;
-    left: 70px;
+    position: relative;
+    float:left;
+    left: 30px;
     top: 15px;
     cursor: pointer;
 }
 
 .hexBox {
-    position: absolute;
+    position: relative;
+    float: left;
     top: 14px;
-    left: 120px;
+    left: 50px;
     width: 67px;
     height: 30px;
     font-size: 0.8em;
@@ -248,6 +235,7 @@ label.radio {
 label.radio input {
     margin-top: 24px;
     cursor: pointer;
+    margin-bottom:30px;
 }
 
 #colourPicker, #exportWindow {
@@ -1783,6 +1771,9 @@ label.radio input {
 	margin-top:20px;
 	margin-right:14px;
 	display: block;
+}
+#traditionalFontDrop {
+	margin-bottom:18px;
 }
 
 /* -------------------- Select Box Styles: stackoverflow.com Method */

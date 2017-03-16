@@ -270,7 +270,7 @@
                                     </output>
                             <div class="plusMinus"></div>
                         </div>
-                        <div id="bodyContrastEdit" class="accessibility elementEdit">
+                        <div id="bodyContrastEdit" class="elementEdit">
 
                         <div class="ratioWrapper">
 
@@ -416,6 +416,7 @@
                             <img src="../images/google-fonts-logo.png" class="google-font" alt="Google Fonts">
                             <select id="googleFontDrop">
                             </select>
+                            <p><strong>Note:</strong> The Google Fonts API isn't supported in certain countries.</p>
                         </div>
                     </div>
                 </div>
