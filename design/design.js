@@ -281,15 +281,7 @@
         /* jshint validthis:true */
         for (j = 0; j < elementEdit.length; j++) {
             if (elementEdit[j].id !== this.id + 'Edit') {
-                //Reapply the '.accessibility' class before '.elementEdit' for the contrast ratio area(s), which require a larger editing window (120px height instead of usual 64px)
-                if (elementEdit[j].id == 'bodyContrastEdit') {
-                    elementEdit[j].className = 'accessibility elementEdit';
-                }
-                //Otherwise, just apply the default 'elementEdit' class
-                if (elementEdit[j].id != 'bodyContrastEdit') {
                     elementEdit[j].className = 'elementEdit';
-                }
-
             }
         }
         for (k = 0; k < plusMinus.length; k++) {
@@ -302,14 +294,7 @@
                 document.getElementById("circleBodyNotification").style.display = 'none'; //hide notification.
             }
         } else {
-                //Reapply the '.accessibility' class before '.elementEdit' for the contrast ratio area(s), which require a larger editing window (120px height instead of 64px)
-                if (this.id == "bodyContrast") {
-                    document.getElementById(this.id + 'Edit').className = 'accessibility elementEdit';
-                }
-                 //Otherwise, just apply the default 'elementEdit' class
-                else {
-                    document.getElementById(this.id + 'Edit').className = 'elementEdit';
-                }
+                document.getElementById(this.id + 'Edit').className = 'elementEdit';
         }
     }
     
