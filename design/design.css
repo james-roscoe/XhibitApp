@@ -172,7 +172,7 @@ form {
 }
 
 .accordion .elements .elementEdit.visible {
-	max-height:220px;
+	max-height:400px;
 }
 
 .accordion .elements .elementEdit.visible a, .accordion .elements .elementEdit.visible a:active, .accordion .elements .elementEdit.visible a:visited {

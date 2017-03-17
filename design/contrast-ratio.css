@@ -16,24 +16,6 @@
     	box-shadow: 0.05em 0.1em 0.2em rgba(0,0,0,.4), -0.1em -0.1em 0.5em rgba(0,0,0,.4) inset, 0 0.3em hsla(0,0%,100%,.2) inset;
     	border-radius: 50%;
 	}
-	#circleBodyNotification {
-    	display: block;
-    	position: relative;
-    	float: right;
-    	width: 3em;
-    	border: thin solid rgba(0,0,0,.4);
-    	margin-right:32px;
-    	margin-top:-6px;
-    	background: hsl(0, 0%, 50%) -35% -35%;
-    	background-size: 142% 142%;
-    	text-align: center;
-    	color: white;
-    	text-shadow: 0 -0.06em 0.05em rgba(0,0,0,.5);
-    	font: bold 75%/1 'Arial', sans-serif;
-    	box-shadow: 0.05em 0.1em 0.2em rgba(0,0,0,.4), -0.1em -0.1em 0.5em rgba(0,0,0,.4) inset, 0 0.3em hsla(0,0%,100%,.2) inset;
-    	border-radius: 50%;
-    	background-color: #fe0000;
-	}
 
 	.ratioWrapper {
 		position: relative;
@@ -41,12 +23,13 @@
 		margin-top:10px;
 		width: 100%;
 		cursor: help;
+		padding-top: 8px;
 	}
 	.ratioLeft {
 		position: relative;
 		float: left;
 		display: table-cell;
-		padding-left: 11px;
+		padding-left: 9px;
 		width: 20%;
 	}
 	.ratioRight {

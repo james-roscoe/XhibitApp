@@ -135,6 +135,9 @@
 
     function updateCSS() {
 
+        //Update colour contrast read-outs
+        checkContrast();
+
         var css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
 
         // If a 'Google' font is selected, as opposed to 'traditional' add the Include declaration for the Google API
@@ -290,9 +293,6 @@
         if (document.getElementById(this.id + 'Edit').className.indexOf('visible') === -1) {
             document.getElementById(this.id + 'Edit').className += ' visible';
             this.getElementsByClassName('plusMinus')[0].className += ' minus';
-            if (this.id == "bodyContrast") {
-                document.getElementById("circleBodyNotification").style.display = 'none'; //hide notification.
-            }
         } else {
                 document.getElementById(this.id + 'Edit').className = 'elementEdit';
         }
@@ -442,8 +442,6 @@
             document.getElementById(targetElement + 'Edit').getElementsByClassName('hexBox')[0].value = styles[targetElement].colour;
             colourPicker.className = '';
             updateCSS();
-            //Listen for changes made through the colour palette window and pass the hex codes to our contrast ratio function
-            getHexCodes();
         });
     }
     
@@ -602,62 +600,38 @@
     });
 
     //-----------------------------------------------------------------------------------------------------------
-    
-    // Add content to liveStyles on page load
-
-    updateCSS();
-    
-}());
-
-//---------------------------------------------------------------------------------------------------------------
-    
-//Scroll to the very bottom of the overlapped Design Accordions
-function scrollBottom(clicked_id) {
-    //Find the parent div we are in, e.g. accordionFooter and add a # symbol to the front of it
-    var selectedAccordion = "#" + clicked_id.parentNode.parentNode.id;
-    //Scroll to the bottom the accordion stack
-    $(selectedAccordion).animate({scrollTop: $(selectedAccordion)[0].scrollHeight}, 2000);
-}
-
-//---------------------------------------------------------------------------------------------------------------
 
 /* This open-source 'Color Contrast Ratio' script was originally authored by Jared Smith (@jared_w_smith) | http://webaim.org/resources/contrastchecker/ 
 It has been heavily adapted specifically for use in Xhibit App and, like all our code, can be used and built on by other developers. Many thanks Jared for your efforts.
 We have also adapted some of the text validation and (UI) CSS code written originally by Lea Verou (http://leaverou.github.io/contrast-ratio/) - free to use under a MIT Licence. Cheers Lea for your hard work. 
 */
 
-//Global Variables
-var bgColVal;
-var fgColVal;
-
-function getHexCodes() {
-
-      //Capture the Hex Values of our input boxes (Background and Paragraph Colour)
-      bgColVal = document.getElementById('bodyBackgroundHex').value;
-      fgColVal = document.getElementById('bodyParagraphHex').value;
-
-      //Remove the hashes from the beginning of the hex strings (we don't need them for the validation process, just the numbers/letters)
-      var bgColValString = bgColVal.substr(1);
-      var fgColValString = fgColVal.substr(1);
-
-      //Run our contrast ratio validation, passing in our hex values (minus the hashes)
-      checkContrast(fgColValString,bgColValString);
-}
-
-function checkContrast(fgCol,bgCol) {
+    function checkContrast() {
 
     //Setup our variables
 
-    //Coloured Circle Output Result
-    var output = document.getElementById("circleBodyResult");
-    
-    //The two hex colours we will be cross-referencing against each other to determine the Contrast Ratio (passed in from getHexCodes() function)
-    var fgcolor = fgCol;
-    var bgcolor = bgCol;
+    //Load Color Contrast arrays
+    ccComparisons = [
+                        ["bodyBackgroundColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
+                        ["bodyParagraphColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"]
+                    ];
+
+    for (var i = 0; i < ccComparisons.length; i++) {
+
+    //Target the result circle
+    var circleTarget = document.getElementById(ccComparisons[i][0]).getElementsByClassName("circleResult")[0];
+
+    //Target result box
+    var resultTarget = document.getElementById(ccComparisons[i][0]).getElementsByClassName("contrastResult")[0];
+
+    //Target area where the hex box is located
+
+    var areaTarget = ccComparisons[i][3];
+    var areaCompare = ccComparisons[i][4]
 
     //L (Load) the two colours to begin the cross-reference process (through getL() function)
-    var L1FGCol = getL(fgcolor);
-    var L2BGCol = getL(bgcolor);
+    var L1FGCol = getL(ccComparisons[i][1].substr(1));
+    var L2BGCol = getL(ccComparisons[i][2].substr(1));
     
     //Make sure we actually have two valid colours to compare. Do both input boxes contain text? If so, let's validate the ratio
     if (L1FGCol !== false && L2BGCol !== false) {
@@ -669,57 +643,57 @@ function checkContrast(fgCol,bgCol) {
 
         if (ratio >= 0 && ratio <= 2.9) {
             //Style our circle RED
-            output.style.backgroundColor = "#cc0000";
+            circleTarget.style.backgroundColor = '#cc0000';
             //Output the ratio variable in the circle and round it off to 1 SF
-            output.innerHTML = "<strong>" + (Math.round(ratio * 100)/100).toFixed(1) + "</strong>";
+            $(circleTarget).html('<strong>' + (Math.round(ratio * 100)/100).toFixed(1) + '</strong>');
             //Clear previous text
-            $('#resultBody').html('');
+            $(resultTarget).html('');
             //Output the ratio feedback
-            $('#resultBody').html('Using the <em>Background Colour</em> <span style=" text-transform: uppercase"><strong>#' + bgCol + '</strong></span> and <em>Paragraph Colour</em> <span style=" text-transform: uppercase"><strong>#' + fgCol + '</strong></span> fails <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Update your colour contrast ratio now to make your theme more accessible!'); 
+            $(resultTarget).html('Using the <em> ' + areaTarget + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <em>' + areaCompare + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> fails <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Update your colour contrast ratio now to make your theme more accessible!'); 
         }
         else if (ratio >= 3 && ratio <= 4.4) {
             //Style our circle YELLOW/AMBER
-            output.style.backgroundColor = "#e69900";
+            circleTarget.style.backgroundColor = '#e69900';
             //Output the ratio variable in the circle and round it off to 1 SF
-            output.innerHTML = "<strong>" + (Math.round(ratio * 100)/100).toFixed(1) + "</strong>";
+            $(circleTarget).html('<strong>' + (Math.round(ratio * 100)/100).toFixed(1) + '</strong>');
             //Clear previous text
-            $('#resultBody').html('');
+            $(resultTarget).html('');
             //Output the ratio feedback
-            $('#resultBody').html('Using the <em>Background Colour</em> <span style=" text-transform: uppercase"><strong>#' + bgCol + '</strong></span> and <em>Paragraph Colour</em> <span style=" text-transform: uppercase"><strong>#' + fgCol + '</strong></span> passes AA for large text (above 18pt or bold above 14pt). <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. We recommend increasing your colour contrast ratio to a higher level.'); 
+            $(resultTarget).html('Using the <em> ' + areaTarget + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <em>' + areaCompare + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AA for large text (above 18pt or bold above 14pt). <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. We recommend increasing your colour contrast ratio to a higher level.'); 
         }
         else if (ratio >= 4.5 && ratio <= 6.9) {
             //Style our circle LIGHT GREEN
-            output.style.backgroundColor = "#8ab82e";
+            circleTarget.style.backgroundColor = '#8ab82e';
             //Output the ratio variable in the circle and round it off to 1 SF
-            output.innerHTML = "<strong>" + (Math.round(ratio * 100)/100).toFixed(1) + "</strong>";
+            $(circleTarget).html('<strong>' + (Math.round(ratio * 100)/100).toFixed(1) + '</strong>');
             //Clear previous text
-            $('#resultBody').html('');
+            $(resultTarget).html('');
             //Output the ratio feedback
-            $('#resultBody').html('Using the <em>Background Colour</em> <span style=" text-transform: uppercase"><strong>#' + bgCol + '</strong></span> and <em>Paragraph Colour</em> <span style=" text-transform: uppercase"><strong>#' + fgCol + '</strong></span> passes AA level for any size text and AAA for large text (above 18pt or bold above 14pt). <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Your colour contrast ratio is acceptable.');
+            $(resultTarget).html('Using the <em> ' + areaTarget + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <em>' + areaCompare + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AA level for any size text and AAA for large text (above 18pt or bold above 14pt). <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Your colour contrast ratio is acceptable.');
         }
         else if (ratio >= 7 && ratio <= 22) {
             //Style our circle DARK GREEN
-            output.style.backgroundColor = "#5ea72a";
+            circleTarget.style.backgroundColor = '#5ea72a';
             //Output the ratio variable in the circle and round it off to 1 SF
-            output.innerHTML = "<strong>" + (Math.round(ratio * 100)/100).toFixed(1) + "</strong>";
+            $(circleTarget).html('<strong>' + (Math.round(ratio * 100)/100).toFixed(1) + '</strong>');
             //Clear previous text
-            $('#resultBody').html('');
+            $(resultTarget).text('');
             //Output the ratio feedback
-            $('#resultBody').html('Using the <em>Background Colour</em> <span style=" text-transform: uppercase"><strong>#' + bgCol + '</strong></span> and <em>Paragraph Colour</em> <span style=" text-transform: uppercase"><strong>#' + fgCol + '</strong></span> passes AAA level for any size text. <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Well done! Your colour contrast ratio is excellent and passes all levels of accessibility.'); 
+            $(resultTarget).html('Using the <em> ' + areaTarget + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <em>' + areaCompare + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AAA level for any size text. <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Well done! Your colour contrast ratio is excellent and passes all levels of accessibility.'); 
         }
     }
     else {
         //If there is an error with our two colours (invalid Hex code), or if one (or both) of the hex boxes is empty
-
         //Style our circle GREY
-        output.style.backgroundColor = "#7f7f7f";
+        circleTarget.style.backgroundColor = '#7f7f7f';
         //Output a question mark in the circle instead of a ratio number
-        output.innerHTML = "<strong>?</strong>";
+        $(circleTarget).html('<strong>?</strong>');
         //Clear previous text
-        $('#resultBody').html('');
+        $(resultTarget).html('');
         //Output the error feedback
-        $('#resultBody').html("You need to select two colours (with 3 or 6 digit <a href='https://www.w3schools.com/colors/colors_hexadecimal.asp' target='_blank'>Hex codes</a>) for the contrast ratio to be calculated. Check you haven't left a hex box empty within the accordions or typed in a hex code incorrectly."); 
+        $(resultTarget).html("You need to select two colours (with 3 or 6 digit <a href='https://www.w3schools.com/colors/colors_hexadecimal.asp' target='_blank'>Hex codes</a>) for the contrast ratio to be calculated. Check you haven't left a hex box empty within the accordions or typed in a hex code incorrectly."); 
     }
+  }
 }
 
 //Colour Validation
@@ -771,19 +745,22 @@ function getRGB(color) {
     return color;
 }
 
-//Call our Contrast Ratio script on load
-window.onload = function() {
-    //Let's get our initial Hex Codes and start the process off
-    getHexCodes();
+    //-----------------------------------------------------------------------------------------------------------
+    
+    // Add content to liveStyles on page load
+
+    updateCSS();
+    
+}());
+
+//---------------------------------------------------------------------------------------------------------------
+    
+//Scroll to the very bottom of the overlapped Design Accordions
+function scrollBottom(clicked_id) {
+    //Find the parent div we are in, e.g. accordionFooter and add a # symbol to the front of it
+    var selectedAccordion = "#" + clicked_id.parentNode.parentNode.id;
+    //Scroll to the bottom the accordion stack
+    $(selectedAccordion).animate({scrollTop: $(selectedAccordion)[0].scrollHeight}, 2000);
 }
 
-//Listen for keyboard changes made directly to our Body Background Hex
-$('#bodyBackgroundHex').on('input', function() { 
-    //Update the validation
-    getHexCodes();
-});
-//Listen for keyboard changes made directly to our Body Paragraph Hex
-$('#bodyParagraphHex').on('input', function() { 
-    //Update the validation
-    getHexCodes();
-});
+//---------------------------------------------------------------------------------------------------------------
