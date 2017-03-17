@@ -4,7 +4,9 @@
     
     // Set up variables.
 
-    var liveStyles = document.getElementById('liveStyles'),
+    var css,
+        retrieveStorage = true, // For retrieving saved data.
+        liveStyles = document.getElementById('liveStyles'),
         zoneButtons = [null, // Placeholder for possible future help icon
                       document.getElementById('selectHeader'),
                       document.getElementById('selectFooter'),
@@ -25,6 +27,15 @@
         iconPicker = document.getElementById('iconPicker'),
         iconPickerClose = document.getElementById('iconPickerClose'),
         iconBoxChoice = document.getElementsByClassName('iconBoxChoice'),
+        saveBtn = document.getElementById('saveBtn'),
+        saveWindow = document.getElementById('saveWindow'),
+        saveWindowClose = document.getElementById('saveWindowClose'),
+        saveProgress = document.getElementById('saveProgress'),
+        resetBtn = document.getElementById('resetBtn'),
+        resetWindow = document.getElementById('resetWindow'),
+        resetWindowClose = document.getElementById('resetWindowClose'),
+        revertProgress = document.getElementById('revertProgress'),
+        resetProgress = document.getElementById('resetProgress'),
         exportBtn = document.getElementById('exportBtn'),
         exportWindow = document.getElementById('exportWindow'),
         exportWindowClose = document.getElementById('exportWindowClose'),
@@ -131,11 +142,19 @@
             }
         };
     
+    // Retrieve any saved styles.
+    
+    if (localStorage.styles && retrieveStorage === true){
+        console.log('retrieve styles');
+        styles = JSON.parse(localStorage.styles);
+        retrieveStorage = false;
+    }
+    
     // Generate the CSS and place in the document head to enable live preview.
 
     function updateCSS() {
 
-        var css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
+        css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
 
         // If a 'Google' font is selected, as opposed to 'traditional' add the Include declaration for the Google API
         if (traditionalSelected == false && googleSelected == true) {
@@ -335,6 +354,8 @@
             xhibitXerteMenu.style.display = 'none'; //hide XOT menu.
         }
         colourPicker.className = '';
+        saveWindow.className = '';
+        resetWindow.className = '';
         exportWindow.className = '';
     }
 
@@ -356,6 +377,8 @@
             zoneButtonsActive('true');
             xhibitXerteMenu.style.display = 'none';
             colourPicker.className = '';
+            saveWindow.className = '';
+            resetWindow.className = '';
             exportWindow.className = '';
         });
     }
@@ -467,8 +490,30 @@
         updateCSS();
     });
 
+    saveBtn.addEventListener('click', function () {
+        saveWindow.className = 'visible';
+        resetWindow.className = '';
+        exportWindow.className = '';
+    });
+
+    saveWindowClose.addEventListener('click', function () {
+        saveWindow.className = '';
+    });
+
+    resetBtn.addEventListener('click', function () {
+        resetWindow.className = 'visible';
+        saveWindow.className = '';
+        exportWindow.className = '';
+    });
+
+    resetWindowClose.addEventListener('click', function () {
+        resetWindow.className = '';
+    });
+
     exportBtn.addEventListener('click', function () {
         exportWindow.className = 'visible';
+        resetWindow.className = '';
+        saveWindow.className = '';
     });
 
     exportWindowClose.addEventListener('click', function () {
@@ -478,6 +523,32 @@
 	helpClose.addEventListener('click', function () {
 		accordions[0].className = '';
 	});
+    
+    saveProgress.addEventListener('click', function () {
+        if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("styles", JSON.stringify(styles));
+            alert('Theme saved');
+        } else {
+            alert('Sorry, your browser does not support this feature.');
+        }
+    });
+    
+    revertProgress.addEventListener('click', function () {
+        if (typeof(Storage) !== "undefined") {
+            location.reload();
+        } else {
+            alert('Sorry, your browser does not support this feature.');
+        }
+    });
+    
+    resetProgress.addEventListener('click', function () {
+        if (typeof(Storage) !== "undefined") {
+            localStorage.removeItem("styles");
+            location.reload();
+        } else {
+            alert('Sorry, your browser does not support this feature.');
+        }
+    });
 
     //-----------------------------------------------------------------------------------------------------------
     //Opening boolean variables declared. We want the traditional Arial font (Xerte default) to be the default to begin with (not Google Fonts).
