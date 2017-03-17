@@ -299,7 +299,7 @@
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="bodyBorder"/>
                         </div>
-                        <div id="bodyLinkColour" class="element">
+                        <div id="bodyLinkColour" onclick="scrollBottom(this);" class="element">
                             Link Colour
                             <div class="plusMinus"></div>
                         </div>
@@ -329,6 +329,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="bodyLinkHoverColour"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>

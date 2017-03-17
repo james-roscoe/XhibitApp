@@ -611,10 +611,12 @@ We have also adapted some of the text validation and (UI) CSS code written origi
     //Setup our variables
 
     //Load Color Contrast arrays
+    //Class within design index page to focus on, cross reference hex 1, cross reference hex 2, target area 1, target area 2
     ccComparisons = [
                         ["bodyBackgroundColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
                         ["bodyParagraphColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
-                        ["bodyLinkColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkColour.colour, "Background Colour", "Link Colour"]
+                        ["bodyLinkColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkColour.colour, "Background Colour", "Link Colour"],
+                        ["bodyLinkHoverColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkHoverColour.colour, "Background Colour", "Link Hover Colour"]
                     ];
 
     for (var i = 0; i < ccComparisons.length; i++) {
