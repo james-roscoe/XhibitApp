@@ -307,6 +307,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="bodyLinkColour"/>
+
+                             <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                         <div id="bodyLinkHoverColour" onclick="scrollBottom(this);" class="element">
                             Link Hover Colour

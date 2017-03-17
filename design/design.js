@@ -613,7 +613,8 @@ We have also adapted some of the text validation and (UI) CSS code written origi
     //Load Color Contrast arrays
     ccComparisons = [
                         ["bodyBackgroundColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
-                        ["bodyParagraphColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"]
+                        ["bodyParagraphColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
+                        ["bodyLinkColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkColour.colour, "Background Colour", "Link Colour"]
                     ];
 
     for (var i = 0; i < ccComparisons.length; i++) {
