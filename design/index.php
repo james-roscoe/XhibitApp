@@ -70,7 +70,7 @@
 
             <h1 class="designSpace">Design Your Theme</h1>
 
-            <h2 class="designH2">Customise your colours</h2>
+            <h2 class="designH2">Customise your Xerte project</h2>
 
             <p>Start designing your Xerte theme by using the Xhibit designer tools below. When you are ready click the export button.</p>
             
@@ -88,6 +88,8 @@
                     <div id="selectMenus">Menus</div>
                     <div id="selectIcons">Icons</div>
                     <div id="selectFonts">Fonts</div>
+                    <div id="saveBtn">Save</div>
+                    <div id="resetBtn">Reset</div>
                     <div id="exportBtn">Export</div>
 
                 </div>
@@ -768,6 +770,23 @@
                 </div>
                 
                 <input id="cssOutput" type="hidden" name="cssOutput" />
+
+                <div id="saveWindow">
+                    <div id="saveWindowClose"></div>
+                    <p class="windowTitle">Save</p>
+                    <p>You can save your progress on this design by clicking the save button. Simply return to this page using the same device and browser to access your design again.</p>
+                    <p>Note that this feature relies on your browser's local storage and will be deleted if your clear your cookies.</p>
+                    <button type="button" id="saveProgress">Save Progress</button>
+                </div>
+
+                <div id="resetWindow">
+                    <div id="resetWindowClose"></div>
+                    <p class="windowTitle">Reset</p>
+                    <p>Undo your changes and revert to your saved theme (if available, otherwise reset to defaults):</p>
+                    <button type="button" id="revertProgress">Revert to saved theme</button>
+                    <p>Delete your progress (including any saved theme) and reset to the default Xerte theme:</p>
+                    <button type="button" id="resetProgress">Delete theme and reset</button>
+                </div>
 
                 <div id="exportWindow">
                     <div id="exportWindowClose"></div>

@@ -14,7 +14,7 @@ form {
 
 #zoneSelector {
     position: absolute;
-    width: 560px;
+    width: 720px;
     overflow-x: auto;
     white-space: nowrap;
     background-color: #1C74A4;
@@ -22,7 +22,6 @@ form {
 }
 
 #zoneSelector div {
-/*    width: 20%;*/
     width: 80px;
     height: 75px;
     display: inline-block;
@@ -33,7 +32,19 @@ form {
     text-transform: uppercase;
     font-size: 12.8px;
     letter-spacing: 0.5px;
+    background-position: top center;
 }
+
+@media screen and (min-width: 620px){
+    #zoneSelector {
+        width: 100%;
+    }
+    #zoneSelector div {
+        width: 11.111%;
+        max-width: 80px;
+    }
+}
+
 #x_pageHolder {
 	height:296px !important;
 }
@@ -65,7 +76,7 @@ form {
     background-position: 0px -100%;
 }
 
-#exportBtn {
+#saveBtn, #resetBtn, #exportBtn {
     background: url('../images/export-new.png');
     font-family: 'Open Sans', sans-serif;
     text-align: center;
@@ -73,6 +84,18 @@ form {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.5px;
+}
+
+#saveBtn {
+    background: url('../images/save.png');
+}
+
+#resetBtn {
+    background: url('../images/reset.png');
+}
+
+#exportBtn {
+    background: url('../images/export-new.png');
 }
 
 #help {
@@ -238,7 +261,7 @@ label.radio input {
     margin-bottom:30px;
 }
 
-#colourPicker, #exportWindow {
+#colourPicker, #saveWindow, #resetWindow, #exportWindow {
     display: none;
     position: absolute;
     top: 125px;
@@ -250,11 +273,11 @@ label.radio input {
     overflow-y: auto;
 }
 
-#colourPicker.visible, #exportWindow.visible {
+#colourPicker.visible, #saveWindow.visible, #resetWindow.visible, #exportWindow.visible {
     display: block;
 }
 
-#colourPickerClose, #exportWindowClose, .accordionClose {
+#colourPickerClose, #saveWindowClose, #resetWindowClose, #exportWindowClose, .accordionClose {
     width: 27px;
     height: 28px;
     position: absolute;
@@ -323,13 +346,13 @@ label.radio input {
     color: white;
 }
 
-#colourPicker p, #exportWindow p {
+#colourPicker p, #saveWindow p, #resetWindow p, #exportWindow p {
     margin: 10px;
     color: #504e4e;
     font-family: 'Open Sans', sans-serif;
 }
 
-#colourPicker p.windowTitle, #exportWindow p.windowTitle {
+#colourPicker p.windowTitle, #saveWindow p.windowTitle, #resetWindow p.windowTitle, #exportWindow p.windowTitle {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
@@ -1726,23 +1749,42 @@ label.radio input {
     z-index: 0; /* Overwrites z-index of -3 in mainStyles.css */
 }
 
-#confirmBtn {
+#saveProgress, #revertProgress, #resetProgress, #confirmBtn {
+    width: 100px;
+    height: 45px;
+    display: block;
+    background-color: #064c71;
+    border-radius: 8px;
+    position: relative;
     text-align: center;
     color: white;
-    margin: 0px;
+    margin: auto;
     border: 1px solid #064c71;
     text-transform: uppercase;
     font-size: 1em;
     transition: background .5s ease;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
 }
-#confirmBtn:hover {
+
+#saveProgress {
+    width: 150px;
+}
+
+#revertProgress, #resetProgress {
+    width: 230px;
+}
+
+#saveProgress:hover, #revertProgress:hover, #resetProgress:hover, #confirmBtn:hover {
 	background-color: #105F8A;
 }
 
-#exportWindow {
+#saveWindow, #resetWindow, #exportWindow {
     top: 75px;
-    height: 298px;
+    height: 288px;
+    padding-bottom: 10px;
 }
+
 #exportWindow a, #exportWindow a:active, #exportWindow a:visited {
     color: #ff511f;
     transition: all 0.5s ease;
@@ -1751,20 +1793,6 @@ label.radio input {
 #exportWindow a:hover {
     color: #D73101;
     text-decoration: none;
-}
-
-#confirmBtn {
-    width: 100px;
-    height: 45px;
-    background-color: #064c71;
-    border-radius: 8px;
-    position: relative;
-    right: 0px;
-    margin-left: -60px;
-    margin-top: 10px;
-    left: 50%;
-    cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
 }
 .google-font {
 	float:right;
@@ -1863,7 +1891,7 @@ select {
         border: 0px;
         border-top: 2px solid white;
     }
-    #colourPicker, #exportWindow {
+    #colourPicker, #saveWindow, #resetWindow, #exportWindow {
         top: -58px;
         width: 100%;
         height: 100%;
@@ -1903,7 +1931,7 @@ select {
     #intro {
         display: none;
     }
-    .accordion, #colourPicker, #exportWindow {
+    .accordion, #colourPicker, #saveWindow, #resetWindow, #exportWindow {
         top: 0px;
     }
 }
