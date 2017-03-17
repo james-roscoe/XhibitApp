@@ -175,12 +175,12 @@ form {
 	max-height:220px;
 }
 
-.accordion .elements .accessibility.elementEdit.visible a, .accordion .elements .accessibility.elementEdit.visible a:active, .accordion .elements .accessibility.elementEdit.visible a:visited {
+.accordion .elements .elementEdit.visible a, .accordion .elements .elementEdit.visible a:active, .accordion .elements .elementEdit.visible a:visited {
     color: #ff511f;
     transition: all 0.5s ease;
 }
 
-.accordion .elements .accessibility.elementEdit.visible a:hover {
+.accordion .elements .elementEdit.visible a:hover {
     color: #D73101;
     text-decoration: none;
 }
@@ -1800,30 +1800,12 @@ select {
    width: 225px;
 }
 
-/*@media (max-width: 970px){
-	.accordion .elements .accessibility.elementEdit.visible {
-		padding-bottom: 5px;
-	}
-}*/
-
 @media (max-width: 940px){
 
 	 .google-font {
     	display:none;
     }
 }
-/*@media (max-width: 900px){
-
-	.accordion .elements .accessibility.elementEdit.visible {
-		height:190px;
-	}
-}
-@media (max-width: 770px){
-
-	.accordion .elements .accessibility.elementEdit.visible {
-		height:220px;
-	}
-}*/
 
 @media (max-width: 620px){
     #intro h1 {
@@ -1894,9 +1876,6 @@ select {
     .google-font {
     	display:block;
     }
-   /*.accordion .elements .accessibility.elementEdit.visible {
-		height:120px;
-	}*/
 }
 
 @media (max-width: 590px) and (max-height: 620px) {
@@ -1920,9 +1899,6 @@ select {
     	display:none;
     }
 
-  /* .accordion .elements .accessibility.elementEdit.visible {
-		height:170px;
-	}*/
 }
 
 /* Hide mobile help on wider screens */
