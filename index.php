@@ -7,6 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="xhibit.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!--[if lt IE 9]>
       <link rel="stylesheet" type="text/css" href="old-ie.css">

@@ -177,12 +177,20 @@ hr {
     background-color: #075E8D;
     margin-bottom:20px;
 }
-.twitter {
+.twitter{
    position: relative;
    float:right;
    width: auto;
    padding-top: 1px;
    display: block;
+}
+.gh {
+   position: relative;
+   float:left;
+   width: auto;
+   display: block;
+   margin-right:12px;
+   margin-top: -5px;
 }
 .btn-wrapper {
     text-align: center;
