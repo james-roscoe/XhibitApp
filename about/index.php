@@ -86,7 +86,7 @@
             
             <h2 class="tweet-share">What are people saying about Xhibit?</h2>
             
-            <p class="tweet-share">We've had a great response so far from the Xerte community. Take a look at just some of the comments from developers, learning technologists and educators who have seen what Xhibit can do: </p>
+            <p class="tweet-share">We've had a great response so far from the <a href="http://www.xerte.org.uk/" target="blank_">Xerte</a> community. Take a look at just some of the comments from developers, learning technologists and educators who have seen what Xhibit can do: </p>
             
             <div class="tweets">
             

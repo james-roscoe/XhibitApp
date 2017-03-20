@@ -82,7 +82,7 @@
                     <a href="/design/"><button type="button" class="button btn-blue">Start Your Design</button></a>
             </div>
 
-            <p>Xhibit is a web app offering non-coding Xerte users the opportunity to produce a theme without having to learn HTML and CSS. The user's design edits appear in real-time via a Xerte project preview window and the theme can be exported into a CSS document at the click of a button. Simple!</p>
+            <p>Xhibit is a web app offering non-coding <a href="http://www.xerte.org.uk/" target="blank_">Xerte</a> users the opportunity to produce a theme without having to learn HTML and CSS. The user's design edits appear in real-time via a Xerte project preview window and the theme can be exported into a CSS document at the click of a button. Simple!</p>
 
             <div class="itemContainer">
                     <div class="column-left">

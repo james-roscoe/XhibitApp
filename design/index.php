@@ -127,6 +127,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="headerGradient1"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                         <div id="headerGradient2" class="element">
                             Gradient 2
@@ -136,8 +149,21 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="headerGradient2"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
-                        <div id="headerHeading1" class="element">
+                        <div id="headerHeading1" onclick="scrollBottom(this);" class="element">
                             Heading 1
                             <div class="plusMinus"></div>
                         </div>
@@ -145,8 +171,21 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="headerHeading1"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
-                        <div id="headerHeading2" class="element">
+                        <div id="headerHeading2" onclick="scrollBottom(this);" class="element">
                             Heading 2
                             <div class="plusMinus"></div>
                         </div>
@@ -154,6 +193,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="headerHeading2"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                         <div id="headerBottomBorder" class="element">
                             Bottom Border
@@ -212,7 +264,7 @@
                                 <input type="radio" name="footerDotsTexture" value="off"/> Off
                             </label>
                         </div>
-                        <div id="pageNumBackground" class="element">
+                        <div id="pageNumBackground" onclick="scrollBottom(this);" class="element">
                             Page Number Background Colour
                             <div class="plusMinus"></div>
                         </div>
@@ -220,6 +272,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="pageNumBackground"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                         <div id="pageNumBorder" onclick="scrollBottom(this);" class="element">
                             Page Number Border
@@ -238,6 +303,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="pageNumTextColour"/>
+
+                           <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -371,8 +449,21 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="menuHeaderBackground"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
-                        <div id="menuHeaderText" class="element">
+                        <div id="menuHeaderText" onclick="scrollBottom(this);" class="element">
                             Header Text Colour
                             <div class="plusMinus"></div>
                         </div>
@@ -380,8 +471,21 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="menuHeaderText"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
-                        <div id="menuItemBackground" class="element">
+                        <div id="menuItemBackground" onclick="scrollBottom(this);" class="element">
                             Item Background Colour
                             <div class="plusMinus"></div>
                         </div>
@@ -389,8 +493,21 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="menuItemBackground"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
-                        <div id="menuItemText" class="element">
+                        <div id="menuItemText" onclick="scrollBottom(this);" class="element">
                             Item Text Colour
                             <div class="plusMinus"></div>
                         </div>
@@ -398,6 +515,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="menuItemText"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -408,7 +538,7 @@
                         <div class="accordionClose"></div>
                     </div>
                     <div class="elements">
-                        <p>Coming soon. You will be able to change the default UI and navigation icons in the Xerte Footer to new icon sets.</p>
+                        <p>Coming soon. You will be able to change the default UI and navigation icons in the Xerte Footer to new icon sets. We can't wait to share them with you!</p>
 <!--
                         <div id="nextIcon" class="element">
                             Next Arrow

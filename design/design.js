@@ -687,7 +687,17 @@ We have also adapted some of the text validation and (UI) CSS code written origi
                         ["bodyBackgroundColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
                         ["bodyParagraphColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
                         ["bodyLinkColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkColour.colour, "Background Colour", "Link Colour"],
-                        ["bodyLinkHoverColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkHoverColour.colour, "Background Colour", "Link Hover Colour"]
+                        ["bodyLinkHoverColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkHoverColour.colour, "Background Colour", "Link Hover Colour"],
+                        ["headerGradient1Edit", styles.headerGradient1.colour, styles.headerHeading1.colour, "Gradient 1 Colour", "Heading 1 Colour"],
+                        ["headerHeading1Edit", styles.headerGradient1.colour, styles.headerHeading1.colour, "Gradient 1 Colour", "Heading 1 Colour"],
+                        ["headerGradient2Edit", styles.headerGradient2.colour, styles.headerHeading2.colour, "Gradient 2 Colour", "Heading 2 Colour"],
+                        ["headerHeading2Edit", styles.headerGradient2.colour, styles.headerHeading2.colour, "Gradient 2 Colour", "Heading 2 Colour"],
+                        ["pageNumBackgroundEdit", styles.pageNumBackground.colour, styles.pageNumTextColour.colour, "Page Number Background Colour", "Page Number Text Colour"],
+                        ["pageNumTextColourEdit", styles.pageNumBackground.colour, styles.pageNumTextColour.colour, "Page Number Background Colour", "Page Number Text Colour"],
+                        ["menuHeaderBackgroundEdit", styles.menuHeaderBackground.colour, styles.menuHeaderText.colour, "Header Background Colour", "Header Text Colour"],
+                        ["menuHeaderTextEdit", styles.menuHeaderBackground.colour, styles.menuHeaderText.colour, "Header Background Colour", "Header Text Colour"],
+                        ["menuItemBackgroundEdit", styles.menuItemBackground.colour, styles.menuItemText.colour, "Item Background Colour", "Item Text Colour"],
+                        ["menuItemTextEdit", styles.menuItemBackground.colour, styles.menuItemText.colour, "Item Background Colour", "Item Text Colour"]
                     ];
 
     for (var i = 0; i < ccComparisons.length; i++) {
@@ -723,7 +733,7 @@ We have also adapted some of the text validation and (UI) CSS code written origi
             //Clear previous text
             $(resultTarget).html('');
             //Output the ratio feedback
-            $(resultTarget).html('Using the <em> ' + areaTarget + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <em>' + areaCompare + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> fails <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Update your colour contrast ratio now to make your theme more accessible!'); 
+            $(resultTarget).html('Using the <i>' + areaTarget + '</i> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <i>' + areaCompare + '</i> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> fails <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Update your colour contrast ratio now to make your theme more accessible!'); 
         }
         else if (ratio >= 3 && ratio <= 4.4) {
             //Style our circle YELLOW/AMBER
@@ -733,7 +743,7 @@ We have also adapted some of the text validation and (UI) CSS code written origi
             //Clear previous text
             $(resultTarget).html('');
             //Output the ratio feedback
-            $(resultTarget).html('Using the <em> ' + areaTarget + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <em>' + areaCompare + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AA for large text (above 18pt or bold above 14pt). <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. We recommend increasing your colour contrast ratio to a higher level.'); 
+            $(resultTarget).html('Using the <i>' + areaTarget + '</i> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <i>' + areaCompare + '</i> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AA for large text (above 18pt or bold above 14pt). <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. We recommend increasing your colour contrast ratio to a higher level.'); 
         }
         else if (ratio >= 4.5 && ratio <= 6.9) {
             //Style our circle LIGHT GREEN
@@ -743,7 +753,7 @@ We have also adapted some of the text validation and (UI) CSS code written origi
             //Clear previous text
             $(resultTarget).html('');
             //Output the ratio feedback
-            $(resultTarget).html('Using the <em> ' + areaTarget + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <em>' + areaCompare + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AA level for any size text and AAA for large text (above 18pt or bold above 14pt). <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Your colour contrast ratio is acceptable.');
+            $(resultTarget).html('Using the <i>' + areaTarget + '</i> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <i>' + areaCompare + '</i> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AA level for any size text and AAA for large text (above 18pt or bold above 14pt). <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Your colour contrast ratio is acceptable.');
         }
         else if (ratio >= 7 && ratio <= 22) {
             //Style our circle DARK GREEN
@@ -751,9 +761,9 @@ We have also adapted some of the text validation and (UI) CSS code written origi
             //Output the ratio variable in the circle and round it off to 1 SF
             $(circleTarget).html('<strong>' + (Math.round(ratio * 100)/100).toFixed(1) + '</strong>');
             //Clear previous text
-            $(resultTarget).text('');
+            $(resultTarget).html('');
             //Output the ratio feedback
-            $(resultTarget).html('Using the <em> ' + areaTarget + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <em>' + areaCompare + '</em> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AAA level for any size text. <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Well done! Your colour contrast ratio is excellent and passes all levels of accessibility.'); 
+            $(resultTarget).html('Using the <i>' + areaTarget + '</i> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][1] + '</strong></span> and <i>' + areaCompare + '</i> <span style=" text-transform: uppercase"><strong>' + ccComparisons[i][2] + '</strong></span> passes AAA level for any size text. <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast" target="_blank">WCAG 2.0 on contrast ratio</a>. Well done! Your colour contrast ratio is excellent and passes all levels of accessibility.'); 
         }
     }
     else {
