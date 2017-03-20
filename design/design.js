@@ -135,9 +135,6 @@
 
     function updateCSS() {
 
-        //Update colour contrast read-outs
-        checkContrast();
-
         css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
 
         // If a 'Google' font is selected, as opposed to 'traditional' add the Include declaration for the Google API
@@ -273,6 +270,9 @@
 
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
+
+        //Update colour contrast read-outs
+        checkContrast();
     }
 
     
