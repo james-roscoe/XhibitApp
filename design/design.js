@@ -138,7 +138,7 @@
         //Update colour contrast read-outs
         checkContrast();
 
-        var css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
+        css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
 
         // If a 'Google' font is selected, as opposed to 'traditional' add the Include declaration for the Google API
         if (traditionalSelected == false && googleSelected == true) {
