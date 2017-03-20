@@ -331,3 +331,28 @@ hr {
         padding-bottom:20px;
     }
 }
+@media (max-width:420px){
+
+    .gh {
+        position: relative;
+        float:left;
+        width: 100%;
+        display: block;
+        margin-right:12px;
+        margin-top: 7px;
+    }
+    .sticky,
+    .push {
+        height: 102px;
+        display:block;
+    }
+    .mainWrapper {
+        min-height: 100%;
+        /* Equal to height of footer */
+        /* But also accounting for potential margin-bottom of last child */
+        margin-bottom: -102px;
+    }
+    .footer-wrap {
+        text-align: center;
+    }
+}
