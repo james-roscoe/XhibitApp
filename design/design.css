@@ -175,12 +175,12 @@ form {
 	max-height:400px;
 }
 
-.accordion .elements .elementEdit.visible a, .accordion .elements .elementEdit.visible a:active, .accordion .elements .elementEdit.visible a:visited {
+.accordion .elements .elementEdit.visible a, .accordion .elements .elementEdit a, .accordion .elements .elementEdit.visible a:active, .accordion .elements .elementEdit a:active, .accordion .elements .elementEdit a:visited, .accordion .elements .elementEdit.visible a:visited {
     color: #ff511f;
     transition: all 0.5s ease;
 }
 
-.accordion .elements .elementEdit.visible a:hover {
+.accordion .elements .elementEdit a:hover, .accordion .elements .elementEdit.visible a:hover {
     color: #D73101;
     text-decoration: none;
 }
