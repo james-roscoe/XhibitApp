@@ -73,7 +73,7 @@ form {
 }
 
 #zoneSelector div.inactive {
-    background-position: 0px -100%;
+    background-position: 50% -100%;
 }
 
 #saveBtn, #resetBtn, #exportBtn {
