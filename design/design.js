@@ -687,7 +687,11 @@ We have also adapted some of the text validation and (UI) CSS code written origi
                         ["bodyBackgroundColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
                         ["bodyParagraphColourEdit", styles.bodyBackgroundColour.colour, styles.bodyParagraphColour.colour, "Background Colour", "Paragraph Colour"],
                         ["bodyLinkColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkColour.colour, "Background Colour", "Link Colour"],
-                        ["bodyLinkHoverColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkHoverColour.colour, "Background Colour", "Link Hover Colour"]
+                        ["bodyLinkHoverColourEdit", styles.bodyBackgroundColour.colour, styles.bodyLinkHoverColour.colour, "Background Colour", "Link Hover Colour"],
+                        ["headerGradient1Edit", styles.headerGradient1.colour, styles.headerHeading1.colour, "Gradient 1 Colour", "Heading 1 Colour"],
+                        ["headerHeading1Edit", styles.headerGradient1.colour, styles.headerHeading1.colour, "Gradient 1 Colour", "Heading 1 Colour"],
+                        ["headerGradient2Edit", styles.headerGradient2.colour, styles.headerHeading2.colour, "Gradient 2 Colour", "Heading 2 Colour"],
+                        ["headerHeading2Edit", styles.headerGradient2.colour, styles.headerHeading2.colour, "Gradient 2 Colour", "Heading 2 Colour"]
                     ];
 
     for (var i = 0; i < ccComparisons.length; i++) {

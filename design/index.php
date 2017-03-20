@@ -127,6 +127,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="headerGradient1"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                         <div id="headerGradient2" class="element">
                             Gradient 2
@@ -136,8 +149,21 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="headerGradient2"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
-                        <div id="headerHeading1" class="element">
+                        <div id="headerHeading1" onclick="scrollBottom(this);" class="element">
                             Heading 1
                             <div class="plusMinus"></div>
                         </div>
@@ -145,8 +171,21 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="headerHeading1"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
-                        <div id="headerHeading2" class="element">
+                        <div id="headerHeading2" onclick="scrollBottom(this);" class="element">
                             Heading 2
                             <div class="plusMinus"></div>
                         </div>
@@ -154,6 +193,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="headerHeading2"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                         <div id="headerBottomBorder" class="element">
                             Bottom Border
