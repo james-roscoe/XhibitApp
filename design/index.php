@@ -264,7 +264,7 @@
                                 <input type="radio" name="footerDotsTexture" value="off"/> Off
                             </label>
                         </div>
-                        <div id="pageNumBackground" class="element">
+                        <div id="pageNumBackground" onclick="scrollBottom(this);" class="element">
                             Page Number Background Colour
                             <div class="plusMinus"></div>
                         </div>
@@ -272,6 +272,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="pageNumBackground"/>
+
+                            <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+
                         </div>
                         <div id="pageNumBorder" onclick="scrollBottom(this);" class="element">
                             Page Number Border
@@ -290,6 +303,19 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="pageNumTextColour"/>
+
+                           <div class="ratioWrapper">
+
+                                <div class="ratioLeft">
+                                    <output class="circleResult">
+                                        <strong>?</strong>
+                                    </output>
+                                </div>
+
+                                <div class="ratioRight contrastResult"></div>
+
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

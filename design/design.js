@@ -691,7 +691,9 @@ We have also adapted some of the text validation and (UI) CSS code written origi
                         ["headerGradient1Edit", styles.headerGradient1.colour, styles.headerHeading1.colour, "Gradient 1 Colour", "Heading 1 Colour"],
                         ["headerHeading1Edit", styles.headerGradient1.colour, styles.headerHeading1.colour, "Gradient 1 Colour", "Heading 1 Colour"],
                         ["headerGradient2Edit", styles.headerGradient2.colour, styles.headerHeading2.colour, "Gradient 2 Colour", "Heading 2 Colour"],
-                        ["headerHeading2Edit", styles.headerGradient2.colour, styles.headerHeading2.colour, "Gradient 2 Colour", "Heading 2 Colour"]
+                        ["headerHeading2Edit", styles.headerGradient2.colour, styles.headerHeading2.colour, "Gradient 2 Colour", "Heading 2 Colour"],
+                        ["pageNumBackgroundEdit", styles.pageNumBackground.colour, styles.pageNumTextColour.colour, "Page Number Background Colour", "Page Number Text Colour"],
+                        ["pageNumTextColourEdit", styles.pageNumBackground.colour, styles.pageNumTextColour.colour, "Page Number Background Colour", "Page Number Text Colour"]
                     ];
 
     for (var i = 0; i < ccComparisons.length; i++) {
