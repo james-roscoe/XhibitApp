@@ -119,6 +119,16 @@ header a:hover, footer a:hover {
     color: #504e4e;
     border-bottom: 2px solid #05496E;
 }
+
+#intro ul {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 2em;
+}
+
+#intro ul li {
+    margin: 0.5em;
+}
+
 .designSpace {
     margin-bottom:20px;
 }
@@ -130,6 +140,11 @@ header a:hover, footer a:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
     color: #ff511f;
+}
+
+#intro h3 {
+    color: #504e4e;
+    font-size: 1.1em;
 }
 
 #intro p {

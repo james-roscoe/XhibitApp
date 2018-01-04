@@ -66,17 +66,76 @@
 
             <h1>About</h1>
             
-            <h2>How do I use Xhibit?</h2>
+            <p>In this section:</p>
             
-            <p>The best way to get started is to try out Xhibit for yourself.</p>
+            <ul>
+                <li><a href="#aboutWhat">What is Xhibit?</a></li>
+                <li><a href="#aboutHow">How do I use Xhibit?</a></li>
+                <li><a href="#aboutLaunch">Watch the Xhibit Launch Event</a></li>
+                <li><a href="#aboutTweets">What are people saying about Xhibit?</a></li>
+            </ul>
+            
+            <hr/>
+            
+            <h2 id="aboutWhat">What is Xhibit?</h2>
+            
+            <p>Xhibit gives users of Xerte Online Toolkits the ability to produce a theme without having to write any HTML or CSS. It allows anyone to customise the appearance of their learning object within minutes, before bringing it into their live project.</p>
+            
+            <p>Whether you want to change your colour schemes, backgrounds, fonts, icons or menus, Xhibit allows you to easily create any look-and-feel that you want for your next e-learning project.</p>
+            
+            <p>Xhibit is the creation of James Roscoe and Joel Reed, who saw an opportunity to enable non-coders to customise the appearance of their Xerte objects (a process which, before Xhibit, required reasonable coding skills). Xhibit was first launched at the Xerte Conference held in April 2016 in Nottingham, and continues to be under development. Like Xerte, the project is completely free and open source.</p>
+            
+            <hr/>
+            
+            <h2 id="aboutHow">How do I use Xhibit?</h2>
+            
+            <h3>Step 1: Design</h3>
+            
+            <p>Click on <a href="/design/">Start Your Design</a> to begin creating your own custom Xerte theme. Using the editing controls along the top, you can select particular areas of your learning object (e.g. header, body, footer) before targeting specific elements within those sections (e.g. paragraph colour). </p>
+            
+            <p>You will be able to monitor the progress of your design in real-time via the Xerte preview window. Note that the preview window consists of just a single static sample page, and many of the usual interactive features of Xerte are not intended to work in this preview environment (e.g. slides changes or the accessibility menu).</p>
+            
+            <p>You can capture a snapshot of your work-in-progress at any time via the 'Save' button, which will mean your theme automatically reloads the next time you visit Xhibit, allowing you to continue work on it. Note that you will need to revisit your theme from the save device and web browser that you saved it from in order for this feature to work.</p>
+            
+            <p>As you make changes to your design, you may notice some WCAG colour contrast recommendations. These are in place to help you create the most accessible and user-friendly theme possible. We strongly encourage you take note of these recommendations, and if possible try to aim for a high colour contrast ratio across all your elements. Your end-users will really appreciate it!</p>
+            
+            <figure>
+                <img src="/images/xhibit-design-screeshot.png" alt="Screenshot of the Xhibit design page"/>
+                <figcaption>Design: Changing the colours for particular sections and elements.</figcaption>
+            </figure>
+                
+            <h3>Step 2: Export</h3>
+            
+            <p>Clicking on the export icon will allow you to save the theme to your computer in the form of a CSS file.</p>
+            
+            <p>If you are accessing Xhibit from a mobile device, you may find that you don't have the ability to download the file. Some devices may show you the raw CSS code, in which case we advise copying this code to your clipboard and pasting it into an email to yourself so that you can save it into a CSS file manually via a computer at a later date.</p>
+                
+            <h3>Step 3: Attach</h3>
+            
+            <p>Within Xerte Online Toolkits, open the editor for your project, and then at the top-level add the 'Stylesheet' option via the Optional Properties. If you can't see the optional properties, click the arrow in the top-right of the editor.</p>
+            
+            <p>Next, upload your Xhibit CSS file via the stylesheet upload feature, just like you would upload any other file in Xerte.</p>
+            
+            <p>If you are using the most recent version of Xerte Online Toolkits, you should also choose the '<em>Xhibit Base Theme</em>' option from the dropdown of installed themes. This will ensure that you are using the same base theme as xhibitapp.com, on top of which your own design will be placed. If you are using an older version of Xerte Online Toolkits, choose the standard 'Xerte Online Toolkits' theme instead, and most features should still work.</p>
+            
+            <figure>
+                <img src="/images/xot-attach-theme.png" alt="Screenshot of Xerte theme settings"/>
+                <figcaption>Inside Xerte: Set the theme and stylesheet as above.</figcaption>
+            </figure>
+            
+            <p>So what are you waiting for? Start designing your theme today and create a great-looking Xerte theme within minutes. Any questions, comments, or feedback? Get in touch via our <a href="/contact/">contact page</a>. Good luck!</p>
 
-             <div class="btn-wrapper">
+            <div class="btn-wrapper">
                     <a href="/design/"><button type="button" class="button btn-blue">Start Your Design</button></a>
             </div>
             
-            <p>We will be posting more comprehensive support information on how to use Xhibit soon. Until then, you can watch a recorded demonstration below (including how to generate and attach a stylesheet) from the Xhibit Launch Event at the 2016 Xerte Conference.</p>
+            <hr/>
             
-            <p>If you have any questions or comments please get in touch via the <a href="/contact/">contact page</a>.</p>
+            <h2 id="aboutLaunch">Watch the Xhibit Launch Event</h2>
+            
+            <p>You can watch a recorded demonstration below (including how to generate and attach a stylesheet) from the Xhibit Launch Event at the 2016 Xerte Conference.</p>
+            
+            <p>Please note that video shows an earlier version of Xhibit, and therefore some features may vary. It also does not feature the 'Xhibit Base Theme' as described above, which should now be utilised on any up-to-date Xerte install.</p>
 
             <div class='launchVideoContainer'>
                 <iframe src='https://www.youtube.com/embed/xlvxlXyUFx4' frameborder='0' allowfullscreen></iframe>
@@ -84,7 +143,7 @@
             
             <hr/>
             
-            <h2 class="tweet-share">What are people saying about Xhibit?</h2>
+            <h2 class="tweet-share" id="aboutTweets">What are people saying about Xhibit?</h2>
             
             <p class="tweet-share">We've had a great response so far from the <a href="http://www.xerte.org.uk/" target="blank_">Xerte</a> community. Take a look at just some of the comments from developers, learning technologists and educators who have seen what Xhibit can do: </p>
             
@@ -111,6 +170,8 @@
                 
                 
             </div>
+            
+            <p><a href="/about/">Back to the top</a></p>
             
         </div>
         
