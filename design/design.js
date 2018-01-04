@@ -94,13 +94,13 @@
                 colour: '#ffffff'
             },
             footerDotsTexture : {
-                status: 'on'
+                status: 'off'
             },
             pageNumBackground : {
-                colour: '#000000'
+                colour: 'transparent'
             },
             pageNumBorder : {
-                colour: '#000000'
+                colour: 'transparent'
             },
             pageNumTextColour : {
                 colour: '#ffffff'
