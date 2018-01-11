@@ -244,7 +244,7 @@
 
         css += '/* PARAGRAPH COLOUR */\n\n';
 
-        css += '#x_mainHolder p {\n';
+        css += '#x_mainHolder p, #textHolder {\n';
         css += '\t' + 'color: ' + styles.bodyParagraphColour.colour + ';\n';
         css += '}\n\n';
 
