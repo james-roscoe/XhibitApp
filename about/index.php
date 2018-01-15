@@ -95,7 +95,7 @@
             
             <p>You will be able to monitor the progress of your design in real-time via the Xerte preview window. Note that the preview window consists of just a single static sample page, and many of the usual interactive features of Xerte are not intended to work in this preview environment (e.g. slides changes or the accessibility menu).</p>
             
-            <p>You can capture a snapshot of your work-in-progress at any time via the 'Save' button, which will mean your theme automatically reloads the next time you visit Xhibit, allowing you to continue work on it. Note that you will need to revisit your theme from the save device and web browser that you saved it from in order for this feature to work.</p>
+            <p>You can capture a snapshot of your work-in-progress at any time via the 'Save' button, which will mean your theme automatically reloads the next time you visit Xhibit, allowing you to continue work on it. Note that you will need to revisit your theme from the same device and web browser that you saved it from in order for this feature to work.</p>
             
             <p>As you make changes to your design, you may notice some WCAG colour contrast recommendations. These are in place to help you create the most accessible and user-friendly theme possible. We strongly encourage you take note of these recommendations, and if possible try to aim for a high colour contrast ratio across all your elements. Your end-users will really appreciate it!</p>
             
