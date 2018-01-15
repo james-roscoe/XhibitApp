@@ -285,7 +285,23 @@
         if (traditionalSelected == false && googleSelected == true) {
             css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
         }
-        css += '}';
+        css += '}\n\n';
+        
+        css += '/* PRESERVE INVERT FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
+
+        css += '.filter_inv #x_headerBlock h1, .filter_inv #x_headerBlock h2 {\n';
+        css += '\t' + 'color: black;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv #x_mainHolder p, .filter_inv #textHolder, .filter_inv #x_mainHolder a, .filter_inv #x_mainHolder a:hover {\n';
+        css += '\t' + 'color: white;\n';
+        css += '}\n';
+        
+        css += '/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
+
+        css += '.filter_boy #x_mainHolder p, .filter_boy #textHolder, .filter_boy #x_mainHolder a, .filter_boy #x_mainHolder a:hover {\n';
+        css += '\t' + 'color: black;\n';
+        css += '}\n\n';
 
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
