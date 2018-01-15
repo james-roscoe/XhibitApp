@@ -47,3 +47,20 @@
 .twitter-tweet::shadow .EmbeddedTweet {
     max-width: none !important;
 }
+
+figure {
+    margin: 0;
+    width: 100%;
+}
+
+img {
+    border: 3px solid black;
+    width: 100%;
+}
+
+figcaption {
+    padding: 1em;
+    text-align: center;
+    color: gray;
+    font-style: italic;
+}

@@ -258,10 +258,10 @@
                         </div>
                         <div id="footerDotsTextureEdit" class="elementEdit">
                             <label id="footerDotsTextureOn" class="radio">
-                                <input type="radio" name="footerDotsTexture" value="on" checked/> On
+                                <input type="radio" name="footerDotsTexture" value="on"/> On
                             </label>
                             <label id="footerDotsTextureOff" class="radio">
-                                <input type="radio" name="footerDotsTexture" value="off"/> Off
+                                <input type="radio" name="footerDotsTexture" value="off" checked/> Off
                             </label>
                         </div>
                         <div id="pageNumBackground" onclick="scrollBottom(this);" class="element">
