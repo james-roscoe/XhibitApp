@@ -8,9 +8,9 @@ XhibitApp is a supporting project for [Xerte](http://www.xerte.org.uk), the free
 
 This web app offers Xerte users the opportunity to produce a theme without having to learn HTML and CSS. The user's edits appear in real-time via a Xerte project preview window.
 
-The web app is accessible on desktop, tablet and smartphones.
+XhibitApp is accessible on desktop, tablet and smartphones.
 
-Please note that XhibitApp is still a work-in-progress. A preview version was launched at the Xerte Conference on 14th April 2016 in Nottingham, UK, and we continue to make adjustments and improvements.
+The project was launched at the Xerte Conference on 14th April 2016 in Nottingham, UK, and we continue to make adjustments and improvements.
 
 ## How do I get started?
 
@@ -20,4 +20,4 @@ Feel free to browse or contribute to the source code on GitHub.
 
 ## Contributors
 
-Concept, design and development by James Roscoe and Joel Reed, University of Nottingham.
+Concept, design and development by James Roscoe, University of Warwick, and Joel Reed, University of Nottingham.
