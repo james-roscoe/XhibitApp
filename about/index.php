@@ -1,3 +1,4 @@
+<?php require_once dirname(__FILE__) . "/../config.php"; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,58 +8,29 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
-    <link rel="stylesheet" type="text/css" href="about.css"><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <!--[if IE 9]>
-      <style>.tweets,.tweet-share {display: none;}</style>
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-      <link rel="stylesheet" type="text/css" href="../old-ie.css">
-      <style>.mainWrapper,.sticky {display: none;}</style>
-    <![endif]-->
-
+    <?php include SITEPATH . "/includes/old-ie-head.php" ?>
+    
     <!-- CSS -->
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
     <!-- Fonts -->
 
-    <!-- TWITTER -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="http://www.xhibitapp.com/">
-    <meta name="twitter:title" content="Xhibit App">
-    <meta name="twitter:description" content="Xhibit offers non-coding Xerte users the opportunity to produce a theme without having to learn HTML and CSS. The user's edits appear in real-time via a Xerte project preview window.">
-    <meta name="twitter:image" content="http://www.xhibitapp.com/images/xhibit-social.jpg">
-    <!-- TWITTER -->
+    <?php include_once SITEPATH . "/includes/twitter-card.php" ?>
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../images/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../images/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../images/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../images/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-194x194.png" sizes="194x194">
-    <link rel="icon" type="image/png" href="../images/favicons/android-chrome-192x192.png" sizes="192x192">
-    <!-- Favicon -->
+    <?php include_once SITEPATH . "/includes/favicon.php" ?>
 
 </head>
 <body>
     
-    <?php include_once("../includes/analyticstracking.php") ?>
+    <?php include_once SITEPATH . "/includes/analyticstracking.php" ?>
 
 <div class="mainWrapper">
 
-    <?php 
-    include('../includes/header.html');
-    ?>
+    <?php include_once SITEPATH . "/includes/header.php" ?>
     
     <div class="about wrapper">
         
@@ -91,7 +63,7 @@
             
             <h3>Step 1: Design</h3>
             
-            <p>Click on <a href="/design/">Start Your Design</a> to begin creating your own custom Xerte theme. Using the editing controls along the top, you can select particular areas of your learning object (e.g. header, body, footer) before targeting specific elements within those sections (e.g. paragraph colour). </p>
+            <p>Click on <a href="../design/">Start Your Design</a> to begin creating your own custom Xerte theme. Using the editing controls along the top, you can select particular areas of your learning object (e.g. header, body, footer) before targeting specific elements within those sections (e.g. paragraph colour). </p>
             
             <p>You will be able to monitor the progress of your design in real-time via the Xerte preview window. Note that the preview window consists of just a single static sample page, and many of the usual interactive features of Xerte are not intended to work in this preview environment (e.g. slides changes or the accessibility menu).</p>
             
@@ -100,7 +72,7 @@
             <p>As you make changes to your design, you may notice some WCAG colour contrast recommendations. These are in place to help you create the most accessible and user-friendly theme possible. We strongly encourage you take note of these recommendations, and if possible try to aim for a high colour contrast ratio across all your elements. Your end-users will really appreciate it!</p>
             
             <figure>
-                <img src="/images/xhibit-design-screeshot.png" alt="Screenshot of the Xhibit design page"/>
+                <img src="../images/xhibit-design-screeshot.png" alt="Screenshot of the Xhibit design page"/>
                 <figcaption>Design: Changing the colours for particular sections and elements.</figcaption>
             </figure>
                 
@@ -119,14 +91,14 @@
             <p>If you are using the most recent version of Xerte Online Toolkits, you should also choose the '<em>Xhibit Base Theme</em>' option from the dropdown of installed themes. This will ensure that you are using the same base theme as xhibitapp.com, on top of which your own design will be placed. If you are using an older version of Xerte Online Toolkits, choose the standard 'Xerte Online Toolkits' theme instead, and most features should still work.</p>
             
             <figure>
-                <img src="/images/xot-attach-theme.png" alt="Screenshot of Xerte theme settings"/>
+                <img src="../images/xot-attach-theme.png" alt="Screenshot of Xerte theme settings"/>
                 <figcaption>Inside Xerte: Set the theme and stylesheet as above.</figcaption>
             </figure>
             
-            <p>So what are you waiting for? Start designing your theme today and create a great-looking Xerte theme within minutes. Any questions, comments, or feedback? Get in touch via our <a href="/contact/">contact page</a>. Good luck!</p>
+            <p>So what are you waiting for? Start designing your theme today and create a great-looking Xerte theme within minutes. Any questions, comments, or feedback? Get in touch via our <a href="../contact/">contact page</a>. Good luck!</p>
 
             <div class="btn-wrapper">
-                    <a href="/design/"><button type="button" class="button btn-blue">Start Your Design</button></a>
+                    <a href="../design/"><button type="button" class="button btn-blue">Start Your Design</button></a>
             </div>
             
             <hr/>
@@ -171,7 +143,7 @@
                 
             </div>
             
-            <p><a href="/about/">Back to the top</a></p>
+            <p><a href=".">Back to the top</a></p>
             
         </div>
         
@@ -180,21 +152,9 @@
    <div class="push"></div>
 </div>
 
-    <?php 
-    include('../includes/footer.html');
-    ?>
-
-   <!--[if lte IE 8]><div id="ie" class="ie-only">
-            <div id="message">
-                <img src="../images/xhibit-logo.png" width="190px">
-                <div id="alert">
-                    Your current browser is out-of-date. Please <a href="https://updatemybrowser.org/" target="_blank">upgrade it now</a> to enjoy the best possible experience on Xhibit App.
-                </div>
-            </div>
-            <div id="warning-image">
-                <img src="../images/sad-pc.png" width="446px" alt="Upgrade your browser now">
-            </div>
-   </div><![endif]-->
+    <?php include_once SITEPATH . "/includes/footer.php" ?>
+    
+    <?php include SITEPATH . "/includes/old-ie-warning.php"; ?>
     
 </body>
     

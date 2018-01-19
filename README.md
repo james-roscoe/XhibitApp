@@ -18,6 +18,16 @@ It's easy - Visit the [XhibitApp website](http://www.xhibitapp.com/) to create y
 
 Feel free to browse or contribute to the source code on GitHub.
 
+## For installing your own version of XhibitApp
+
+To use XhibitApp, you can simply visit the [XhibitApp website](http://www.xhibitapp.com/).
+
+However, if you wish to install XhibitApp on your own server (either locally or on the web), you may need to change the `config.php` file.
+
+For localhost, e.g. via XAMPP, the default config file assumes that Xhibit is located in a directory named `/xhibitapp` in your document root (often 'htdocs'). You can then access it via localhost/xhibitapp. Please change the config file if your setup is different from this.
+
+For the web, the default config file assumes that Xhibit is sitting at the top level of your site's home URL, e.g. http://www.xhibitapp.com. You can change the config file if this is not the case.
+
 ## Contributors
 
 Concept, design and development by James Roscoe, University of Warwick, and Joel Reed, University of Nottingham.

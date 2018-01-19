@@ -9,7 +9,7 @@
     </div>
     </div>
 </footer>
-<script src="/global.js"></script>
+<script src="<?php echo SITEURL ?>/global.js"></script>
 
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
