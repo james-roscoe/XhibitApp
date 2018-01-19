@@ -18,14 +18,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
     <!-- Fonts -->
 
-    <?php include_once SITEPATH . "/includes/twitter-card.php"; ?>
+    <?php include SITEPATH . "/includes/twitter-card.php"; ?>
 
     <?php include SITEPATH . "/includes/favicon.php"; ?>
 
 </head>
 <body>
     
-    <?php include_once SITEPATH . "/includes/analyticstracking.php" ?>
+    <?php include SITEPATH . "/includes/analyticstracking.php" ?>
 
     <div class="mainWrapper">
 
