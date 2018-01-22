@@ -1825,7 +1825,7 @@ select {
    padding: 2px 5px;
    text-overflow: ellipsis;
    white-space: nowrap;
-   width: 225px;
+   width: 260px;
 }
 
 @media (max-width: 940px){
