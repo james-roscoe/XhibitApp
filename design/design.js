@@ -146,7 +146,8 @@
     
     if (localStorage.styles && retrieveStorage === true){
         console.log('retrieve styles');
-        styles = JSON.parse(localStorage.styles);
+        savedStyles = JSON.parse(localStorage.styles);
+        styles = Object.assign(styles, savedStyles) // merge saved styles into default styles
         retrieveStorage = false;
     }
     

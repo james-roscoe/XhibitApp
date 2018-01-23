@@ -944,6 +944,7 @@
 
     <?php include SITEPATH . "/includes/footer.php" ?>
     
+    <script src="polyfills.js"></script>
     <script src="design.js"></script>
 
     <?php include SITEPATH . "/includes/old-ie-warning.php" ?>
