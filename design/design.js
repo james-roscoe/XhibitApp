@@ -44,6 +44,7 @@
         fontTraditionalSelect = document.getElementById('traditionalFontDrop'),
         fontGoogleSelect = document.getElementById('googleFontDrop'),
         googleAPI = "Lato:400,400i,700,700i",
+        fontDyslexiaSelect = document.getElementById('dyslexiaFontDrop'),
         colourBox = document.getElementsByClassName('colourBox'),
         colourPickerIcon = document.getElementsByClassName('colourPickerIcon'),
         iconBox = document.getElementsByClassName('iconBox'),
@@ -68,6 +69,9 @@
             },
             googleFont : {
                 fontFamily: '"Lato", sans-serif'
+            },
+            dyslexiaFont : {
+                fontFamily: 'OpenDyslexic3'
             },
             headerGradient1 : {
                 colour: '#010101'
@@ -157,20 +161,30 @@
 
         css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
 
-        // If a 'Google' font is selected, as opposed to 'traditional' add the Include declaration for the Google API
-        if (traditionalSelected == false && googleSelected == true) {
+        // If a 'Google' font is selected, as opposed to 'Traditional' or 'Dyslexia', add the Include declaration for the Google API
+        if (traditionalSelected == false && dyslexiaSelected == false && googleSelected == true) {
             css += '/* GOOGLE FONT IMPORT DECLARATION */\n';
             css += "@import url('https://fonts.googleapis.com/css?family=" + googleAPI + "');\n\n";
         }
 
+        // If a 'Dyslexia' font is selected, as opposed to 'Traditional' or 'Google Font' add the font-face declaration from 'OpenDyslexic'
+        if (dyslexiaSelected == true) {
+            css += '/* DYSLEXIA FRIENDLY FONT DECLARATION */\n';
+            css += "@font-face {\nfont-family: 'OpenDyslexic3';\nsrc: url('http://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Regular.eot'); /* IE9 Compat Modes */\nsrc: url('http://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\nurl('http://www.xhibitapp.com/fonts/opendyslexic3/woff/OpenDyslexic-Regular.woff') format('woff'), /* Modern Browsers */\nurl('http://www.xhibitapp.com/fonts/opendyslexic3/ttf/OpenDyslexic-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */\n}\n\n";
+            css += "@font-face {\nfont-family: 'OpenDyslexic3';\nsrc: url('http://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Bold.eot'); /* IE9 Compat Modes */\nsrc: url('http://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\nurl('http://www.xhibitapp.com/fonts/opendyslexic3/woff/OpenDyslexic-Bold.woff') format('woff'), /* Modern Browsers */\nurl('http://www.xhibitapp.com/fonts/opendyslexic3/ttf/OpenDyslexic-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */\n}\n\n";
+        }
+
         css += '/* FONT */\n\n';
-        // Specify the Font Family across the Xerte project - traditional or Google Font
+        // Specify the Font Family across the Xerte project -  Traditional, Google Font or Dyslexia
         css += 'body {\n';
-        if (traditionalSelected == true && googleSelected == false) {
+        if (traditionalSelected == true && googleSelected == false && dyslexiaSelected == false) {
             css += '\t' + 'font-family: ' + styles.traditionalFont.fontFamily + ';\n';
         }
-        if (traditionalSelected == false && googleSelected == true) {
+        if (traditionalSelected == false && googleSelected == true && dyslexiaSelected == false) {
             css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
+        }
+        if (traditionalSelected == false && googleSelected == false && dyslexiaSelected == true) {
+            css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '";\n';
         }
         css += '}\n\n';
 
@@ -262,13 +276,17 @@
 
         css += '.ui-dialog {\n';
         css += '\t' + 'background: ' + styles.menuBackgroundColour.colour + ';\n';
-        // Specify the Font Family across the Xerte project - traditional or Google Font
-        if (traditionalSelected == true && googleSelected == false) {
+        // Specify the Font Family across the Xerte project -  Traditional, Google Font or Dyslexia
+        if (traditionalSelected == true && googleSelected == false && dyslexiaSelected == false) {
             css += '\t' + 'font-family: ' + styles.traditionalFont.fontFamily + ';\n';
         }
-        if (traditionalSelected == false && googleSelected == true) {
+        if (traditionalSelected == false && googleSelected == true && dyslexiaSelected == false) {
             css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
         }
+        if (traditionalSelected == false && googleSelected == false && dyslexiaSelected == true) {
+            css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '";\n';
+        }
+
         css += '}\n\n';
 
         css += '.ui-dialog .ui-widget-header {\n';
@@ -279,13 +297,17 @@
         css += '.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {\n';
         css += '\t' + 'background: ' + styles.menuItemBackground.colour + ';\n';
         css += '\t' + 'color: ' + styles.menuItemText.colour + ';\n';
-        // Specify the Font Family across the Xerte project - traditional or Google Font
-        if (traditionalSelected == true && googleSelected == false) {
+        // Specify the Font Family across the Xerte project - Traditional, Google Font or Dyslexia
+        if (traditionalSelected == true && googleSelected == false && dyslexiaSelected == false) {
             css += '\t' + 'font-family: ' + styles.traditionalFont.fontFamily + ';\n';
         }
-        if (traditionalSelected == false && googleSelected == true) {
+        if (traditionalSelected == false && googleSelected == true && dyslexiaSelected == false) {
             css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
         }
+        if (traditionalSelected == false && googleSelected == false && dyslexiaSelected == true) {
+           css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '";\n';
+        }
+
         css += '}\n\n';
         
         css += '/* PRESERVE INVERT FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
@@ -566,9 +588,10 @@
     });
 
     //-----------------------------------------------------------------------------------------------------------
-    //Opening boolean variables declared. We want the traditional Arial font (Xerte default) to be the default to begin with (not Google Fonts).
+    //Opening boolean variables declared. We want the traditional Arial font (Xerte default) to be the default to begin with (not Google Fonts or Dyslexia Friendly).
     var traditionalSelected = true;
     var googleSelected = false;
+    var dyslexiaSelected = false;
 
     //Populate the Traditional Font select menu
     var selectTraditional = document.getElementById("traditionalFontDrop");
@@ -614,9 +637,14 @@
         var selectedTraditionalFont = fontTraditionalSelect.options[fontTraditionalSelect.selectedIndex].value;
         //Update our CSS style variable with the selected value (above)
         styles.traditionalFont.fontFamily = selectedTraditionalFont;
+        //Reset Google Menu
+        document.getElementById('googleFontDrop').selectedIndex = 0;
+        //Reset Dyslexia Menu
+        document.getElementById('dyslexiaFontDrop').selectedIndex = 0;
         //Update boolean properties to Traditional
         traditionalSelected = true;
         googleSelected = false;
+        dyslexiaSelected = false;
         //Update CSS
         updateCSS();
     });
@@ -679,12 +707,62 @@
             var selectedGoogleFont = fontGoogleSelect.options[fontGoogleSelect.selectedIndex].text;
             //Update our CSS style variable with the selected value (above)
             styles.googleFont.fontFamily = selectedGoogleFont;
+            //Reset Dyslexia Menu
+            document.getElementById('dyslexiaFontDrop').selectedIndex = 0;
             //Update boolean properties to Google Fonts
             traditionalSelected = false;
+            dyslexiaSelected = false;
             googleSelected = true;
             //Update CSS
             updateCSS();
         }
+    });
+
+    //-----------------------------------------------------------------------------------------------------------
+
+    //Populate the Dyslexia Font select menu
+    var selectDyslexia = document.getElementById("dyslexiaFontDrop");
+
+    //Load the dyslexia web fonts into two managable arrays
+    var dOptions = [
+                    "Select a Dyslexia Friendly Font...",
+                    "OpenDyslexic"
+                   ];
+
+    var dValues = [
+                    "Select a Dyslexia Friendly Font...",
+                    "OpenDyslexic3"
+                  ];
+
+    //Populate the select menu using our arrays
+    for (var i = 0; i < dOptions.length; i++) {
+        var optionD = dOptions[i];
+        var valueD = dValues[i];
+        var dfo = document.createElement("option");
+        dfo.textContent = optionD;
+        dfo.value = valueD;
+        selectDyslexia.appendChild(dfo);
+    }
+
+    //Set default selected item
+    document.getElementById('dyslexiaFontDrop').selectedIndex = 0;
+
+    //Update Dyslexia Font through Select (Options) Drop-Down Menu
+
+    fontDyslexiaSelect.addEventListener('change', function () {
+
+            //Get selected value
+            var selectedDyslexiaFont = fontDyslexiaSelect.options[fontDyslexiaSelect.selectedIndex].value;
+            //Update our CSS style variable with the selected value (above)
+            styles.dyslexiaFont.fontFamily = selectedDyslexiaFont;
+            //Update boolean properties to Dyslexia
+            dyslexiaSelected = true;
+            traditionalSelected = false;
+            googleSelected = false;
+            //Reset Google Menu
+            document.getElementById('googleFontDrop').selectedIndex = 0;
+            //Update CSS
+            updateCSS();
     });
 
     //-----------------------------------------------------------------------------------------------------------

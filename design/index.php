@@ -551,6 +551,15 @@
                             </select>
                             <p><strong>Note:</strong> The Google Fonts API isn't supported in certain countries.</p>
                         </div>
+                        <div id="dyslexiaFonts" class="element">
+                            Dyslexia Friendly Fonts
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="dyslexiaFontsEdit" class="elementEdit">
+                            <select id="dyslexiaFontDrop">
+                            </select>
+                            <p>Provided by <a href="https://opendyslexic.org/" target="_blank">OpenDyslexic</a></p>
+                        </div>
                     </div>
                 </div>
 
