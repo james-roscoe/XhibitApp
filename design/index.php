@@ -556,9 +556,10 @@
                             <div class="plusMinus"></div>
                         </div>
                         <div id="dyslexiaFontsEdit" class="elementEdit">
-                            <select id="dyslexiaFontDrop">
+                            <select id="dyslexiaFontDrop" style="display: none">
                             </select>
-                            <p>Provided by <a href="https://opendyslexic.org/" target="_blank">OpenDyslexic</a></p>
+                            <p style="display: none">Provided by <a href="https://opendyslexic.org/" target="_blank">OpenDyslexic</a></p>
+                            <p>Coming soon.</p>
                         </div>
                     </div>
                 </div>
