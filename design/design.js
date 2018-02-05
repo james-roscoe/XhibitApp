@@ -140,8 +140,8 @@
                 colour: '#555555'
             },
             nextIcon : {
-                content: '',
-                colour: '',
+                content: 'f138',
+                colour: 'red',
                 background: ''
             }
         };
@@ -267,7 +267,7 @@
 
         css += '#x_mainHolder a {\n';
         css += '\t' + 'color: ' + styles.bodyLinkColour.colour + ';\n';
-        css += '}\n';
+        css += '}\n\n';
         css += '#x_mainHolder a:hover {\n';
         css += '\t' + 'color: ' + styles.bodyLinkHoverColour.colour + ';\n';
         css += '}\n\n';
@@ -310,6 +310,12 @@
 
         css += '}\n\n';
         
+        css += '/* ICONS */\n\n';
+        
+        css += '.iconBox:after {\n';
+        css += '\t' + 'content: "\\' + styles.nextIcon.content + '";\n';
+        css += '}\n\n';
+        
         css += '/* PRESERVE INVERT FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
         css += '.filter_inv #x_headerBlock h1, .filter_inv #x_headerBlock h2 {\n';
@@ -318,7 +324,7 @@
 
         css += '.filter_inv #x_mainHolder p, .filter_inv #textHolder, .filter_inv #x_mainHolder a, .filter_inv #x_mainHolder a:hover {\n';
         css += '\t' + 'color: white;\n';
-        css += '}\n';
+        css += '}\n\n';
         
         css += '/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
@@ -469,15 +475,16 @@
     function editIcon(_i) {
         
         // Set defaults
-        var unicodeValue = styles[iconBox[_i].parentElement.id.slice(0, -4)].colour;
+        var unicodeValue = styles[iconBox[_i].parentElement.id.slice(0, -4)].content;
         unicodeBox[_i].value = unicodeValue;
         
         // Event listeners
         unicodeBox[_i].addEventListener('keyup', function () {
-            iconBox[_i].style.backgroundColor = unicodeBox[_i].value;
+//            iconBox[_i].style.backgroundColor = unicodeBox[_i].value;
             var targetElement = iconBox[_i].parentElement.id.slice(0, -4),
                 newValue = unicodeBox[_i].value;
-            styles[targetElement].unicode = newValue;
+            console.log(targetElement + ', ' + newValue);
+            styles[targetElement].content = newValue;
             updateCSS();
         });
         iconBox[_i].addEventListener('click', function () {

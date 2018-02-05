@@ -211,7 +211,7 @@ form {
 #accordionHeader, #accordionFooter, #accordionBody, #accordionMenus, #accordionIcons, #accordionFonts {
 	overflow-y: auto;
 }
-.colourBox {
+.colourBox, .iconBox {
     position: relative;
     float:left;
     width: 44px;
@@ -224,7 +224,22 @@ form {
     margin-bottom: 10px;
 }
 
-.colourPickerIcon {
+.iconBox {
+}
+
+.iconBox:after {
+    font-family: "FontAwesome";
+    font-size: 2.4em;
+    width: 44px;
+    height: 44px;
+    display: block;
+    text-align: center;
+    line-height: 44px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.colourPickerIcon, .iconPickerIcon {
     width: 30px;
     height: 30px;
     background-image: url('../images/colour-picker-icon.png');
@@ -235,7 +250,7 @@ form {
     cursor: pointer;
 }
 
-.hexBox {
+.hexBox, .unicodeBox {
     position: relative;
     float: left;
     top: 14px;
@@ -246,7 +261,10 @@ form {
     padding-left: 5px;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.4px;
-	text-transform: uppercase;
+}
+
+.hexBox {
+    text-transform: uppercase;
 }
 
 label.radio {

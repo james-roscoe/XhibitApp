@@ -512,8 +512,6 @@
                         <div class="accordionClose"></div>
                     </div>
                     <div class="elements">
-                        <p>Coming soon. You will be able to change the default UI and navigation icons in the Xerte Footer to new icon sets. We can't wait to share them with you!</p>
-<!--
                         <div id="nextIcon" class="element">
                             Next Arrow
                             <div class="plusMinus"></div>
@@ -523,7 +521,6 @@
                             <div class="iconPickerIcon"></div>
                             <input class="unicodeBox" type="text"/>
                         </div>
--->
                     </div>
                 </div>
 
