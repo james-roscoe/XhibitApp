@@ -1,6 +1,6 @@
 <header>
     <div class="wrapper">
-        <div id="menuIcon">
+        <div id="xhibitMenuIcon">
         </div>
         <div id="logo">
             <a href="<?php echo SITEURL ?>"><img src="<?php echo SITEURL ?>/images/xhibit-logo.png"></a>

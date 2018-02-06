@@ -61,7 +61,7 @@
                     <div id="selectFooter">Footer</div>
                     <div id="selectBody">Body</div>
                     <div id="selectMenus">Menus</div>
-                    <div id="selectIcons">Icons</div>
+                    <div id="selectIcons" class="new">Icons</div>
                     <div id="selectFonts">Fonts</div>
                     <div id="saveBtn">Save</div>
                     <div id="resetBtn">Reset</div>
@@ -521,7 +521,16 @@
                             <div class="colourBox"></div>
                             <div class="colourPickerIcon"></div>
                             <input class="hexBox" type="text" name="icons"/>
-
+                        </div>
+                        
+                        <div id="iconsHover" onclick="scrollBottom(this);" class="element">
+                            Icon Hover Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="iconsHoverEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="iconsHover"/>
                         </div>
                         
                         <div id="nextIcon" class="element">
@@ -529,6 +538,76 @@
                             <div class="plusMinus"></div>
                         </div>
                         <div id="nextIconEdit" class="elementEdit">
+                            <div class="iconBox"></div>
+                            <div class="iconPickerIcon"></div>
+                            <input class="unicodeBox" type="text"/>
+                        </div>
+                        
+                        <div id="prevIcon" class="element">
+                            Previous Arrow
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="prevIconEdit" class="elementEdit">
+                            <div class="iconBox"></div>
+                            <div class="iconPickerIcon"></div>
+                            <input class="unicodeBox" type="text"/>
+                        </div>
+                        
+                        <div id="menuIcon" class="element">
+                            Menu Button
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="menuIconEdit" class="elementEdit">
+                            <div class="iconBox"></div>
+                            <div class="iconPickerIcon"></div>
+                            <input class="unicodeBox" type="text"/>
+                        </div>
+                        
+                        <div id="colourChangerIcon" class="element">
+                            Colour Changer Button
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="colourChangerIconEdit" class="elementEdit">
+                            <div class="iconBox"></div>
+                            <div class="iconPickerIcon"></div>
+                            <input class="unicodeBox" type="text"/>
+                        </div>
+                        
+                        <div id="fullScreenIcon" class="element">
+                            Full Screen Button
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="fullScreenIconEdit" class="elementEdit">
+                            <div class="iconBox"></div>
+                            <div class="iconPickerIcon"></div>
+                            <input class="unicodeBox" type="text"/>
+                        </div>
+                        
+                        <div id="helpIcon" class="element">
+                            Help Button
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="helpIconEdit" class="elementEdit">
+                            <div class="iconBox"></div>
+                            <div class="iconPickerIcon"></div>
+                            <input class="unicodeBox" type="text"/>
+                        </div>
+                        
+                        <div id="glossaryIcon" class="element">
+                            Glossary Button
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="glossaryIconEdit" class="elementEdit">
+                            <div class="iconBox"></div>
+                            <div class="iconPickerIcon"></div>
+                            <input class="unicodeBox" type="text"/>
+                        </div>
+                        
+                        <div id="mediaIcon" class="element">
+                            Media Button
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="mediaIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
                             <input class="unicodeBox" type="text"/>
@@ -918,6 +997,125 @@
                     <div id="colFEFCFF" class="colourBoxChoice"></div>
                     <div id="colFFFFFF" class="colourBoxChoice"></div>
 
+                </div>
+                
+                <div id="iconPicker">
+                    <div id="iconPickerClose"></div>
+                    <p class="windowTitle">Select your icon</p>
+<!--                    <p>FontAwesome 4.3.0 - Works in previous Xerte release.</p>-->
+                    
+                    <div class="options">
+                        <span>Show all icons:</span>
+                        <label class="switch">
+                          <input type="checkbox" id="allIcons">
+                          <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <div id="f054" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f061" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f0a4" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f0a9" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f0da" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f101" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f105" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f138" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f152" class="iconBoxChoice nextIconOption"></div>
+                    <div id="f178" class="iconBoxChoice nextIconOption"></div>
+                    
+                    <div id="f053" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f060" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f0a5" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f0a8" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f0d9" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f100" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f104" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f137" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f191" class="iconBoxChoice prevIconOption"></div>
+                    <div id="f177" class="iconBoxChoice prevIconOption"></div>
+                    
+                    <div id="f00b" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f022" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f036" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f037" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f038" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f039" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f0ca" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f0cb" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f146" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f272" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f0c9" class="iconBoxChoice menuIconOption"></div>
+                    <div id="f0e8" class="iconBoxChoice menuIconOption"></div>
+                    
+                    <div id="f042" class="iconBoxChoice colourChangerIconOption"></div>
+                    <div id="f06e" class="iconBoxChoice colourChangerIconOption"></div>
+                    <div id="f070" class="iconBoxChoice colourChangerIconOption"></div>
+                    <div id="f170" class="iconBoxChoice colourChangerIconOption"></div>
+                    <div id="f193" class="iconBoxChoice colourChangerIconOption"></div>
+                    <div id="f1fb" class="iconBoxChoice colourChangerIconOption"></div>
+                    <div id="f1fc" class="iconBoxChoice colourChangerIconOption"></div>
+                    <div id="f031" class="iconBoxChoice colourChangerIconOption"></div>
+                    
+                    <div id="f0b2" class="iconBoxChoice fullScreenIconOption"></div>
+                    <div id="f108" class="iconBoxChoice fullScreenIconOption"></div>
+                    <div id="f067" class="iconBoxChoice fullScreenIconOption"></div>
+                    <div id="f066" class="iconBoxChoice fullScreenIconOption"></div>
+                    <div id="f002" class="iconBoxChoice fullScreenIconOption"></div>
+                    <div id="f00e" class="iconBoxChoice fullScreenIconOption"></div>
+                    
+                    <div id="f128" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f059" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f05a" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f129" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f075" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f0e0" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f06a" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f071" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f15b" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f15c" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f1c2" class="iconBoxChoice helpIconOption"></div>
+                    <div id="f1c1" class="iconBoxChoice helpIconOption"></div>
+                    
+                    <div id="f02d" class="iconBoxChoice glossaryIconOption"></div>
+                    <div id="f0db" class="iconBoxChoice glossaryIconOption"></div>
+                    <div id="f1ea" class="iconBoxChoice glossaryIconOption"></div>
+                    <div id="f15d" class="iconBoxChoice glossaryIconOption"></div>
+                    <div id="f15e" class="iconBoxChoice glossaryIconOption"></div>
+                    
+                    <div id="f16a" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f03d" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f1c8" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f1c7" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f008" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f028" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f027" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f030" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f083" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f26c" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f001" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f04b" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f025" class="iconBoxChoice mediaIconOption"></div>
+                    <div id="f144" class="iconBoxChoice mediaIconOption"></div>
+
+                    
+                    <div style="clear:both"></div>
+<!--
+                    <p>FontAwesome 5.0.0 - Not available in current Xerte release.</p>
+                    <div id="f30b" class="iconBoxChoice"></div>
+                    <div id="f324" class="iconBoxChoice"></div>
+                    <div id="f32b" class="iconBoxChoice"></div>
+                    <div id="f330" class="iconBoxChoice"></div>
+                    <div id="f33b" class="iconBoxChoice"></div>
+                    <div id="f340" class="iconBoxChoice"></div>
+                    <div id="f343" class="iconBoxChoice"></div>
+                    <div id="f347" class="iconBoxChoice"></div>
+                    <div id="f34c" class="iconBoxChoice"></div>
+                    <div id="f352" class="iconBoxChoice"></div>
+                    <div id="f356" class="iconBoxChoice"></div>
+                    <div id="f35a" class="iconBoxChoice"></div>
+
+                    <div id="f430" class="iconBoxChoice menuIconOption"></div>
+-->
                 </div>
                 
                 <input id="cssOutput" type="hidden" name="cssOutput" />

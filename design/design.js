@@ -26,6 +26,7 @@
         colourBoxChoice = document.getElementsByClassName('colourBoxChoice'),
         iconPicker = document.getElementById('iconPicker'),
         iconPickerClose = document.getElementById('iconPickerClose'),
+        allIcons = document.getElementById('allIcons'),
         iconBoxChoice = document.getElementsByClassName('iconBoxChoice'),
         saveBtn = document.getElementById('saveBtn'),
         saveWindow = document.getElementById('saveWindow'),
@@ -142,10 +143,32 @@
             icons : {
                 colour: '#ffffff'
             },
+            iconsHover : {
+                colour: '#ff9900'
+            },
             nextIcon : {
-                content: 'f138',
-                colour: 'red',
-                background: ''
+                content: 'f138'
+            },
+            prevIcon : {
+                content: 'f137'
+            },
+            menuIcon : {
+                content: 'f0c9'
+            },
+            colourChangerIcon : {
+                content: 'f06e'
+            },
+            fullScreenIcon : {
+                content: 'f0b2'
+            },
+            helpIcon : {
+                content: 'f128'
+            },
+            glossaryIcon : {
+                content: 'f02d'
+            },
+            mediaIcon : {
+                content: 'f16a'
             }
         };
     
@@ -315,9 +338,44 @@
         
         css += '/* ICONS */\n\n';
         
-        css += '.ui-button:after {\n';
+        css += '#x_footerBlock .ui-button:after {\n';
         css += '\t' + 'color: ' + styles.icons.colour +';\n';
+        css += '}\n\n';
+        
+        css += '#x_footerBlock .ui-button.ui-state-hover:after {\n';
+        css += '\t' + 'color: ' + styles.iconsHover.colour +';\n';
+        css += '}\n\n';
+        
+        css += '#x_nextBtn:after {\n';
         css += '\t' + 'content: "\\' + styles.nextIcon.content + '";\n';
+        css += '}\n\n';
+        
+        css += '#x_prevBtn:after {\n';
+        css += '\t' + 'content: "\\' + styles.prevIcon.content + '";\n';
+        css += '}\n\n';
+        
+        css += '#x_menuBtn:after {\n';
+        css += '\t' + 'content: "\\' + styles.menuIcon.content + '";\n';
+        css += '}\n\n';
+        
+        css += '#x_colourChangerBtn:after {\n';
+        css += '\t' + 'content: "\\' + styles.colourChangerIcon.content + '";\n';
+        css += '}\n\n';
+        
+        css += '#x_cssBtn:after {\n';
+        css += '\t' + 'content: "\\' + styles.fullScreenIcon.content + '";\n';
+        css += '}\n\n';
+        
+        css += '#x_helpBtn:after {\n';
+        css += '\t' + 'content: "\\' + styles.helpIcon.content + '";\n';
+        css += '}\n\n';
+        
+        css += '#x_glossaryBtn:after {\n';
+        css += '\t' + 'content: "\\' + styles.glossaryIcon.content + '";\n';
+        css += '}\n\n';
+        
+        css += '#x_mediaBtn:after {\n';
+        css += '\t' + 'content: "\\' + styles.mediaIcon.content + '";\n';
         css += '}\n\n';
         
         css += '/* PRESERVE INVERT FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
@@ -341,17 +399,47 @@
         
         var extraCss = '/* Extra dynamic CSS for Xhibit - Not exported to theme output */\n\n';
 
-        extraCss += '.iconBox {\n';
-        extraCss += '\t' + 'color: ' + styles.icons.colour +';\n';
+        extraCss += '.iconBox, .iconBoxChoice {\n';
         extraCss += '\t' + 'background: -ms-linear-gradient(top, ' + styles.footerGradient1.colour + ', ' + styles.footerGradient2.colour + ');\n';
         extraCss += '\t' + 'background: -webkit-gradient(linear, left top, left bottom, from(' + styles.footerGradient1.colour + '), to(' + styles.footerGradient2.colour + '));\n';
         extraCss += '\t' + 'background: -moz-linear-gradient(top,  ' + styles.footerGradient1.colour + ',  ' + styles.footerGradient2.colour + ');\n';
         extraCss += '\t' + 'backgroundImage: -o-linear-gradient(' + styles.footerGradient1.colour + ', ' + styles.footerGradient2.colour + ');\n';
         extraCss += '}\n\n';
         
-        extraCss += '.iconBox:after {\n';
+        extraCss += '.iconBox:after, .iconBoxChoice:after {\n';
         extraCss += '\t' + 'color: ' + styles.icons.colour +';\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '#nextIconEdit .iconBox:after {\n';
         extraCss += '\t' + 'content: "\\' + styles.nextIcon.content + '";\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '#prevIconEdit .iconBox:after {\n';
+        extraCss += '\t' + 'content: "\\' + styles.prevIcon.content + '";\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '#menuIconEdit .iconBox:after {\n';
+        extraCss += '\t' + 'content: "\\' + styles.menuIcon.content + '";\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '#colourChangerIconEdit .iconBox:after {\n';
+        extraCss += '\t' + 'content: "\\' + styles.colourChangerIcon.content + '";\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '#fullScreenIconEdit .iconBox:after {\n';
+        extraCss += '\t' + 'content: "\\' + styles.fullScreenIcon.content + '";\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '#helpIconEdit .iconBox:after {\n';
+        extraCss += '\t' + 'content: "\\' + styles.helpIcon.content + '";\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '#glossaryIconEdit .iconBox:after {\n';
+        extraCss += '\t' + 'content: "\\' + styles.glossaryIcon.content + '";\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '#mediaIconEdit .iconBox:after {\n';
+        extraCss += '\t' + 'content: "\\' + styles.mediaIcon.content + '";\n';
         extraCss += '}\n\n';
             
         liveStyles.textContent += extraCss;
@@ -420,6 +508,7 @@
             xhibitXerteMenu.style.display = 'none'; //hide XOT menu.
         }
         colourPicker.className = '';
+        iconPicker.className = '';
         saveWindow.className = '';
         resetWindow.className = '';
         exportWindow.className = '';
@@ -443,6 +532,7 @@
             zoneButtonsActive('true');
             xhibitXerteMenu.style.display = 'none';
             colourPicker.className = '';
+            iconPicker.className = '';
             saveWindow.className = '';
             resetWindow.className = '';
             exportWindow.className = '';
@@ -504,7 +594,6 @@
 //            iconBox[_i].style.backgroundColor = unicodeBox[_i].value;
             var targetElement = iconBox[_i].parentElement.id.slice(0, -4),
                 newValue = unicodeBox[_i].value;
-            console.log(targetElement + ', ' + newValue);
             styles[targetElement].content = newValue;
             updateCSS();
         });
@@ -539,10 +628,38 @@
         colourPalette(i);
     }
     
+    //Functionality for selecting from icon palette
+    
+    function iconPalette(_i) {
+        iconBoxChoice[_i].addEventListener('click', function () {
+            var targetElement = iconPicker.className.split(' ')[1]; //2nd class name in list
+                newValue = '' + iconBoxChoice[_i].id;
+            styles[targetElement].content = newValue;
+            //document.getElementById(targetElement + 'Edit').getElementsByClassName('colourBox')[0].style.backgroundColor = styles[targetElement].colour;
+            //document.getElementById(targetElement + 'Edit').getElementsByClassName('hexBox')[0].value = styles[targetElement].colour;
+            iconPicker.className = '';
+            updateCSS();
+        });
+    }
+    
+    for (i = 0; i < iconBoxChoice.length; i++) {
+        iconPalette(i);
+    }
+
+    allIcons.addEventListener('click', function () {
+        for (i=0; i<iconBoxChoice.length; i++) {
+            iconBoxChoice[i].classList.toggle("visible"); 
+        }
+    });
+    
     // Other event listeners
 
     colourPickerClose.addEventListener('click', function () {
         colourPicker.className = '';
+    });
+
+    iconPickerClose.addEventListener('click', function () {
+        iconPicker.className = '';
     });
 
     footerDotsTextureOn.addEventListener('click', function () {

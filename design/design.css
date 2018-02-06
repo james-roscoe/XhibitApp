@@ -76,6 +76,18 @@ form {
     background-position: 50% -100%;
 }
 
+#zoneSelector div.new:after {
+    content: "New!";
+    position: absolute;
+    bottom: 0;
+    bottom: 0;
+    margin-left: -59px;
+    background-color: #ff511f;
+    padding: 2px;
+    border-radius: 0 5px 0 0;
+    font-size: 0.8em;
+}
+
 #saveBtn, #resetBtn, #exportBtn {
     background: url('../images/export-new.png');
     font-family: 'Open Sans', sans-serif;
@@ -224,12 +236,9 @@ form {
     margin-bottom: 10px;
 }
 
-.iconBox {
-}
-
-.iconBox:after {
+.iconBox:after, .iconBoxChoice:after {
     font-family: "FontAwesome";
-    font-size: 2.4em;
+    font-size: 1.7em;
     width: 44px;
     height: 44px;
     display: block;
@@ -279,7 +288,7 @@ label.radio input {
     margin-bottom:30px;
 }
 
-#colourPicker, #saveWindow, #resetWindow, #exportWindow {
+#colourPicker, #iconPicker, #saveWindow, #resetWindow, #exportWindow {
     display: none;
     position: absolute;
     top: 125px;
@@ -291,11 +300,11 @@ label.radio input {
     overflow-y: auto;
 }
 
-#colourPicker.visible, #saveWindow.visible, #resetWindow.visible, #exportWindow.visible {
+#colourPicker.visible, #iconPicker.visible, #saveWindow.visible, #resetWindow.visible, #exportWindow.visible {
     display: block;
 }
 
-#colourPickerClose, #saveWindowClose, #resetWindowClose, #exportWindowClose, .accordionClose {
+#colourPickerClose, #iconPickerClose, #saveWindowClose, #resetWindowClose, #exportWindowClose, .accordionClose {
     width: 27px;
     height: 28px;
     position: absolute;
@@ -364,19 +373,19 @@ label.radio input {
     color: white;
 }
 
-#colourPicker p, #saveWindow p, #resetWindow p, #exportWindow p {
+#colourPicker p, #iconPicker p, #saveWindow p, #resetWindow p, #exportWindow p {
     margin: 10px;
     color: #504e4e;
     font-family: 'Open Sans', sans-serif;
 }
 
-#colourPicker p.windowTitle, #saveWindow p.windowTitle, #resetWindow p.windowTitle, #exportWindow p.windowTitle {
+#colourPicker p.windowTitle, #iconPicker p.windowTitle, #saveWindow p.windowTitle, #resetWindow p.windowTitle, #exportWindow p.windowTitle {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
 }
 
-#colourPicker .colourBoxChoice {
+#colourPicker .colourBoxChoice, #iconPicker .iconBoxChoice {
     width: 44px;
     height: 44px;
     float: left;
@@ -384,6 +393,27 @@ label.radio input {
     margin-bottom: 12px;
     cursor: pointer;
     border: 1px solid #064c71;
+}
+
+#iconPicker .iconBoxChoice {
+    display: none;
+}
+
+/* By default, filter icons by those that are relevant: */
+
+#iconPicker.nextIcon .nextIconOption, 
+#iconPicker.prevIcon .prevIconOption, 
+#iconPicker.menuIcon .menuIconOption, 
+#iconPicker.colourChangerIcon .colourChangerIconOption, 
+#iconPicker.fullScreenIcon .fullScreenIconOption, 
+#iconPicker.helpIcon .helpIconOption, 
+#iconPicker.glossaryIcon .glossaryIconOption, 
+#iconPicker.mediaIcon .mediaIconOption  {
+    display: block;
+}
+
+#iconPicker .iconBoxChoice.visible {
+    display: block;
 }
 
 #accordionMenus .elements em {
@@ -1750,6 +1780,494 @@ label.radio input {
 	background-color: #FFFFFF;
 }
 
+/* Next arrows */
+
+#f054:after {
+    content: "\f054";
+}
+
+#f061:after {
+    content: "\f061";
+}
+
+#f0a4:after {
+    content: "\f0a4";
+}
+
+#f0a9:after {
+    content: "\f0a9";
+}
+
+#f0da:after {
+    content: "\f0da";
+}
+
+#f101:after {
+    content: "\f101";
+}
+
+#f105:after {
+    content: "\f105";
+}
+
+#f138:after {
+    content: "\f138";
+}
+
+#f152:after {
+    content: "\f152";
+}
+
+#f178:after {
+    content: "\f178";
+}
+
+/* Prev arrows */
+
+#f053:after {
+    content: "\f053";
+}
+
+#f060:after {
+    content: "\f060";
+}
+
+#f0a5:after {
+    content: "\f0a5";
+}
+
+#f0a8:after {
+    content: "\f0a8";
+}
+
+#f0d9:after {
+    content: "\f0d9";
+}
+
+#f100:after {
+    content: "\f100";
+}
+
+#f104:after {
+    content: "\f104";
+}
+
+#f137:after {
+    content: "\f137";
+}
+
+#f191:after {
+    content: "\f191";
+}
+
+#f177:after {
+    content: "\f177";
+}
+
+/* Menu icons */
+
+#f00b:after {
+    content: "\f00b";
+}
+
+#f022:after {
+    content: "\f022";
+}
+
+#f036:after {
+    content: "\f036";
+}
+
+#f037:after {
+    content: "\f037";
+}
+
+#f038:after {
+    content: "\f038";
+}
+
+#f039:after {
+    content: "\f039";
+}
+
+#f0ca:after {
+    content: "\f0ca";
+}
+
+#f0cb:after {
+    content: "\f0cb";
+}
+
+#f146:after {
+    content: "\f146";
+}
+
+#f272:after {
+    content: "\f272";
+}
+
+#f0c9:after {
+    content: "\f0c9";
+}
+
+#f042:after {
+    content: "\f042";
+}
+
+#f06e:after {
+    content: "\f06e";
+}
+
+#f070:after {
+    content: "\f070";
+}
+
+#f170:after {
+    content: "\f170";
+}
+
+#f193:after {
+    content: "\f193";
+}
+
+#f1fb:after {
+    content: "\f1fb";
+}
+
+#f1fc:after {
+    content: "\f1fc";
+}
+
+#f031:after {
+    content: "\f031";
+}
+
+#f0e8:after {
+    content: "\f0e8";
+}
+
+/* Full screen icons */
+
+#f0b2:after {
+    content: "\f0b2";
+}
+
+#f108:after {
+    content: "\f108";
+}
+
+#f067:after {
+    content: "\f067";
+}
+
+#f066:after {
+    content: "\f066";
+}
+
+#f002:after {
+    content: "\f002";
+}
+
+#f00e:after {
+    content: "\f00e";
+}
+
+/* Help icons */
+
+#f128:after {
+    content: "\f128";
+}
+
+#f059:after {
+    content: "\f059";
+}
+
+#f05a:after {
+    content: "\f05a";
+}
+
+#f129:after {
+    content: "\f129";
+}
+
+#f075:after {
+    content: "\f075";
+}
+
+#f0e0:after {
+    content: "\f0e0";
+}
+
+#f06a:after {
+    content: "\f06a";
+}
+
+#f071:after {
+    content: "\f071";
+}
+
+#f15b:after {
+    content: "\f15b";
+}
+
+#f15c:after {
+    content: "\f15c";
+}
+
+#f1c2:after {
+    content: "\f1c2";
+}
+
+#f1c1:after {
+    content: "\f1c1";
+}
+
+/* Glossary icons */
+
+#f02d:after {
+    content: "\f02d";
+}
+
+#f0db:after {
+    content: "\f0db";
+}
+
+#f1ea:after {
+    content: "\f1ea";
+}
+
+#f15d:after {
+    content: "\f15d";
+}
+
+#f15e:after {
+    content: "\f15e";
+}
+
+/* Media icons */
+
+#f16a:after {
+    content: "\f16a";
+}
+
+#f03d:after {
+    content: "\f03d";
+}
+
+#f1c8:after {
+    content: "\f1c8";
+}
+
+#f1c7:after {
+    content: "\f1c7";
+}
+
+#f008:after {
+    content: "\f008";
+}
+
+#f028:after {
+    content: "\f028";
+}
+
+#f027:after {
+    content: "\f027";
+}
+
+#f030:after {
+    content: "\f030";
+}
+
+#f083:after {
+    content: "\f083";
+}
+
+#f26c:after {
+    content: "\f26c";
+}
+
+#f001:after {
+    content: "\f001";
+}
+
+#f04b:after {
+    content: "\f04b";
+}
+
+#f025:after {
+    content: "\f025";
+}
+
+#f144:after {
+    content: "\f144";
+}
+
+
+
+
+
+/* Icons below only work on latest FontAwesome */
+
+/*
+#f30b:after {
+    content: "\f30b";
+}
+
+#f324:after {
+    content: "\f324";
+}
+
+#f32b:after {
+    content: "\f32b";
+}
+
+#f330:after {
+    content: "\f330";
+}
+
+#f33b:after {
+    content: "\f33b";
+}
+
+#f340:after {
+    content: "\f340";
+}
+
+#f343:after {
+    content: "\f343";
+}
+
+#f347:after {
+    content: "\f347";
+}
+
+#f34c:after {
+    content: "\f34c";
+}
+
+#f352:after {
+    content: "\f352";
+}
+
+#f356:after {
+    content: "\f356";
+}
+
+#f35a:after {
+    content: "\f35a";
+}
+
+#f430:after {
+    content: "\f430";
+}
+*/
+
+/* Switches */
+
+.options {
+    margin: 15px 10px;
+    padding: 4px;
+    font-size: 0.5em;
+}
+
+.options > span {
+    font-size: 1.8em;
+    margin-right: 1em;
+    font-style: italic;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 6em;
+  height: 3.4em;
+}
+
+.switch input {visibility:hidden;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2.6em;
+  width: 2.6em;
+  left: 0.4em;
+  bottom: 0.4em;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0.1em #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(2.6em);
+  -ms-transform: translateX(2.6em);
+  transform: translateX(2.6em);
+}
+
+/*
+.switch input + .slider:before, .switch input + .slider:after {
+    display: block;
+    position: absolute;
+    font-size: 1.1em;
+    width: 5em;
+    visibility: visible;
+    color: #0a4f73;
+    line-height: 1.3em;
+    vertical-align: middle;
+}
+
+.switch input + .slider:before {
+    content: "Relevant";
+    left: -5em;
+    font-weight: bold;
+}
+
+.switch input:checked + .slider:before {
+    font-weight: bold;
+    font-weight: normal;
+}
+
+.switch input + .slider:after {
+    left: 4em;
+    content: "All";
+}
+
+.switch input:checked + .slider:after {
+    content: "All";
+    font-weight: bold;
+}
+*/
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 3.4em;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* End of sliders */
+
 #preview {
     position: absolute;
     width: 55%;
@@ -1891,7 +2409,7 @@ select {
         border: 0px;
         border-top: 2px solid white;
     }
-    #colourPicker, #saveWindow, #resetWindow, #exportWindow {
+    #colourPicker, #iconPicker, #saveWindow, #resetWindow, #exportWindow {
         top: -58px;
         width: 100%;
         height: 100%;
@@ -1928,7 +2446,7 @@ select {
     #intro {
         display: none;
     }
-    .accordion, #colourPicker, #saveWindow, #resetWindow, #exportWindow {
+    .accordion, #colourPicker, #iconPicker, #saveWindow, #resetWindow, #exportWindow {
         top: 0px;
     }
 }
