@@ -512,6 +512,18 @@
                         <div class="accordionClose"></div>
                     </div>
                     <div class="elements">
+                        
+                        <div id="icons" onclick="scrollBottom(this);" class="element">
+                            Icon Colour
+                            <div class="plusMinus"></div>
+                        </div>
+                        <div id="iconsEdit" class="elementEdit">
+                            <div class="colourBox"></div>
+                            <div class="colourPickerIcon"></div>
+                            <input class="hexBox" type="text" name="icons"/>
+
+                        </div>
+                        
                         <div id="nextIcon" class="element">
                             Next Arrow
                             <div class="plusMinus"></div>
@@ -521,6 +533,7 @@
                             <div class="iconPickerIcon"></div>
                             <input class="unicodeBox" type="text"/>
                         </div>
+                        
                     </div>
                 </div>
 

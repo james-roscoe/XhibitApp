@@ -139,6 +139,9 @@
             menuItemText : {
                 colour: '#555555'
             },
+            icons : {
+                colour: '#ffffff'
+            },
             nextIcon : {
                 content: 'f138',
                 colour: 'red',
@@ -312,7 +315,8 @@
         
         css += '/* ICONS */\n\n';
         
-        css += '.iconBox:after {\n';
+        css += '.ui-button:after {\n';
+        css += '\t' + 'color: ' + styles.icons.colour +';\n';
         css += '\t' + 'content: "\\' + styles.nextIcon.content + '";\n';
         css += '}\n\n';
         
@@ -334,6 +338,23 @@
 
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
+        
+        var extraCss = '/* Extra dynamic CSS for Xhibit - Not exported to theme output */\n\n';
+
+        extraCss += '.iconBox {\n';
+        extraCss += '\t' + 'color: ' + styles.icons.colour +';\n';
+        extraCss += '\t' + 'background: -ms-linear-gradient(top, ' + styles.footerGradient1.colour + ', ' + styles.footerGradient2.colour + ');\n';
+        extraCss += '\t' + 'background: -webkit-gradient(linear, left top, left bottom, from(' + styles.footerGradient1.colour + '), to(' + styles.footerGradient2.colour + '));\n';
+        extraCss += '\t' + 'background: -moz-linear-gradient(top,  ' + styles.footerGradient1.colour + ',  ' + styles.footerGradient2.colour + ');\n';
+        extraCss += '\t' + 'backgroundImage: -o-linear-gradient(' + styles.footerGradient1.colour + ', ' + styles.footerGradient2.colour + ');\n';
+        extraCss += '}\n\n';
+        
+        extraCss += '.iconBox:after {\n';
+        extraCss += '\t' + 'color: ' + styles.icons.colour +';\n';
+        extraCss += '\t' + 'content: "\\' + styles.nextIcon.content + '";\n';
+        extraCss += '}\n\n';
+            
+        liveStyles.textContent += extraCss;
 
         //Update colour contrast read-outs
         checkContrast();
