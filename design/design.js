@@ -28,6 +28,9 @@
         iconPickerClose = document.getElementById('iconPickerClose'),
         allIcons = document.getElementById('allIcons'),
         iconBoxChoice = document.getElementsByClassName('iconBoxChoice'),
+        helpIconPreview = document.getElementById('helpIconPreview'),
+        glossaryIconPreview = document.getElementById('glossaryIconPreview'),
+        mediaIconPreview = document.getElementById('mediaIconPreview'),
         saveBtn = document.getElementById('saveBtn'),
         saveWindow = document.getElementById('saveWindow'),
         saveWindowClose = document.getElementById('saveWindowClose'),
@@ -650,6 +653,25 @@
         for (i=0; i<iconBoxChoice.length; i++) {
             iconBoxChoice[i].classList.toggle("visible"); 
         }
+    });
+    
+    // Functionality for previewing optional icons
+    
+    function showOptionalIcons(id){
+        var targetIcon = document.getElementById(id);
+        targetIcon.style.display = targetIcon.style.display === 'none' ? '' : 'none';
+    }
+
+    helpIconPreview.addEventListener('click', function () {
+        showOptionalIcons('x_helpBtn');
+    });
+
+    glossaryIconPreview.addEventListener('click', function () {
+        showOptionalIcons('x_glossaryBtn');
+    });
+
+    mediaIconPreview.addEventListener('click', function () {
+        showOptionalIcons('x_mediaBtn');
     });
     
     // Other event listeners

@@ -513,7 +513,7 @@
                     </div>
                     <div class="elements">
                         
-                        <div id="icons" onclick="scrollBottom(this);" class="element">
+                        <div id="icons" class="element">
                             Icon Colour
                             <div class="plusMinus"></div>
                         </div>
@@ -523,7 +523,7 @@
                             <input class="hexBox" type="text" name="icons"/>
                         </div>
                         
-                        <div id="iconsHover" onclick="scrollBottom(this);" class="element">
+                        <div id="iconsHover" class="element">
                             Icon Hover Colour
                             <div class="plusMinus"></div>
                         </div>
@@ -540,7 +540,7 @@
                         <div id="nextIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
-                            <input class="unicodeBox" type="text"/>
+                            <div class="unicodeWrapper"><input class="unicodeBox" type="text"/></div>
                         </div>
                         
                         <div id="prevIcon" class="element">
@@ -550,7 +550,7 @@
                         <div id="prevIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
-                            <input class="unicodeBox" type="text"/>
+                            <div class="unicodeWrapper"><input class="unicodeBox" type="text"/></div>
                         </div>
                         
                         <div id="menuIcon" class="element">
@@ -560,57 +560,69 @@
                         <div id="menuIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
-                            <input class="unicodeBox" type="text"/>
+                            <div class="unicodeWrapper"><input class="unicodeBox" type="text"/></div>
                         </div>
                         
-                        <div id="colourChangerIcon" class="element">
+                        <div id="colourChangerIcon" onclick="scrollBottom(this);" class="element">
                             Colour Changer Button
                             <div class="plusMinus"></div>
                         </div>
                         <div id="colourChangerIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
-                            <input class="unicodeBox" type="text"/>
+                            <div class="unicodeWrapper"><input class="unicodeBox" type="text"/></div>
                         </div>
                         
-                        <div id="fullScreenIcon" class="element">
+                        <div id="fullScreenIcon" onclick="scrollBottom(this);" class="element">
                             Full Screen Button
                             <div class="plusMinus"></div>
                         </div>
                         <div id="fullScreenIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
-                            <input class="unicodeBox" type="text"/>
+                            <div class="unicodeWrapper"><input class="unicodeBox" type="text"/></div>
                         </div>
                         
-                        <div id="helpIcon" class="element">
+                        <div id="helpIcon" onclick="scrollBottom(this);" class="element">
                             Help Button
                             <div class="plusMinus"></div>
                         </div>
                         <div id="helpIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
-                            <input class="unicodeBox" type="text"/>
+                            <div class="unicodeWrapper"><input class="unicodeBox" type="text"/></div>
+                            <label class="previewCheck">
+                                <input id="helpIconPreview" type="checkbox"/>
+                                <span>Preview</span>
+                            </label>
                         </div>
                         
-                        <div id="glossaryIcon" class="element">
+                        <div id="glossaryIcon" onclick="scrollBottom(this);" class="element">
                             Glossary Button
                             <div class="plusMinus"></div>
                         </div>
                         <div id="glossaryIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
-                            <input class="unicodeBox" type="text"/>
+                            <div class="unicodeWrapper"><input class="unicodeBox" type="text"/></div>
+                            <label class="previewCheck">
+                                <input id="glossaryIconPreview" type="checkbox"/>
+                                <span>Preview</span>
+                            </label>
                         </div>
                         
-                        <div id="mediaIcon" class="element">
+                        <div id="mediaIcon" onclick="scrollBottom(this);" class="element">
                             Media Button
                             <div class="plusMinus"></div>
                         </div>
                         <div id="mediaIconEdit" class="elementEdit">
                             <div class="iconBox"></div>
                             <div class="iconPickerIcon"></div>
-                            <input class="unicodeBox" type="text"/>
+                            <div class="unicodeWrapper"><input class="unicodeBox" type="text"/></div>
+                            <label class="previewCheck">
+                                <input id="mediaIconPreview" type="checkbox"/>
+                                <span>Preview</span>
+                            </label>
                         </div>
                         
                     </div>
