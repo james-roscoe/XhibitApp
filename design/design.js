@@ -339,6 +339,23 @@
 
         css += '}\n\n';
         
+        css += '/* SETUP FOR FONT AWESOME ICONS */\n';
+        css += '/* (Already present in Xhibit Base Theme, but needed here for older versions of Xerte that do not have the base theme) */\n\n';
+        
+        css += '#x_footerBlock button span {\n';
+        css += '\t' + 'background: none; /* Hide any PNG buttons */\n';
+        css += '}\n\n';
+
+        css += '.ui-button:after { /* Setup for FontAwesome icons */\n';
+        css += '\t' + 'font-family: FontAwesome;\n';
+        css += '\t' + 'color: white;\n';
+        css += '\t' + 'position: absolute;\n';
+        css += '\t' + 'top: 0;\n';
+        css += '\t' + 'width: 100%;\n';
+        css += '\t' + 'font-size: 1.9em;\n';
+        css += '\t' + 'line-height: 1.5em;\n';
+        css += '}\n\n';
+        
         css += '/* ICONS */\n\n';
         
         css += '#x_footerBlock .ui-button:after {\n';
