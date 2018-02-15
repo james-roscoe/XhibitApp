@@ -1,5 +1,5 @@
 .design.wrapper {
-    min-height: 600px;
+/*    min-height: 600px;*/
 }
 
 form {
@@ -262,7 +262,7 @@ form {
 .hexBox, .unicodeWrapper {
     position: relative;
     float: left;
-    width: 67px;
+    width: 61px;
     height: 30px;
     font-size: 0.8em;
     font-family: 'Open Sans', sans-serif;
@@ -275,6 +275,9 @@ form {
     width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    padding-left: 6px;
+/*    width: calc(100% - 6px);*/
 }
 
 .previewCheck {    
@@ -284,16 +287,16 @@ form {
     font-size: 0.8em;
     cursor: pointer;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 16px;
 }
 
 .previewCheck input {
     position: relative;
-    top: 2px;
 }
 
 .hexBox {
     text-transform: uppercase;
+    padding-left: 6px;
 }
 
 label.radio {
@@ -311,9 +314,9 @@ label.radio input {
 #colourPicker, #iconPicker, #saveWindow, #resetWindow, #exportWindow {
     display: none;
     position: absolute;
-    top: 125px;
+    top: 75px;
     width: 44.5%;
-    height: 248px;
+    height: 298px;
     background-color: white;
     border: 2px solid #064c71;
     z-index: 0;
@@ -2424,8 +2427,8 @@ select {
     #intro p {
         display: none;
     }
-    #designer {
-        height: 100%;
+    .mainWrapper #designer {
+        height: calc(100vh - 186px);
         position: relative;
     }
     .design.wrapper {
@@ -2448,13 +2451,14 @@ select {
         position: absolute;
         top: 0px;
         width: 100%;
-        height: auto;
+        height: 100%;
         z-index: 1;
         border: 0px;
         border-top: 2px solid white;
+        padding-bottom: 15px;
     }
     #colourPicker, #iconPicker, #saveWindow, #resetWindow, #exportWindow {
-        top: -58px;
+        top: -49px;
         width: 100%;
         height: 100%;
         background-color: white;
