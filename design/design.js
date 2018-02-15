@@ -569,12 +569,21 @@
         
         // Set defaults
         var hexValue = styles[colourBox[_i].parentElement.id.slice(0, -4)].colour;
-        colourBox[_i].style.backgroundColor = hexValue;
+        if (hexValue == 'transparent'){
+            colourBox[_i].style.backgroundImage = 'url(../images/transparent.png)';
+        } else { 
+            colourBox[_i].style.backgroundColor = hexValue;
+        }
         hexBox[_i].value = hexValue;
         
         // Event listeners
         hexBox[_i].addEventListener('keyup', function () {
             colourBox[_i].style.backgroundColor = hexBox[_i].value;
+            if (hexBox[_i].value == 'transparent'){
+                colourBox[_i].style.backgroundImage = 'url(../images/transparent.png)';
+            } else {
+                colourBox[_i].style.backgroundImage = '';
+            }
             var targetElement = colourBox[_i].parentElement.id.slice(0, -4),
                 newValue = hexBox[_i].value;
             styles[targetElement].colour = newValue;
@@ -634,10 +643,19 @@
     
     function colourPalette(_i) {
         colourBoxChoice[_i].addEventListener('click', function () {
-            var targetElement = colourPicker.className.substr(8),
-                newValue = '#' + colourBoxChoice[_i].id.substr(3);
-            styles[targetElement].colour = newValue;
-            document.getElementById(targetElement + 'Edit').getElementsByClassName('colourBox')[0].style.backgroundColor = styles[targetElement].colour;
+            var targetElement = colourPicker.className.substr(8);
+            if (colourBoxChoice[_i].id == 'transparent') {
+                var newValue = 'transparent';
+                styles[targetElement].colour = newValue;
+                document.getElementById(targetElement + 'Edit').getElementsByClassName('colourBox')[0].style.backgroundImage = "url('../images/transparent.png')";
+            } else {
+                var newValue = '#' + colourBoxChoice[_i].id.substr(3); // If not transparent, must be a colour.
+                document.getElementById(targetElement + 'Edit').getElementsByClassName('colourBox')[0].style.backgroundImage = ""; //Remove any transparent styling.
+                styles[targetElement].colour = newValue;
+                document.getElementById(targetElement + 'Edit').getElementsByClassName('colourBox')[0].style.backgroundColor = styles[targetElement].colour;
+            }
+            
+            
             document.getElementById(targetElement + 'Edit').getElementsByClassName('hexBox')[0].value = styles[targetElement].colour;
             colourPicker.className = '';
             updateCSS();
@@ -1054,7 +1072,11 @@ We have also adapted some of the text validation and (UI) CSS code written origi
         //Clear previous text
         $(resultTarget).html('');
         //Output the error feedback
-        $(resultTarget).html("You need to select two colours (with 3 or 6 digit <a href='https://www.w3schools.com/colors/colors_hexadecimal.asp' target='_blank'>Hex codes</a>) for the contrast ratio to be calculated. Check you haven't left a hex box empty within the accordions or typed in a hex code incorrectly."); 
+        if (ccComparisons[i][1] == 'transparent' || ccComparisons[i][1] == 'transparent'){
+            $(resultTarget).html("<strong>This property (or the contrasting property) is currently setup as transparent. </strong>You need to select two colours (with 3 or 6 digit <a href='https://www.w3schools.com/colors/colors_hexadecimal.asp' target='_blank'>Hex codes</a>) for the contrast ratio to be calculated."); 
+        } else {
+            $(resultTarget).html("You need to select two colours (with 3 or 6 digit <a href='https://www.w3schools.com/colors/colors_hexadecimal.asp' target='_blank'>Hex codes</a>) for the contrast ratio to be calculated. Check you haven't left a hex box empty within the accordions or typed in a hex code incorrectly."); 
+        }
     }
   }
 }

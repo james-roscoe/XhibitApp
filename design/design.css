@@ -223,6 +223,7 @@ form {
 #accordionHeader, #accordionFooter, #accordionBody, #accordionMenus, #accordionIcons, #accordionFonts {
 	overflow-y: auto;
 }
+
 .colourBox, .iconBox {
     position: relative;
     float:left;
@@ -1801,6 +1802,10 @@ label.radio input {
 
 #colFFFFFF {
 	background-color: #FFFFFF;
+}
+
+#transparent {
+    background-image: url('../images/transparent.png');
 }
 
 /* Next arrows */

@@ -1008,6 +1008,7 @@
                     <div id="colFFF5EE" class="colourBoxChoice"></div>
                     <div id="colFEFCFF" class="colourBoxChoice"></div>
                     <div id="colFFFFFF" class="colourBoxChoice"></div>
+                    <div id="transparent" class="colourBoxChoice"></div>
 
                 </div>
                 
