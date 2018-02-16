@@ -1137,7 +1137,7 @@
                     <div id="saveWindowClose"></div>
                     <p class="windowTitle">Save</p>
                     <p>You can save your progress on this design by clicking the save button. Simply return to this page using the same device and browser to access your design again.</p>
-                    <p>Note that this feature relies on your browser's local storage and will be deleted if your clear your cookies.</p>
+                    <p>Note that this feature relies on your browser's local storage and will be deleted if you clear your cookies.</p>
                     <button type="button" id="saveProgress">Save Progress</button>
                 </div>
 
