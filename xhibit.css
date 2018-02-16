@@ -106,7 +106,7 @@ header a:hover, footer a:hover {
     color: #c1e5f8;
 }
 
-#menuIcon {
+#xhibitMenuIcon {
     display: none;
 }
 
@@ -302,7 +302,7 @@ hr {
     #logo img {
         width: 100%;
     }
-    #menuIcon {
+    #xhibitMenuIcon {
         display: block;
         float: right;
         width: 10%;
