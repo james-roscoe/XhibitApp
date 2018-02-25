@@ -71,6 +71,8 @@
             
             <p>As you make changes to your design, you may notice some WCAG colour contrast recommendations. These are in place to help you create the most accessible and user-friendly theme possible. We strongly encourage you take note of these recommendations, and if possible try to aim for a high colour contrast ratio across all your elements. Your end-users will really appreciate it!</p>
             
+            <p>You can also change the Xerte interface buttons by choosing from a selection of <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> icons. Note that producing an Xhibit theme will implement Font Awesome icons by default (even if you haven't changed any), and this will therefore overwrite any existing icons that may be in place on your project (e.g. PNG icons). If you would prefer this didn't happen, you will need to manually remove the icons section from the generated Xhibit stylesheet before uploading it to your project.</p>
+            
             <figure>
                 <img src="../images/xhibit-design-screeshot.png" alt="Screenshot of the Xhibit design page"/>
                 <figcaption>Design: Changing the colours for particular sections and elements.</figcaption>
