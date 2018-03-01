@@ -3,7 +3,7 @@
 	define('SITEPATH', $_SERVER['DOCUMENT_ROOT'] . '/xhibitapp');
 }
 else{ // For Web
-	define('SITEURL', "http://" . $_SERVER['HTTP_HOST']);
+	define('SITEURL', "https://" . $_SERVER['HTTP_HOST']);
 	define('SITEPATH', $_SERVER['DOCUMENT_ROOT']);
 }
 ?>
