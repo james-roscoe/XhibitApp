@@ -199,8 +199,8 @@
         // If a 'Dyslexia' font is selected, as opposed to 'Traditional' or 'Google Font' add the font-face declaration from 'OpenDyslexic'
         if (dyslexiaSelected == true) {
             css += '/* DYSLEXIA FRIENDLY FONT DECLARATION */\n';
-            css += "@font-face {\nfont-family: 'OpenDyslexic3';\nsrc: url('http://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Regular.eot'); /* IE9 Compat Modes */\nsrc: url('http://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\nurl('http://www.xhibitapp.com/fonts/opendyslexic3/woff/OpenDyslexic-Regular.woff') format('woff'), /* Modern Browsers */\nurl('http://www.xhibitapp.com/fonts/opendyslexic3/ttf/OpenDyslexic-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */\n}\n\n";
-            css += "@font-face {\nfont-family: 'OpenDyslexic3';\nsrc: url('http://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Bold.eot'); /* IE9 Compat Modes */\nsrc: url('http://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\nurl('http://www.xhibitapp.com/fonts/opendyslexic3/woff/OpenDyslexic-Bold.woff') format('woff'), /* Modern Browsers */\nurl('http://www.xhibitapp.com/fonts/opendyslexic3/ttf/OpenDyslexic-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */\n}\n\n";
+            css += "@font-face {\nfont-family: 'OpenDyslexic3';\nsrc: url('https://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Regular.eot'); /* IE9 Compat Modes */\nsrc: url('https://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\nurl('https://www.xhibitapp.com/fonts/opendyslexic3/woff/OpenDyslexic-Regular.woff') format('woff'), /* Modern Browsers */\nurl('https://www.xhibitapp.com/fonts/opendyslexic3/ttf/OpenDyslexic-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */\n}\n\n";
+            css += "@font-face {\nfont-family: 'OpenDyslexic3';\nsrc: url('https://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Bold.eot'); /* IE9 Compat Modes */\nsrc: url('https://www.xhibitapp.com/fonts/opendyslexic3/eot/OpenDyslexic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\nurl('https://www.xhibitapp.com/fonts/opendyslexic3/woff/OpenDyslexic-Bold.woff') format('woff'), /* Modern Browsers */\nurl('https://www.xhibitapp.com/fonts/opendyslexic3/ttf/OpenDyslexic-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */\n}\n\n";
         }
 
         css += '/* FONT */\n\n';
@@ -213,7 +213,7 @@
             css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
         }
         if (traditionalSelected == false && googleSelected == false && dyslexiaSelected == true) {
-            css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '";\n';
+            css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '", "Comic Sans MS", cursive, sans-serif;\n';
         }
         css += '}\n\n';
 
@@ -313,7 +313,7 @@
             css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
         }
         if (traditionalSelected == false && googleSelected == false && dyslexiaSelected == true) {
-            css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '";\n';
+            css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '", "Comic Sans MS", cursive, sans-serif;\n';
         }
 
         css += '}\n\n';
@@ -334,7 +334,7 @@
             css += '\t' + "font-family: " + "'" + styles.googleFont.fontFamily + "', sans-serif;\n";
         }
         if (traditionalSelected == false && googleSelected == false && dyslexiaSelected == true) {
-           css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '";\n';
+           css += '\t' + 'font-family: "' + styles.dyslexiaFont.fontFamily + '", "Comic Sans MS", cursive, sans-serif;\n';
         }
 
         css += '}\n\n';
