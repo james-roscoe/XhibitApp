@@ -952,19 +952,22 @@
     //Update Dyslexia Font through Select (Options) Drop-Down Menu
 
     fontDyslexiaSelect.addEventListener('change', function () {
-
+        
             //Get selected value
             var selectedDyslexiaFont = fontDyslexiaSelect.options[fontDyslexiaSelect.selectedIndex].value;
-            //Update our CSS style variable with the selected value (above)
-            styles.dyslexiaFont.fontFamily = selectedDyslexiaFont;
-            //Update boolean properties to Dyslexia
-            dyslexiaSelected = true;
-            traditionalSelected = false;
-            googleSelected = false;
-            //Reset Google Menu
-            document.getElementById('googleFontDrop').selectedIndex = 0;
-            //Update CSS
-            updateCSS();
+
+            if (selectedDyslexiaFont != "Select a Dyslexia Friendly Font...") {
+                //Update our CSS style variable with the selected value (above)
+                styles.dyslexiaFont.fontFamily = selectedDyslexiaFont;
+                //Update boolean properties to Dyslexia
+                dyslexiaSelected = true;
+                traditionalSelected = false;
+                googleSelected = false;
+                //Reset Google Menu
+                document.getElementById('googleFontDrop').selectedIndex = 0;
+                //Update CSS
+                updateCSS();
+            }
     });
 
     //-----------------------------------------------------------------------------------------------------------
