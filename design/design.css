@@ -2371,18 +2371,18 @@ input:checked + .slider:before {
     text-decoration: none;
 }
 
-.metaField {
-    font-weight: bold;
-}
-
-.metaField > * {
+.metaField label {
+    display: inline-block;
+    width: 115px;
     vertical-align: top;
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-right: 12px;
 }
 
 #themeName, #themeDescription {
-    margin-left: 12px;
     padding-left: 6px;
-    width: 130px;
+    width: 200px;
     height: 30px;
     font-size: 0.8em;
     font-family: 'Open Sans', sans-serif;
@@ -2390,17 +2390,21 @@ input:checked + .slider:before {
 }
 
 #themeDescription {
-    width: 200px;
     height: 60px;
-    margin-bottom: 12px;
     resize: none;
 }
 
 .confirmBtn {
+    display: inline-block;
     float: left;
+    width: 163px;
+    margin-bottom: 8px;
     margin-left: 12px;
-    margin-bottom: 12px;
-    width: auto;
+}
+
+.confirmBtn .fa {
+    font-size: 1.3em;
+    margin-right: 15px;
 }
 
 .google-font {

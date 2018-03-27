@@ -1153,10 +1153,10 @@
                     <div id="exportWindowClose"></div>
                     <p class="windowTitle">Confirm Export</p>
                     <p>See the <a href="../about/" target="blank_">About section</a> for further guidance.</p>
-                    <p class="metaField">Theme name:<input type="text" id="themeName" value="My Xhibit Theme"/></p>
-                    <p class="metaField">Description:<textarea id="themeDescription">A theme generated via Xhibit App.</textarea>
-                    <input type="submit" class="confirmBtn" value="Personal theme" name="personal"/>
-                    <button type="button" id="exportInstitutionBtn" class="confirmBtn">Institution theme</button>
+                    <p class="metaField"><label for="themeName">Theme name:</label><input type="text" id="themeName" value="My Xhibit Theme"/></p>
+                    <p class="metaField"><label for="themeDescription">Description:</label><textarea id="themeDescription">A theme generated via Xhibit App.</textarea></p>
+                    <button type="submit" class="confirmBtn" value="personal" name="personal"><i class="fa fa-laptop"></i>Personal</button>
+                    <button type="button" id="exportInstitutionBtn" value="institution" class="confirmBtn"><i class="fa fa-university"></i>Institution</button>
                 </div>
 
                 <div id="preview">
