@@ -43,6 +43,7 @@
         exportBtn = document.getElementById('exportBtn'),
         exportWindow = document.getElementById('exportWindow'),
         exportWindowClose = document.getElementById('exportWindowClose'),
+        exportInstitutionBtn = document.getElementById('exportInstitutionBtn'),
         element = document.getElementsByClassName('element'),
         elementEdit = document.getElementsByClassName('elementEdit'),
         fontTraditionalSelect = document.getElementById('traditionalFontDrop'),
@@ -61,6 +62,7 @@
         radios = document.getElementsByClassName('radio'),
         footerDotsTextureOn = document.getElementById('footerDotsTextureOn'),
         footerDotsTextureOff = document.getElementById('footerDotsTextureOff'),
+        preview = document.getElementById('preview'),
         xerteButtons = document.getElementById('preview').getElementsByTagName('button'),
         xhibitXerteMenu = document.getElementById('xhibitXerteMenu'),
         hexValue,
@@ -188,8 +190,12 @@
 
     function updateCSS() {
 
-        css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
+        css = '/* Xerte theme generated via Xhibit App (https://www.xhibitapp.com) */\n\n';
+        
+        css += '/* THEME: ' + document.getElementById('themeName').value + ' */\n';
+        css += '/* DESCRIPTION: ' + document.getElementById('themeDescription').value + ' */\n\n\n';
 
+        
         // If a 'Google' font is selected, as opposed to 'Traditional' or 'Dyslexia', add the Include declaration for the Google API
         if (traditionalSelected == false && dyslexiaSelected == false && googleSelected == true) {
             css += '/* GOOGLE FONT IMPORT DECLARATION */\n';
@@ -1137,7 +1143,63 @@ function getRGB(color) {
     
     // Add content to liveStyles on page load
 
-    updateCSS();
+    updateCSS(); 
+    
+    //-----------------------------------------------------------------------------------------------------------
+    
+    // Function for converting theme name to web-friendly slug
+    
+    function convertToSlug(Text){
+        return Text
+            .toLowerCase()
+            .replace(/[^\w ]+/g,'')
+            .replace(/ +/g,'-')
+            ;
+        }
+    
+    // Function for exporting institutional theme zip
+        
+    function exportInstitution() {
+        
+        // Get theme name/slug/description
+        var themeName = document.getElementById('themeName').value;
+        var themeNameSlug = convertToSlug(themeName);
+        var themeDescription = document.getElementById('themeDescription').value;
+        
+        var zip = new JSZip();
+        
+        // Stylesheet
+        zip.file(themeNameSlug + ".css", css);
+        
+        // Meta data for the info file
+        var info = "name: " + themeNameSlug + "\n";
+        info += "display name: " + themeName + "\n";
+        info += "description: " + themeDescription + "\n";
+        info += "enabled: yes\n";
+        info += "preview: " + themeNameSlug + ".jpg";
+        
+        zip.file(themeNameSlug + ".info", info);
+    
+        //Take screenshot of preview window and then save all to zip
+        html2canvas(preview)
+            .then(function (canvas) {
+//                document.body.appendChild(canvas);
+                canvas.toBlob(function (blob) {
+                    zip.file(themeNameSlug + ".jpg", blob);
+                    zip.generateAsync({type:"blob"})
+                        .then(function (content) {
+                            saveAs(content, themeNameSlug + ".zip");
+                        });
+                });
+            })
+            .catch(function (error) {
+                // catch any errors
+                console.log('Error: ' + error);
+            });
+
+    }
+
+    exportInstitutionBtn.addEventListener('click', exportInstitution);
     
 }());
 

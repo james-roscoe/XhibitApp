@@ -1152,9 +1152,11 @@
                 <div id="exportWindow">
                     <div id="exportWindowClose"></div>
                     <p class="windowTitle">Confirm Export</p>
-                    <p>Thanks for using <strong>Xhibit</strong> to develop your Xerte theme. To confirm your export, click on the <strong>Confirmation</strong> button.</p>
-                    <p>You can then attach your CSS file to your Xerte project. Watch the video in the <a href="../about/" target="blank_">About section</a> to find out how!</p>
-                    <input type="submit" id="confirmBtn" value="Confirm"/>
+                    <p>See the <a href="../about/" target="blank_">About section</a> for further guidance.</p>
+                    <p class="metaField">Theme name:<input type="text" id="themeName" value="My Xhibit Theme"/></p>
+                    <p class="metaField">Description:<textarea id="themeDescription">A theme generated via Xhibit App.</textarea>
+                    <input type="submit" class="confirmBtn" value="Personal theme" name="personal"/>
+                    <button type="button" id="exportInstitutionBtn" class="confirmBtn">Institution theme</button>
                 </div>
 
                 <div id="preview">
@@ -1175,6 +1177,9 @@
     <?php include SITEPATH . "/includes/footer.php" ?>
     
     <script src="polyfills.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script src="FileSaver.min.js"></script>
+    <script src="jszip.min.js"></script>
     <script src="design.js"></script>
 
     <?php include SITEPATH . "/includes/old-ie-warning.php" ?>

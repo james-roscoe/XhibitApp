@@ -2325,7 +2325,7 @@ input:checked + .slider:before {
     z-index: 0; /* Overwrites z-index of -3 in mainStyles.css */
 }
 
-#saveProgress, #revertProgress, #resetProgress, #confirmBtn {
+#saveProgress, #revertProgress, #resetProgress, .confirmBtn {
     width: 100px;
     height: 45px;
     display: block;
@@ -2351,7 +2351,7 @@ input:checked + .slider:before {
     width: 230px;
 }
 
-#saveProgress:hover, #revertProgress:hover, #resetProgress:hover, #confirmBtn:hover {
+#saveProgress:hover, #revertProgress:hover, #resetProgress:hover, .confirmBtn:hover {
 	background-color: #105F8A;
 }
 
@@ -2370,6 +2370,39 @@ input:checked + .slider:before {
     color: #D73101;
     text-decoration: none;
 }
+
+.metaField {
+    font-weight: bold;
+}
+
+.metaField > * {
+    vertical-align: top;
+}
+
+#themeName, #themeDescription {
+    margin-left: 12px;
+    padding-left: 6px;
+    width: 130px;
+    height: 30px;
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.4px;
+}
+
+#themeDescription {
+    width: 200px;
+    height: 60px;
+    margin-bottom: 12px;
+    resize: none;
+}
+
+.confirmBtn {
+    float: left;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    width: auto;
+}
+
 .google-font {
 	float:right;
 	margin-top:20px;
