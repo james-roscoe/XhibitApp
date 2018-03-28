@@ -62,6 +62,8 @@
         radios = document.getElementsByClassName('radio'),
         footerDotsTextureOn = document.getElementById('footerDotsTextureOn'),
         footerDotsTextureOff = document.getElementById('footerDotsTextureOff'),
+        themeNameBox = document.getElementById('themeName'),
+        themeDescriptionBox = document.getElementById('themeDescription'),
         preview = document.getElementById('preview'),
         x_mainHolder = document.getElementById('x_mainHolder'),
         xerteButtons = document.getElementById('preview').getElementsByTagName('button'),
@@ -71,6 +73,8 @@
         j,
         k,
         styles = {
+            themeName : 'My Xhibit Theme',
+            themeDescription : 'A theme generated via Xhibit App.',
             traditionalFont : {
                 fontFamily: '"Arial", Helvetica, sans-serif'
             },
@@ -193,8 +197,8 @@
 
         css = '/* Xerte theme generated via Xhibit App (https://www.xhibitapp.com) */\n\n';
         
-        css += '/* THEME: ' + document.getElementById('themeName').value + ' */\n';
-        css += '/* DESCRIPTION: ' + document.getElementById('themeDescription').value + ' */\n\n\n';
+        css += '/* THEME: ' + styles.themeName + ' */\n';
+        css += '/* DESCRIPTION: ' + styles.themeDescription + ' */\n\n\n';
 
         
         // If a 'Google' font is selected, as opposed to 'Traditional' or 'Dyslexia', add the Include declaration for the Google API
@@ -716,6 +720,21 @@
         showOptionalIcons('x_mediaBtn');
     });
     
+    // Event listeners for theme metadata
+    
+    themeNameBox.value = styles.themeName;
+    themeDescriptionBox.value = styles.themeDescription;
+
+    themeNameBox.addEventListener('keyup', function () {
+        styles.themeName = this.value;
+        updateCSS();
+    });
+
+    themeDescriptionBox.addEventListener('keyup', function () {
+        styles.themeDescription = this.value;
+        updateCSS();
+    });    
+    
     // Other event listeners
 
     colourPickerClose.addEventListener('click', function () {
@@ -1163,9 +1182,9 @@ function getRGB(color) {
     function exportInstitution() {
         
         // Get theme name/slug/description
-        var themeName = document.getElementById('themeName').value;
+        var themeName = styles.themeName;
         var themeNameSlug = convertToSlug(themeName);
-        var themeDescription = document.getElementById('themeDescription').value;
+        var themeDescription = styles.themeDescription;
         
         var zip = new JSZip();
         
