@@ -9,7 +9,7 @@ form {
 .mainWrapper #designer {
     position: relative;
     background-color: #064c71;
-    height: 377px;
+    height: 493px;
 }
 
 #zoneSelector {
@@ -121,10 +121,11 @@ form {
 
 .accordion {
     display: none;
+    box-sizing: border-box;
     position: absolute;
     top: 75px;
-    width: 44.5%;
-    height: 298px;
+    width: 45%;
+    height: 414px;
     color: white;
     background-color: #0b4f74;
     border: 2px solid #064c71;
@@ -314,10 +315,11 @@ label.radio input {
 
 #colourPicker, #iconPicker, #saveWindow, #resetWindow, #exportWindow {
     display: none;
+    box-sizing: border-box;
     position: absolute;
     top: 75px;
-    width: 44.5%;
-    height: 298px;
+    width: 45%;
+    height: 418px;
     background-color: white;
     border: 2px solid #064c71;
     z-index: 0;
@@ -2318,9 +2320,10 @@ input:checked + .slider:before {
 }
 
 #x_mainHolder {
+    box-sizing: border-box;
     right: 0px;
     width: 100%;
-    height: 300px;
+    height: 418px;
     background-color: white;
     z-index: 0; /* Overwrites z-index of -3 in mainStyles.css */
 }
@@ -2356,9 +2359,11 @@ input:checked + .slider:before {
 }
 
 #saveWindow, #resetWindow, #exportWindow {
+/*
     top: 75px;
-    height: 288px;
+    height: 404px;
     padding-bottom: 10px;
+*/
 }
 
 #exportWindow a, #exportWindow a:active, #exportWindow a:visited {
@@ -2396,6 +2401,7 @@ input:checked + .slider:before {
 
 .confirmBtn {
     display: inline-block;
+    text-align: left;
     float: left;
     width: 163px;
     margin-bottom: 8px;
@@ -2404,7 +2410,7 @@ input:checked + .slider:before {
 
 .confirmBtn .fa {
     font-size: 1.3em;
-    margin-right: 15px;
+    margin: 0 10px;
 }
 
 .google-font {

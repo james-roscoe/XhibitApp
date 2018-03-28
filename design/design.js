@@ -63,6 +63,7 @@
         footerDotsTextureOn = document.getElementById('footerDotsTextureOn'),
         footerDotsTextureOff = document.getElementById('footerDotsTextureOff'),
         preview = document.getElementById('preview'),
+        x_mainHolder = document.getElementById('x_mainHolder'),
         xerteButtons = document.getElementById('preview').getElementsByTagName('button'),
         xhibitXerteMenu = document.getElementById('xhibitXerteMenu'),
         hexValue,
@@ -1179,11 +1180,44 @@ function getRGB(color) {
         info += "preview: " + themeNameSlug + ".jpg";
         
         zip.file(themeNameSlug + ".info", info);
-    
-        //Take screenshot of preview window and then save all to zip
-        html2canvas(preview)
+
+        // Generate screenshot and put everything in zip file
+        var options = {
+            
+            // Scale up to 805x635 (standard Xerte theme screenshot size)
+            
+            // Canvas size
+            width: 805,
+            height: 635,
+            
+            // Snapshot offset (more reliable if taken from top-left)
+            x: 0,
+            y: 0,
+            
+            // Ensure scroll is at top-left (for rendering fixed element)
+            scrollX: 0,
+            scrollY: 0,
+            
+            // Alter Xerte preview size in cloned canvas and place in top-left
+            onclone: function(clone){
+                clone.getElementById('preview').style.width = "805px"; 
+                clone.getElementById('x_mainHolder').style.height = "635px";
+                clone.getElementById('preview').style.position = "fixed";
+                clone.getElementById('preview').style.top = "0px";
+                clone.getElementById('preview').style.left = "0px";
+            }
+            
+        }
+        
+        html2canvas(x_mainHolder, options)
             .then(function (canvas) {
-//                document.body.appendChild(canvas);
+            
+//                For testing only - Enables screenshot preview:
+//                    canvas.style.position="absolute";
+//                    canvas.style.top="0px";
+//                    canvas.addEventListener('click',function(){this.style.display="none";})
+//                    document.body.appendChild(canvas);
+            
                 canvas.toBlob(function (blob) {
                     zip.file(themeNameSlug + ".jpg", blob);
                     zip.generateAsync({type:"blob"})

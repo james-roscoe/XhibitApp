@@ -61,7 +61,7 @@
                     <div id="selectFooter">Footer</div>
                     <div id="selectBody">Body</div>
                     <div id="selectMenus">Menus</div>
-                    <div id="selectIcons" class="new">Icons</div>
+                    <div id="selectIcons">Icons</div>
                     <div id="selectFonts">Fonts</div>
                     <div id="saveBtn">Save</div>
                     <div id="resetBtn">Reset</div>
