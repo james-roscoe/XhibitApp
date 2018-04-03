@@ -363,7 +363,7 @@
         css += '\t' + 'position: absolute;\n';
         css += '\t' + 'top: 0;\n';
         css += '\t' + 'width: 100%;\n';
-        css += '\t' + 'font-size: 1.9em;\n';
+        css += '\t' + 'font-size: 1.58rem;\n'; // Using rem here prevents IE's multiply sizing bug
         css += '\t' + 'line-height: 1.5em;\n';
         css += '}\n\n';
         
