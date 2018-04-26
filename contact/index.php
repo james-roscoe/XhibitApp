@@ -15,6 +15,12 @@
 
     <!-- CSS -->
 
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="contact.js"></script>
+
+    <!-- JS -->
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
     <!-- Fonts -->
