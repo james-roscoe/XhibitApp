@@ -39,6 +39,35 @@
 
             <h2>We would love to hear from you!</h2>
 
+            <div class="contact-form-container"><!-- #form -->  
+                    <form id="contact">
+                        <fieldset>
+                            <label>Name: <span class="red">*</span></label>
+                            <input placeholder="Type your name here..." name="name" id="name" type="text" tabindex="1">
+                            <div id="nameError">Please enter your name!</div>
+                        </fieldset>
+                        <fieldset>
+                            <label>Email Address: <span class="red">*</span></label>
+                            <input placeholder="Type your email address here..." name="email" id="email" type="email" tabindex="2">
+                            <div id="emailError">Please enter a valid email address!</div>
+                        </fieldset>
+                        <fieldset>
+                            <label>Message: <span class="red">*</span></label>
+                            <textarea placeholder="Type your message here...." name="message" id="message" tabindex="3"></textarea>
+                            <div id="msgError">Please enter your message!</div>
+                        </fieldset>
+                        <div id="honeypot-field">
+                            <label>Keep this field blank</label>
+                            <input type="text" name="honeypot" id="honeypot" />
+                        </div>
+                        <fieldset>
+                            <button name="submit" type="submit" id="submit" data-submit="...Sending">Submit</button>
+                        </fieldset>
+                        <div id="returnmessage"></div>
+                        </form>
+                        
+                </div><!-- #form -->
+
             <p>Please follow us on Twitter to receive future updates on the app. We will respond to any queries via Twitter as soon as we can!</p>
             
             <div class="btn-wrapper">
