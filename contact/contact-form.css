@@ -1,0 +1,149 @@
+/* Contact Form */
+
+.contact-form-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 13px/16px "Open Sans", Helvetica, Arial, sans-serif;
+  color:#504e4e;
+  -webkit-appearance: none;
+}
+
+#contact {
+  background: #075e8d;
+  padding: 25px 47px 25px 25px;
+  margin: 40px 0 60px 0;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 20px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ebe5c8;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  -webkit-appearance: none;
+ 
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #FFFCEE;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #ff511f;
+  color: #FFF;
+  margin-left:11px;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 16px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #FF734A;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #ff511f;
+}
+
+::-webkit-input-placeholder {
+  color: #504e4e;
+}
+
+:-moz-placeholder {
+  color: #504e4e;
+}
+
+::-moz-placeholder {
+  color: #504e4e;
+}
+
+:-ms-input-placeholder {
+  color: #504e4e;
+}
+
+#honeypot-field {
+  display: none;
+}
+span {
+  font: 400 13px/16px "Open Sans", Helvetica, Arial, sans-serif;
+}
+label {
+  font: 400 13px/16px "Open Sans", Helvetica, Arial, sans-serif;
+  color:#fff;
+  margin-bottom:15px;
+  display: block;
+}
+#returnmessage {
+  padding: 10px;
+  margin-top: 25px;
+  width:100%;
+  background-color: #468847;
+  border: 1px solid #ebe5c8;
+  font: 400 13px/16px "Open Sans", Helvetica, Arial, sans-serif;
+  display:none;
+  color:#FFF;
+}
+
+#nameError, #emailError, #msgError {
+  display: none;
+  font-weight: bold;
+  color:#FFF;
+  font: 400 13px/16px "Open Sans", Helvetica, Arial, sans-serif;
+  margin-top:5px;
+  background-color: #8A0E17;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ebe5c8;
+}
+
+ /* Part of this form's CSS structure was adapted and built-on from an original open HTML5 development by Aigars Silkalns (http://codepen.io/colorlib) - Thanks so much Aigars */
+
+ /* This contact form was originally from https://joelreed.co.uk/ and can be used and adapted in anyway for your web own project */
