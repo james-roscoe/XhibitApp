@@ -100,4 +100,4 @@
   });
 });
 
- /* This contact form was originally from https://joelreed.co.uk/ and can be used and adapted in anyway for your web own project */
+ /* This contact form was originally from https://joelreed.co.uk/ and can be used and adapted in anyway for your own web project */
