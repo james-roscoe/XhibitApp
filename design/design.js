@@ -358,7 +358,7 @@
         css += '}\n\n';
 
         css += '.ui-button:after { /* Setup for FontAwesome icons */\n';
-        css += '\t' + 'font-family: FontAwesome;\n';
+        css += '\t' + 'font-family: "FontAwesome";\n';
         css += '\t' + 'color: white;\n';
         css += '\t' + 'position: absolute;\n';
         css += '\t' + 'top: 0;\n';
@@ -1202,6 +1202,8 @@ function getRGB(color) {
 
         // Generate screenshot and put everything in zip file
         var options = {
+            
+            allowTaint: true,
             
             // Scale up to 805x635 (standard Xerte theme screenshot size)
             

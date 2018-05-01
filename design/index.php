@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="design.css">
     <link rel="stylesheet" type="text/css" href="contrast-ratio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.4.0.min.css">
     <style id="liveStyles"></style>
 
     <?php include SITEPATH . "/includes/old-ie-head.php" ?>
@@ -21,6 +21,14 @@
     <!-- JS/JQ -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <!-- JS/JQ -->
+    
+    <!-- Automatically provides/replaces `Promise` if missing or broken. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script> 
+
+    <!-- Minified version of `es6-promise-auto` below. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script> 
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
@@ -1179,6 +1187,7 @@
     <?php include SITEPATH . "/includes/footer.php" ?>
     
     <script src="polyfills.js"></script>
+    <script src="canvas-toBlob.js"></script> <!-- toBlob polyfill for IE -->
     <script src="html2canvas.min.js"></script>
     <script src="FileSaver.min.js"></script>
     <script src="jszip.min.js"></script>
