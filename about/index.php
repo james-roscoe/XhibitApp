@@ -43,6 +43,7 @@
             <ul>
                 <li><a href="#aboutWhat">What is Xhibit?</a></li>
                 <li><a href="#aboutHow">How do I use Xhibit?</a></li>
+                <li><a href="#aboutInstitution">Creating a theme for your whole institution</a></li>
                 <li><a href="#aboutLaunch">Watch the Xhibit Launch Event</a></li>
                 <li><a href="#aboutTweets">What are people saying about Xhibit?</a></li>
             </ul>
@@ -80,9 +81,16 @@
                 
             <h3>Step 2: Export</h3>
             
-            <p>Clicking on the export icon will allow you to save the theme to your computer in the form of a CSS file.</p>
+            <p>There are two export options available in Xhibit. Most users will wish to use the '<em>Personal</em>' export option. Clicking on this option will allow you to save the theme to your computer in the form of a CSS file. This can then be attached to your project in Xerte Online Toolkits (see '<em>Step 3: Attach</em>' below).</p>
             
             <p>If you are accessing Xhibit from a mobile device, you may find that you don't have the ability to download the file. Some devices may show you the raw CSS code, in which case we advise copying this code to your clipboard and pasting it into an email to yourself so that you can save it into a CSS file manually via a computer at a later date.</p>
+            
+            <p>There is also an option to export an '<em>Institution</em>' theme, allowing Xerte admins to install a theme across an institution. For further information, see '<em>Creating a theme for your whole institution</em>' further below.</p>
+            
+            <figure class="figMedium">
+                <img src="../images/xhibit-export-options.png" alt="Screenshot of the Xhibit design page"/>
+                <figcaption>Export: Two options are available (personal or institution).</figcaption>
+            </figure>
                 
             <h3>Step 3: Attach</h3>
             
@@ -96,6 +104,14 @@
                 <img src="../images/xot-attach-theme.png" alt="Screenshot of Xerte theme settings"/>
                 <figcaption>Inside Xerte: Set the theme and stylesheet as above.</figcaption>
             </figure>
+            
+            <hr/>
+            
+            <h2 id="aboutInstitution">Creating a theme for your whole institution</h2>
+            
+            <p>Documentation coming soon.</p>
+            
+            <hr/>
             
             <p>So what are you waiting for? Start designing your theme today and create a great-looking Xerte theme within minutes. Any questions, comments, or feedback? Get in touch via our <a href="../contact/">contact page</a>. Good luck!</p>
 
