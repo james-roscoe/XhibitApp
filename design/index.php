@@ -1160,13 +1160,13 @@
                 <div id="exportWindow">
                     <div id="exportWindowClose"></div>
                     <p class="windowTitle">Confirm Export</p>
-                    <p>See the <a href="../about/" target="blank_">About section</a> for further guidance.</p>
+                    <p>See the <a href="../about#aboutExport" target="_blank">About section</a> for further guidance.</p>
                     <p class="metaField"><label for="themeName">Theme name:</label><input type="text" id="themeName" value="My Xhibit Theme"/></p>
                     <p class="metaField"><label for="themeDescription">Description:</label><textarea id="themeDescription">A theme generated via Xhibit App.</textarea></p>
                     <p><strong>Export option:</strong></p>
                     <button type="submit" class="confirmBtn" value="personal" name="personal"><i class="fa fa-laptop"></i>Personal</button>
                     <button type="button" id="exportInstitutionBtn" value="institution" class="confirmBtn"><i class="fa fa-university"></i>Institution</button>
-                    <p style="clear:both">Use <em>Personal</em> for your own Xerte projects.<br/>Xerte admins can use the <em>Institution</em> option for installing a theme that everyone can use.</p>
+                    <p style="clear:both">Use <em>'Personal'</em> for your own Xerte projects.<br/>Xerte admins can use the <em>'Institution'</em> option for installing a theme that everyone can use.</p>
                 </div>
 
                 <div id="preview">
