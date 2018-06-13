@@ -53,8 +53,13 @@ figure {
     width: 100%;
 }
 
+figure.figMedium {
+    width: 60%;
+    margin: auto;
+}
+
 img {
-    border: 3px solid black;
+    border: 1px solid black;
     width: 100%;
 }
 

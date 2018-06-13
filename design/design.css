@@ -9,7 +9,7 @@ form {
 .mainWrapper #designer {
     position: relative;
     background-color: #064c71;
-    height: 377px;
+    height: 493px;
 }
 
 #zoneSelector {
@@ -121,10 +121,11 @@ form {
 
 .accordion {
     display: none;
+    box-sizing: border-box;
     position: absolute;
     top: 75px;
-    width: 44.5%;
-    height: 298px;
+    width: 45%;
+    height: 414px;
     color: white;
     background-color: #0b4f74;
     border: 2px solid #064c71;
@@ -314,10 +315,11 @@ label.radio input {
 
 #colourPicker, #iconPicker, #saveWindow, #resetWindow, #exportWindow {
     display: none;
+    box-sizing: border-box;
     position: absolute;
     top: 75px;
-    width: 44.5%;
-    height: 298px;
+    width: 45%;
+    height: 418px;
     background-color: white;
     border: 2px solid #064c71;
     z-index: 0;
@@ -2318,14 +2320,15 @@ input:checked + .slider:before {
 }
 
 #x_mainHolder {
+    box-sizing: border-box;
     right: 0px;
     width: 100%;
-    height: 300px;
+    height: 418px;
     background-color: white;
     z-index: 0; /* Overwrites z-index of -3 in mainStyles.css */
 }
 
-#saveProgress, #revertProgress, #resetProgress, #confirmBtn {
+#saveProgress, #revertProgress, #resetProgress, .confirmBtn {
     width: 100px;
     height: 45px;
     display: block;
@@ -2351,14 +2354,16 @@ input:checked + .slider:before {
     width: 230px;
 }
 
-#saveProgress:hover, #revertProgress:hover, #resetProgress:hover, #confirmBtn:hover {
+#saveProgress:hover, #revertProgress:hover, #resetProgress:hover, .confirmBtn:hover {
 	background-color: #105F8A;
 }
 
 #saveWindow, #resetWindow, #exportWindow {
+/*
     top: 75px;
-    height: 288px;
+    height: 404px;
     padding-bottom: 10px;
+*/
 }
 
 #exportWindow a, #exportWindow a:active, #exportWindow a:visited {
@@ -2370,6 +2375,44 @@ input:checked + .slider:before {
     color: #D73101;
     text-decoration: none;
 }
+
+.metaField label {
+    display: inline-block;
+    width: 115px;
+    vertical-align: top;
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+
+#themeName, #themeDescription {
+    padding-left: 6px;
+    width: 200px;
+    height: 30px;
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.4px;
+}
+
+#themeDescription {
+    height: 60px;
+    resize: none;
+}
+
+.confirmBtn {
+    display: inline-block;
+    text-align: left;
+    float: left;
+    width: 163px;
+    margin-bottom: 8px;
+    margin-left: 12px;
+}
+
+.confirmBtn .fa {
+    font-size: 1.3em;
+    margin: 0 10px;
+}
+
 .google-font {
 	float:right;
 	margin-top:20px;

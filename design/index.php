@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
     <link rel="stylesheet" type="text/css" href="design.css">
     <link rel="stylesheet" type="text/css" href="contrast-ratio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.4.0.min.css">
     <style id="liveStyles"></style>
 
     <?php include SITEPATH . "/includes/old-ie-head.php" ?>
@@ -21,6 +21,14 @@
     <!-- JS/JQ -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <!-- JS/JQ -->
+    
+    <!-- Automatically provides/replaces `Promise` if missing or broken. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script> 
+
+    <!-- Minified version of `es6-promise-auto` below. -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script> 
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
@@ -61,7 +69,7 @@
                     <div id="selectFooter">Footer</div>
                     <div id="selectBody">Body</div>
                     <div id="selectMenus">Menus</div>
-                    <div id="selectIcons" class="new">Icons</div>
+                    <div id="selectIcons">Icons</div>
                     <div id="selectFonts">Fonts</div>
                     <div id="saveBtn">Save</div>
                     <div id="resetBtn">Reset</div>
@@ -1152,9 +1160,13 @@
                 <div id="exportWindow">
                     <div id="exportWindowClose"></div>
                     <p class="windowTitle">Confirm Export</p>
-                    <p>Thanks for using <strong>Xhibit</strong> to develop your Xerte theme. To confirm your export, click on the <strong>Confirmation</strong> button.</p>
-                    <p>You can then attach your CSS file to your Xerte project. Watch the video in the <a href="../about/" target="blank_">About section</a> to find out how!</p>
-                    <input type="submit" id="confirmBtn" value="Confirm"/>
+                    <p>See the <a href="../about#aboutExport" target="_blank">About section</a> for further guidance.</p>
+                    <p class="metaField"><label for="themeName">Theme name:</label><input type="text" id="themeName" value="My Xhibit Theme"/></p>
+                    <p class="metaField"><label for="themeDescription">Description:</label><textarea id="themeDescription">A theme generated via Xhibit App.</textarea></p>
+                    <p><strong>Export option:</strong></p>
+                    <button type="submit" class="confirmBtn" value="personal" name="personal"><i class="fa fa-laptop"></i>Personal</button>
+                    <button type="button" id="exportInstitutionBtn" value="institution" class="confirmBtn"><i class="fa fa-university"></i>Institution</button>
+                    <p style="clear:both">Use <em>'Personal'</em> for your own Xerte projects.<br/>Xerte admins can use the <em>'Institution'</em> option for installing a theme that everyone can use.</p>
                 </div>
 
                 <div id="preview">
@@ -1175,6 +1187,10 @@
     <?php include SITEPATH . "/includes/footer.php" ?>
     
     <script src="polyfills.js"></script>
+    <script src="canvas-toBlob.js"></script> <!-- toBlob polyfill for IE -->
+    <script src="html2canvas.min.js"></script>
+    <script src="FileSaver.min.js"></script>
+    <script src="jszip.min.js"></script>
     <script src="design.js"></script>
 
     <?php include SITEPATH . "/includes/old-ie-warning.php" ?>

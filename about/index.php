@@ -43,6 +43,7 @@
             <ul>
                 <li><a href="#aboutWhat">What is Xhibit?</a></li>
                 <li><a href="#aboutHow">How do I use Xhibit?</a></li>
+                <li><a href="#aboutInstitution">Creating a theme for your whole institution</a></li>
                 <li><a href="#aboutLaunch">Watch the Xhibit Launch Event</a></li>
                 <li><a href="#aboutTweets">What are people saying about Xhibit?</a></li>
             </ul>
@@ -61,7 +62,7 @@
             
             <h2 id="aboutHow">How do I use Xhibit?</h2>
             
-            <h3>Step 1: Design</h3>
+            <h3 id="aboutDesign">Step 1: Design</h3>
             
             <p>Click on <a href="../design/">Start Your Design</a> to begin creating your own custom Xerte theme. Using the editing controls along the top, you can select particular areas of your learning object (e.g. header, body, footer) before targeting specific elements within those sections (e.g. paragraph colour). </p>
             
@@ -78,15 +79,22 @@
                 <figcaption>Design: Changing the colours for particular sections and elements.</figcaption>
             </figure>
                 
-            <h3>Step 2: Export</h3>
+            <h3 id="aboutExport">Step 2: Export</h3>
             
-            <p>Clicking on the export icon will allow you to save the theme to your computer in the form of a CSS file.</p>
+            <p>There are two export options available in Xhibit. Most users will wish to use the '<em>Personal</em>' export option. Clicking on this option will allow you to save the theme to your computer in the form of a CSS file. This can then be attached to your project in Xerte Online Toolkits (see '<em>Step 3: Attach</em>' below).</p>
             
             <p>If you are accessing Xhibit from a mobile device, you may find that you don't have the ability to download the file. Some devices may show you the raw CSS code, in which case we advise copying this code to your clipboard and pasting it into an email to yourself so that you can save it into a CSS file manually via a computer at a later date.</p>
-                
-            <h3>Step 3: Attach</h3>
             
-            <p>Within Xerte Online Toolkits, open the editor for your project, and then at the top-level add the 'Stylesheet' option via the Optional Properties. If you can't see the optional properties, click the arrow in the top-right of the editor.</p>
+            <p>There is also an option to export an '<em>Institution</em>' theme, allowing Xerte admins to install a theme across an institution. For further information, see '<em>Creating a theme for your whole institution</em>' further below.</p>
+            
+            <figure class="figMedium">
+                <img src="../images/xhibit-export-options.png" alt="Screenshot of Xhibit export options"/>
+                <figcaption>Export: Two options are available (personal or institution).</figcaption>
+            </figure>
+                
+            <h3 id="aboutAttach">Step 3: Attach</h3>
+            
+            <p>For your own personal projects within Xerte Online Toolkits, open the editor for your project, and then at the top-level add the 'Stylesheet' option via the Optional Properties. If you can't see the optional properties, click the arrow in the top-right of the editor.</p>
             
             <p>Next, upload your Xhibit CSS file via the stylesheet upload feature, just like you would upload any other file in Xerte.</p>
             
@@ -96,6 +104,37 @@
                 <img src="../images/xot-attach-theme.png" alt="Screenshot of Xerte theme settings"/>
                 <figcaption>Inside Xerte: Set the theme and stylesheet as above.</figcaption>
             </figure>
+            
+            <hr/>
+            
+            <h2 id="aboutInstitution">Creating a theme for your whole institution</h2>
+            
+            <p>It is possible to roll out a theme across your entire Xerte installation, allowing all users on the system to select it from the 'themes' dropdown in their Xerte editor. This can be useful for setting up a standard template for an entire department or organisation.</p>
+            
+            <p>An institution theme must have a minimum of three files to work correctly:</p>
+            
+            <ul>
+                <li>The theme stylesheet (.css)</li>
+                <li>A screenshot of the theme (.jpg)</li>
+                <li>A metadata file (.info)</li>
+            </ul>
+            
+            <p>By clicking the 'Institution' export button, Xhibit will generate all these files on your behalf and present them for download in a ZIP file. The ZIP file will need unpacking, and the files within must be placed within the existing <code>themes > Nottingham</code> directory of the Xerte installation on your web server, alongside the default themes.</p>
+            
+            <p>The text that you provide in the 'Theme name' and 'Description' fields on the Xhibit export window will be placed in the .info metadata file, and will be displayed to users (along with the screenshot) when they select the theme from the themes dropdown menu.</p>
+            
+            <p>The installation process can only be done by a Xerte admin (i.e. somebody from your institution who has access to the server on which Xerte is installed), so if you don't have these permissions then you will need to send the theme's ZIP file to someone who does and ask them to place it on the server in the right location.</p>
+            
+            <p>Once the theme has been added, all users at the organisation can apply it to their projects by selecting it from the 'Theme' dropdown in the Xerte editor, as shown below.</p>
+            
+            <figure>
+                <img src="../images/xerte-theme-dropdown.png" alt="The Xerte theme dropdown menu"/>
+                <figcaption>Applying an institution theme: Once installed, all users can select the theme from the dropdown</figcaption>
+            </figure>
+            
+            <p><em>Note: We have successfully tested the institution theme export across all major, modern web browsers. There is a small issue on Internet Explorer and Safari browsers, whereby the screenshot does not output the theme's icons in the footer (this is due to a <a href="https://github.com/niklasvh/html2canvas/issues/1254" target="_blank">bug in an external plugin</a>). While we wait for a fix for this bug, we suggest using an alternative browser if you wish the footer icons to be displayed.</em></p>
+            
+            <hr/>
             
             <p>So what are you waiting for? Start designing your theme today and create a great-looking Xerte theme within minutes. Any questions, comments, or feedback? Get in touch via our <a href="../contact/">contact page</a>. Good luck!</p>
 

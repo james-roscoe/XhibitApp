@@ -1,0 +1,185 @@
+/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */
+
+/* FONT */
+
+body {
+	font-family: "Arial", Helvetica, sans-serif;
+}
+
+/* HEADER GRADIENT */
+
+#x_headerBlock {
+	background: -ms-linear-gradient(top, #010101, #434343);
+	background: -webkit-gradient(linear, left top, left bottom, from(#010101), to(#434343));
+	background: -moz-linear-gradient(top,  #010101,  #434343);
+	backgroundImage: -o-linear-gradient(#010101, #434343);
+}
+
+/* MAIN HEADING */
+
+#x_headerBlock h1 {
+	color: #ffffff;
+}
+
+/* SECONDARY HEADING */
+
+#x_headerBlock h2 {
+	color: #ffffff;
+}
+
+/* BOTTOM BORDER OF HEADER */
+
+#x_headerBlock {
+	border-bottom: 1px solid #ffffff;
+}
+
+/* FOOTER GRADIENT */
+
+#x_footerBlock {
+	background: -ms-linear-gradient(top, #434343, #010101);
+	background: -webkit-gradient(linear, left top, left bottom, from(#434343), to(#010101));
+	background: -moz-linear-gradient(top,  #434343,  #010101);
+	backgroundImage: -o-linear-gradient(#434343, #010101);
+}
+
+/* TOP BORDER OF FOOTER */
+
+#x_footerBlock {
+	border-top: 1px solid #ffffff;
+}
+
+/* DOTS TEXTURE ON/OFF */
+
+#x_footerBg {
+	background-image: none;
+}
+
+/* FOOTER PAGE NUMBERING BOX */
+
+#x_pageNo {
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: #ffffff;
+}
+
+/* BODY BACKGROUND */
+
+#x_mainHolder {
+	background: #ffffff;
+}
+
+/* BODY BORDER */
+
+#x_mainHolder {
+	border: 1px solid #000000;
+}
+
+/* PARAGRAPH COLOUR */
+
+#x_mainHolder p, #textHolder {
+	color: #000000;
+}
+
+/* LINK COLOUR */
+
+#x_mainHolder a {
+	color: #0000EE;
+}
+
+#x_mainHolder a:hover {
+	color: #0000EE;
+}
+
+/* MENUS */
+
+.ui-dialog {
+	background: #ffffff;
+	font-family: "Arial", Helvetica, sans-serif;
+}
+
+.ui-dialog .ui-widget-header {
+	background: #2d2a2a;
+	color: #ffffff;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background: #e6e6e6;
+	color: #555555;
+	font-family: "Arial", Helvetica, sans-serif;
+}
+
+/* SETUP FOR FONT AWESOME ICONS */
+/* (Already present in Xhibit Base Theme, but needed here for older versions of Xerte that do not have the base theme) */
+
+#x_footerBlock button span {
+	background: none; /* Hide any PNG buttons */
+}
+
+.ui-button:after { /* Setup for FontAwesome icons */
+	font-family: FontAwesome;
+	color: white;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	font-size: 1.9em;
+	line-height: 1.5em;
+}
+
+/* ICONS */
+
+#x_footerBlock .ui-button:after {
+	color: #ffffff;
+}
+
+#x_footerBlock .ui-button.ui-state-hover:after {
+	color: #ff9900;
+}
+
+#x_nextBtn:after {
+	content: "\f138";
+}
+
+#x_prevBtn:after {
+	content: "\f137";
+}
+
+#x_menuBtn:after {
+	content: "\f0c9";
+}
+
+#x_colourChangerBtn:after {
+	content: "\f06e";
+}
+
+#x_cssBtn:after {
+	content: "\f0b2";
+}
+
+#x_helpBtn:after {
+	content: "\f128";
+}
+
+#x_glossaryBtn:after {
+	content: "\f02d";
+}
+
+#x_mediaBtn:after {
+	content: "\f16a";
+}
+
+/* PRESERVE INVERT FUNCTIONALITY FOR ACCESSIBILITY */
+
+.filter_inv #x_headerBlock h1, .filter_inv #x_headerBlock h2 {
+	color: black;
+}
+
+.filter_inv #x_mainHolder p, .filter_inv #textHolder, .filter_inv #x_mainHolder a, .filter_inv #x_mainHolder a:hover {
+	color: white;
+}
+
+/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */
+
+.filter_boy #x_mainHolder p, .filter_boy #textHolder, .filter_boy #x_mainHolder a, .filter_boy #x_mainHolder a:hover {
+	color: black;
+}
+

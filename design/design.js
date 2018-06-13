@@ -43,6 +43,7 @@
         exportBtn = document.getElementById('exportBtn'),
         exportWindow = document.getElementById('exportWindow'),
         exportWindowClose = document.getElementById('exportWindowClose'),
+        exportInstitutionBtn = document.getElementById('exportInstitutionBtn'),
         element = document.getElementsByClassName('element'),
         elementEdit = document.getElementsByClassName('elementEdit'),
         fontTraditionalSelect = document.getElementById('traditionalFontDrop'),
@@ -61,6 +62,10 @@
         radios = document.getElementsByClassName('radio'),
         footerDotsTextureOn = document.getElementById('footerDotsTextureOn'),
         footerDotsTextureOff = document.getElementById('footerDotsTextureOff'),
+        themeNameBox = document.getElementById('themeName'),
+        themeDescriptionBox = document.getElementById('themeDescription'),
+        preview = document.getElementById('preview'),
+        x_mainHolder = document.getElementById('x_mainHolder'),
         xerteButtons = document.getElementById('preview').getElementsByTagName('button'),
         xhibitXerteMenu = document.getElementById('xhibitXerteMenu'),
         hexValue,
@@ -68,6 +73,8 @@
         j,
         k,
         styles = {
+            themeName : 'My Xhibit Theme',
+            themeDescription : 'A theme generated via Xhibit App.',
             traditionalFont : {
                 fontFamily: '"Arial", Helvetica, sans-serif'
             },
@@ -188,8 +195,12 @@
 
     function updateCSS() {
 
-        css = '/* Xerte theme generated via Xhibit App (http://www.xhibitapp.com) */\n\n';
+        css = '/* Xerte theme generated via Xhibit App (https://www.xhibitapp.com) */\n\n';
+        
+        css += '/* THEME: ' + styles.themeName + ' */\n';
+        css += '/* DESCRIPTION: ' + styles.themeDescription + ' */\n\n\n';
 
+        
         // If a 'Google' font is selected, as opposed to 'Traditional' or 'Dyslexia', add the Include declaration for the Google API
         if (traditionalSelected == false && dyslexiaSelected == false && googleSelected == true) {
             css += '/* GOOGLE FONT IMPORT DECLARATION */\n';
@@ -347,12 +358,12 @@
         css += '}\n\n';
 
         css += '.ui-button:after { /* Setup for FontAwesome icons */\n';
-        css += '\t' + 'font-family: FontAwesome;\n';
+        css += '\t' + 'font-family: "FontAwesome";\n';
         css += '\t' + 'color: white;\n';
         css += '\t' + 'position: absolute;\n';
         css += '\t' + 'top: 0;\n';
         css += '\t' + 'width: 100%;\n';
-        css += '\t' + 'font-size: 1.9em;\n';
+        css += '\t' + 'font-size: 1.58rem;\n'; // Using rem here prevents IE's multiply sizing bug
         css += '\t' + 'line-height: 1.5em;\n';
         css += '}\n\n';
         
@@ -708,6 +719,21 @@
     mediaIconPreview.addEventListener('click', function () {
         showOptionalIcons('x_mediaBtn');
     });
+    
+    // Event listeners for theme metadata
+    
+    themeNameBox.value = styles.themeName;
+    themeDescriptionBox.value = styles.themeDescription;
+
+    themeNameBox.addEventListener('keyup', function () {
+        styles.themeName = this.value;
+        updateCSS();
+    });
+
+    themeDescriptionBox.addEventListener('keyup', function () {
+        styles.themeDescription = this.value;
+        updateCSS();
+    });    
     
     // Other event listeners
 
@@ -1137,7 +1163,98 @@ function getRGB(color) {
     
     // Add content to liveStyles on page load
 
-    updateCSS();
+    updateCSS(); 
+    
+    //-----------------------------------------------------------------------------------------------------------
+    
+    // Function for converting theme name to web-friendly slug
+    
+    function convertToSlug(Text){
+        return Text
+            .toLowerCase()
+            .replace(/[^\w ]+/g,'')
+            .replace(/ +/g,'-')
+            ;
+        }
+    
+    // Function for exporting institutional theme zip
+        
+    function exportInstitution() {
+        
+        // Get theme name/slug/description
+        var themeName = styles.themeName;
+        var themeNameSlug = convertToSlug(themeName);
+        var themeDescription = styles.themeDescription;
+        
+        var zip = new JSZip();
+        
+        // Stylesheet
+        zip.file(themeNameSlug + ".css", css);
+        
+        // Meta data for the info file
+        var info = "name: " + themeNameSlug + "\n";
+        info += "display name: " + themeName + "\n";
+        info += "description: " + themeDescription + "\n";
+        info += "enabled: yes\n";
+        info += "preview: " + themeNameSlug + ".jpg";
+        
+        zip.file(themeNameSlug + ".info", info);
+
+        // Generate screenshot and put everything in zip file
+        var options = {
+            
+            allowTaint: true,
+            
+            // Scale up to 805x635 (standard Xerte theme screenshot size)
+            
+            // Canvas size
+            width: 805,
+            height: 635,
+            
+            // Snapshot offset (more reliable if taken from top-left)
+            x: 0,
+            y: 0,
+            
+            // Ensure scroll is at top-left (for rendering fixed element)
+            scrollX: 0,
+            scrollY: 0,
+            
+            // Alter Xerte preview size in cloned canvas and place in top-left
+            onclone: function(clone){
+                clone.getElementById('preview').style.width = "805px"; 
+                clone.getElementById('x_mainHolder').style.height = "635px";
+                clone.getElementById('preview').style.position = "fixed";
+                clone.getElementById('preview').style.top = "0px";
+                clone.getElementById('preview').style.left = "0px";
+            }
+            
+        }
+        
+        html2canvas(x_mainHolder, options)
+            .then(function (canvas) {
+            
+//                For testing only - Enables screenshot preview:
+//                    canvas.style.position="absolute";
+//                    canvas.style.top="0px";
+//                    canvas.addEventListener('click',function(){this.style.display="none";})
+//                    document.body.appendChild(canvas);
+            
+                canvas.toBlob(function (blob) {
+                    zip.file(themeNameSlug + ".jpg", blob);
+                    zip.generateAsync({type:"blob"})
+                        .then(function (content) {
+                            saveAs(content, themeNameSlug + ".zip");
+                        });
+                });
+            })
+            .catch(function (error) {
+                // catch any errors
+                console.log('Error: ' + error);
+            });
+
+    }
+
+    exportInstitutionBtn.addEventListener('click', exportInstitution);
     
 }());
 

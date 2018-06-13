@@ -147,7 +147,7 @@ header a:hover, footer a:hover {
     font-size: 1.1em;
 }
 
-#intro p {
+#intro p, #intro li {
     color: #4d4d4d;
     line-height: 1.6;
     font-family: 'Open Sans', sans-serif;
@@ -162,6 +162,12 @@ header a:hover, footer a:hover {
     color: #D73101;
     text-decoration: none;
 }
+
+#intro code {
+    background-color: #ececec;
+    padding: 0.3em;
+}
+
 .itemContainer {
     max-width:800px;
     margin: 0 auto;
