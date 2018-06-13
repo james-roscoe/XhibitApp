@@ -8,11 +8,18 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../xhibit.css">
+    <link rel="stylesheet" href="contact-form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <?php include SITEPATH . "/includes/old-ie-head.php" ?>
 
     <!-- CSS -->
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="contact.js"></script>
+
+    <!-- JS -->
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,800" rel="stylesheet">
@@ -38,6 +45,37 @@
             <h1>Contact</h1>
 
             <h2>We would love to hear from you!</h2>
+
+            <p>Please use the contact form to get in touch with the Xhibit App Team. We look forward to hearing from you and will respond to your enquiry at the first available opportunity.</p>
+
+            <div class="contact-form-container"><!-- #form -->  
+                    <form id="contact">
+                        <fieldset>
+                            <label>Name: <span class="red">*</span></label>
+                            <input placeholder="Type your name here..." name="name" id="name" type="text" tabindex="1">
+                            <div id="nameError">Please enter your name!</div>
+                        </fieldset>
+                        <fieldset>
+                            <label>Email Address: <span class="red">*</span></label>
+                            <input placeholder="Type your email address here..." name="email" id="email" type="email" tabindex="2">
+                            <div id="emailError">Please enter a valid email address!</div>
+                        </fieldset>
+                        <fieldset>
+                            <label>Message: <span class="red">*</span></label>
+                            <textarea placeholder="Type your message here...." name="message" id="message" tabindex="3"></textarea>
+                            <div id="msgError">Please enter your message!</div>
+                        </fieldset>
+                        <div id="honeypot-field">
+                            <label>Keep this field blank</label>
+                            <input type="text" name="honeypot" id="honeypot" />
+                        </div>
+                        <fieldset>
+                            <button name="submit" type="submit" id="submit" data-submit="...Sending">Submit</button>
+                        </fieldset>
+                        <div id="returnmessage"></div>
+                        </form>
+                        
+                </div><!-- #form -->
 
             <p>Please follow us on Twitter to receive future updates on the app. We will respond to any queries via Twitter as soon as we can!</p>
             
