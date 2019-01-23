@@ -443,6 +443,14 @@
         css += '.filter_inv p.pbTxt {\n';
         css += '\t' + 'color: #000000 !important;\n';
         css += '}\n\n';
+
+        css += '.filter_inv #x_footerBlock .ui-button:after {\n';
+        css += '\t' + 'color: #000000;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv #x_footerBlock .ui-button.ui-state-hover:after {\n';
+        css += '\t' + 'color: #404040;\n';
+        css += '}\n\n';
         
         css += '/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
