@@ -459,6 +459,10 @@
         css += '.filter_inv #x_mainHolder a {\n';
         css += '\t' + 'color: #000000;\n';
         css += '}\n\n';
+
+        css += '.filter_inv #x_mainHolder a:hover {\n';
+        css += '\t' + 'color: #404040;\n';
+        css += '}\n\n';
         
         
         css += '/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
@@ -513,6 +517,10 @@
 
         css += '.filter_boy #x_mainHolder a {\n';
         css += '\t' + 'color: #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_mainHolder a:hover {\n';
+        css += '\t' + 'color: #B2B235;\n';
         css += '}\n\n';
 
         css += '.filter_boy .ui-widget-content {\n';
