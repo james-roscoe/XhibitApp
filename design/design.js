@@ -439,6 +439,10 @@
         css += '\t' + 'color: #000000;\n';
         css += '\t' + 'background: #ffffff;\n';
         css += '}\n\n';
+
+        css += '.filter_inv p.pbTxt {\n';
+        css += '\t' + 'color: #000000 !important;\n';
+        css += '}\n\n';
         
         css += '/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
