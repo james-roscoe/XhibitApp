@@ -463,6 +463,17 @@
         css += '\t' + 'color: black;\n';
         css += '}\n\n';
 
+        css += '.filter_boy .ui-dialog .ui-widget-header {\n';
+        css += '\t' + 'border: 1px solid #666666;\n';
+        css += '\t' + 'background: #000000;\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '\t' + 'font-weight: bold;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy .ui-dialog {\n';
+        css += '\t' + 'background-color: #ffff99;\n';
+        css += '}\n\n';
+
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
         
