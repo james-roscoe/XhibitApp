@@ -503,6 +503,14 @@
         css += '\t' + 'color: #ffff99;\n';
         css += '}\n\n';
 
+        css += '.filter_boy #x_mainHolder a {\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy .ui-widget-content {\n';
+        css += '\t' + 'background: #ffff99;\n';
+        css += '}\n\n';
+
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
         
