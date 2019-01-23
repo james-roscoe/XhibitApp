@@ -423,6 +423,22 @@
         css += '\t' + 'background-color: white;\n';
         css += '\t' + 'border: none;\n';
         css += '}\n\n';
+
+        css += '.filter_inv .ui-dialog {\n';
+        css += '\t' + 'background-color: #ffffff;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv .ui-dialog .ui-widget-header {\n';
+        css += '\t' + 'border: 1px solid #666666;\n';
+        css += '\t' + 'background: #000000;\n';
+        css += '\t' + 'color: #ffffff;\n';
+        css += '\t' + 'font-weight: bold;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv .ui-state-default {\n';
+        css += '\t' + 'color: #000000;\n';
+        css += '\t' + 'background: #ffffff;\n';
+        css += '}\n\n';
         
         css += '/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
