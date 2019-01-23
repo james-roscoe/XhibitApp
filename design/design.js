@@ -474,6 +474,11 @@
         css += '\t' + 'background-color: #ffff99;\n';
         css += '}\n\n';
 
+        css += '.filter_boy .ui-state-default {\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '\t' + 'background: #000000;\n';
+        css += '}\n\n';
+
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
         
