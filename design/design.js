@@ -499,7 +499,7 @@
         css += '\t' + 'color: #B2B235;\n';
         css += '}\n\n';
 
-        css += '.filter_boy #x_pageNo {\n';
+        css += '.filter_boy #x_pageNo, .filter_boy #x_footerChevron {\n';
         css += '\t' + 'color: #ffff99;\n';
         css += '}\n\n';
 
