@@ -499,6 +499,10 @@
         css += '\t' + 'color: #B2B235;\n';
         css += '}\n\n';
 
+        css += '.filter_boy #x_pageNo {\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '}\n\n';
+
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
         
