@@ -483,6 +483,14 @@
         css += '\t' + 'color: #ffff99 !important;\n';
         css += '}\n\n';
 
+        css += '.filter_boy #x_footerBlock {\n';
+        css += '\t' + 'border-top: 1px solid #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_headerBlock {\n';
+        css += '\t' + 'border-bottom: 1px solid #ffff99;\n';
+        css += '}\n\n';
+
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
         
