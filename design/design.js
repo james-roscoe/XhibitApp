@@ -444,6 +444,10 @@
         css += '\t' + 'color: #000000 !important;\n';
         css += '}\n\n';
 
+        css += '.filter_inv .pbContainer {\n';
+        css += '\t' + 'background-color: #000000;\n';
+        css += '}\n\n';
+
         css += '.filter_inv #x_footerBlock .ui-button:after {\n';
         css += '\t' + 'color: #000000;\n';
         css += '}\n\n';
@@ -481,6 +485,10 @@
 
         css += '.filter_boy p.pbTxt {\n';
         css += '\t' + 'color: #ffff99 !important;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy .pbContainer {\n';
+        css += '\t' + 'background-color: #ffff99;\n';
         css += '}\n\n';
 
         css += '.filter_boy #x_footerBlock {\n';
