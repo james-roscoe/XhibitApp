@@ -408,6 +408,10 @@
         css += '#x_mediaBtn:after {\n';
         css += '\t' + 'content: "\\' + styles.mediaIcon.content + '";\n';
         css += '}\n\n';
+
+        css += '#x_footerChevron {\n';
+        css += '\t' + 'color: ' + styles.icons.colour +';\n';
+        css += '}\n\n';
         
         css += '/* PRESERVE INVERT FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
