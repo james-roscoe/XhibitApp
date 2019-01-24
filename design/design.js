@@ -408,21 +408,127 @@
         css += '#x_mediaBtn:after {\n';
         css += '\t' + 'content: "\\' + styles.mediaIcon.content + '";\n';
         css += '}\n\n';
+
+        css += '#x_footerChevron {\n';
+        css += '\t' + 'color: ' + styles.icons.colour +';\n';
+        css += '}\n\n';
         
         css += '/* PRESERVE INVERT FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
-        css += '.filter_inv #x_headerBlock h1, .filter_inv #x_headerBlock h2 {\n';
+        css += '.filter_inv #x_headerBlock h1, .filter_inv #x_headerBlock h2, .filter_inv #x_pageNo, .filter_inv #x_footerChevron {\n';
         css += '\t' + 'color: black;\n';
         css += '}\n\n';
 
         css += '.filter_inv #x_mainHolder p, .filter_inv #textHolder, .filter_inv #x_mainHolder a, .filter_inv #x_mainHolder a:hover {\n';
         css += '\t' + 'color: white;\n';
         css += '}\n\n';
+
+        css += '.filter_inv #x_pageNo {\n';
+        css += '\t' + 'background-color: white;\n';
+        css += '\t' + 'border: none;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv .ui-dialog {\n';
+        css += '\t' + 'background-color: #ffffff;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv .ui-dialog .ui-widget-header {\n';
+        css += '\t' + 'border: 1px solid #666666;\n';
+        css += '\t' + 'background: #000000;\n';
+        css += '\t' + 'color: #ffffff;\n';
+        css += '\t' + 'font-weight: bold;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv .ui-state-default {\n';
+        css += '\t' + 'color: #000000;\n';
+        css += '\t' + 'background: #ffffff;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv p.pbTxt {\n';
+        css += '\t' + 'color: #000000 !important;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv .pbContainer {\n';
+        css += '\t' + 'background-color: #000000;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv #x_footerBlock .ui-button:after {\n';
+        css += '\t' + 'color: #000000;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv #x_footerBlock .ui-button.ui-state-hover:after {\n';
+        css += '\t' + 'color: #404040;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv #x_mainHolder a {\n';
+        css += '\t' + 'color: #000000;\n';
+        css += '}\n\n';
+
+        css += '.filter_inv #x_mainHolder a:hover {\n';
+        css += '\t' + 'color: #404040;\n';
+        css += '}\n\n';
+        
         
         css += '/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
         css += '.filter_boy #x_mainHolder p, .filter_boy #textHolder, .filter_boy #x_mainHolder a, .filter_boy #x_mainHolder a:hover {\n';
         css += '\t' + 'color: black;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy .ui-dialog .ui-widget-header {\n';
+        css += '\t' + 'border: 1px solid #666666;\n';
+        css += '\t' + 'background: #000000;\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '\t' + 'font-weight: bold;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy .ui-dialog {\n';
+        css += '\t' + 'background-color: #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy .ui-state-default {\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '\t' + 'background: #000000;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy p.pbTxt {\n';
+        css += '\t' + 'color: #ffff99 !important;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy .pbContainer {\n';
+        css += '\t' + 'background-color: #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_footerBlock {\n';
+        css += '\t' + 'border-top: 1px solid #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_headerBlock {\n';
+        css += '\t' + 'border-bottom: 1px solid #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_footerBlock .ui-button:after {\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_footerBlock .ui-button.ui-state-hover:after {\n';
+        css += '\t' + 'color: #B2B235;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_pageNo, .filter_boy #x_footerChevron {\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_mainHolder a {\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy #x_mainHolder a:hover {\n';
+        css += '\t' + 'color: #B2B235;\n';
+        css += '}\n\n';
+
+        css += '.filter_boy .ui-widget-content {\n';
+        css += '\t' + 'background: #ffff99;\n';
         css += '}\n\n';
 
         liveStyles.textContent = css;
