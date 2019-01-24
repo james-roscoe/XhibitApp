@@ -419,7 +419,7 @@
         css += '\t' + 'color: black;\n';
         css += '}\n\n';
 
-        css += '.filter_inv #x_mainHolder p, .filter_inv #textHolder, .filter_inv #x_mainHolder a, .filter_inv #x_mainHolder a:hover {\n';
+        css += '.filter_inv #x_mainHolder p, .filter_inv #textHolder, .filter_inv #x_mainHolder a, .filter_inv #x_mainHolder a:hover, .filter_inv #x_mainHolder a.x_glossary {\n';
         css += '\t' + 'color: white;\n';
         css += '}\n\n';
 
@@ -467,11 +467,16 @@
         css += '.filter_inv #x_mainHolder a:hover {\n';
         css += '\t' + 'color: #404040;\n';
         css += '}\n\n';
+
+        css += '.filter_inv .x_tooltip {\n';
+        css += '\t' + 'background: #ffffff;\n';
+        css += '\t' + 'color: #000000;\n';
+        css += '}\n\n';
         
         
         css += '/* PRESERVE BLACK ON YELLOW FUNCTIONALITY FOR ACCESSIBILITY */\n\n';
 
-        css += '.filter_boy #x_mainHolder p, .filter_boy #textHolder, .filter_boy #x_mainHolder a, .filter_boy #x_mainHolder a:hover {\n';
+        css += '.filter_boy #x_mainHolder p, .filter_boy #textHolder, .filter_boy #x_mainHolder a, .filter_boy #x_mainHolder a:hover, .filter_boy #x_mainHolder a.x_glossary {\n';
         css += '\t' + 'color: black;\n';
         css += '}\n\n';
 
@@ -530,6 +535,12 @@
         css += '.filter_boy .ui-widget-content {\n';
         css += '\t' + 'background: #ffff99;\n';
         css += '}\n\n';
+
+        css += '.filter_boy .x_tooltip {\n';
+        css += '\t' + 'background: #000000;\n';
+        css += '\t' + 'color: #ffff99;\n';
+        css += '}\n\n';
+
 
         liveStyles.textContent = css;
         document.getElementById('cssOutput').value = css;
