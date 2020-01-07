@@ -83,7 +83,7 @@
                     <a href="https://twitter.com/xhibitapp" target="_blank"><button type="button" class="button btn-twitter">@XhibitApp</button></a>
             </div>
 
-            <p>Xhibit is developed by James Roscoe, University of Warwick, and Joel Reed, University of Nottingham.</p>
+            <p>Xhibit is developed by James Roscoe (University of Warwick) and Joel Reed.</p>
 
                     <!-- Two columns of text and rounded images -->
         <div class="row">
@@ -100,7 +100,7 @@
           <img class="img-circle" src="../images/joel.jpg" alt="Joel Reed" width="150" height="150">
           <h3>Joel Reed</h3>
            <div class="btn-wrapper">
-                    <a href="https://twitter.com/joelreed_" target="_blank"><button type="button" class="button btn-twitter">@JoelReed_</button></a>
+                    <a href="https://www.joelreed.co.uk" target="_blank"><button type="button" class="button btn-twitter">joelreed.co.uk</button></a>
             </div>
         </div>
 
