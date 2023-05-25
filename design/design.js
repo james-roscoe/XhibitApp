@@ -524,6 +524,11 @@
         css += '\t' + 'color: #ffff99;\n';
         css += '}\n\n';
 
+        css += '.filter_boy #x_pageNo {\n';
+        css += '\t' + 'background: #000000;\n';
+        css += '\t' + 'border: none;\n';
+        css += '}\n\n';
+
         css += '.filter_boy #x_mainHolder a {\n';
         css += '\t' + 'color: #ffff99;\n';
         css += '}\n\n';
