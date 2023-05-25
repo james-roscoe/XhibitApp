@@ -83,7 +83,7 @@
                     <a href="https://twitter.com/xhibitapp" target="_blank"><button type="button" class="button btn-twitter">@XhibitApp</button></a>
             </div>
 
-            <p>Xhibit is developed by James Roscoe (University of Warwick) and Joel Reed.</p>
+            <p>Xhibit App is developed by James Roscoe and Joel Reed.</p>
 
                     <!-- Two columns of text and rounded images -->
         <div class="row">

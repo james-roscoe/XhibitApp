@@ -1,6 +1,6 @@
 <footer class="sticky">
     <div class="wrapper footer-wrap">
-        Xhibit App - Xerte Theme Generator | <a href="<?php echo SITEURL ?>/donate">Donate</a>
+        Xhibit App - Xerte Theme Generator | <a class="donate-now" href="<?php echo SITEURL ?>/donate">Donate</a>
         <div class="twitter">
         		<a class="twitter-follow-button" href="https://twitter.com/XhibitApp">Follow @XhibitApp</a>
 		</div>
