@@ -2,6 +2,8 @@
 
 Visit the live site at http://www.xhibitapp.com/
 
+**_ _Please note: As of February 2025, management of the live XhibitApp website was passed over to the [Xerte Project](http://www.xerte.org.uk). Therefore the code on this repository does not necessarily reflect the current live version of XhibitApp going forwards. Please contact the Xerte Project with any queries. Thank you._ _**
+
 ## What is XhibitApp?
 
 XhibitApp is a supporting project for [Xerte](http://www.xerte.org.uk), the free, open source e-learning content creation tool.
@@ -10,7 +12,7 @@ This web app offers Xerte users the opportunity to produce a theme without havin
 
 XhibitApp is accessible on desktop, tablet and smartphones.
 
-The project was launched at the Xerte Conference on 14th April 2016 in Nottingham, UK, and we continue to make adjustments and improvements.
+The project was launched at the Xerte Conference on 14th April 2016 in Nottingham, UK.
 
 ## How do I get started?
 
@@ -30,4 +32,4 @@ For the web, the default config file assumes that Xhibit is sitting at the top l
 
 ## Contributors
 
-Concept, design and development by James Roscoe, University of Warwick, and Joel Reed, University of Nottingham.
+Concept, design and development by James Roscoe and Joel Reed.
