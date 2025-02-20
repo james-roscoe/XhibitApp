@@ -2,7 +2,7 @@
 
 Visit the live site at http://www.xhibitapp.com/
 
-**_ _Please note: As of February 2025, management of the live XhibitApp website was passed over to the [Xerte Project](http://www.xerte.org.uk). Therefore the code on this repository does not necessarily reflect the current live version of XhibitApp going forwards. Please contact the Xerte Project with any queries. Thank you._ _**
+**_Please note: As of February 2025, management of the live XhibitApp website was passed over to the [Xerte Project](http://www.xerte.org.uk). Therefore the code on this repository does not necessarily reflect the current live version of XhibitApp going forwards. Please contact the Xerte Project with any queries. Thank you._**
 
 ## What is XhibitApp?
 
